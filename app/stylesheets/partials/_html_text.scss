@@ -1,0 +1,21 @@
+/* Content
+-------------------------------------------------------------- */
+#content div.html_text {
+	p {
+		margin-bottom: .8em;
+	}
+	table {
+		width:100%;
+		border-collapse:collapse;
+		vertical-align:middle;
+		text-align:left;
+		tr {
+			border-bottom: 1px solid #49453E;
+			padding-left:6px;
+			td {
+				padding-left:6px;
+			}
+		}
+	}
+	.images { width:100%;}
+}

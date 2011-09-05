@@ -1,0 +1,41 @@
+/* Header
+-------------------------------------------------------------- */
+
+#masterhead {
+	float:right;
+	margin: 0;
+	padding: 0;
+}
+#locales,
+#user-menu {
+	float:left;
+}
+#locales {
+	margin-left:10px;
+}
+#locales a,
+#user-menu a {
+	text-decoration: none;	
+}
+h2#site-title {
+	clear:both;
+	float: left;
+	@extend .huge; 
+	a {
+	 text-decoration: none; 
+	}
+}
+#header {
+	min-height: 80px;
+}
+#main-menu {
+	position:absolute;
+	z-index:10000;
+	bottom:6px;
+	right:0px;
+} 
+#switch_user_identifier {
+	position:fixed;
+	left:0px;
+	top:0px;
+}

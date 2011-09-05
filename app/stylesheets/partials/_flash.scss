@@ -1,0 +1,20 @@
+/* flash 
+-----------------------------------------------------------*/
+.flash {
+	padding: 8px 8px 8px 30px;
+	margin: 0 auto;
+	position: relative;
+	clear:both;
+	color: #fff;
+	min-height:30px;
+	a.icon {
+		display:none;
+	}
+}
+
+.flash.alert {
+	background-color: #cd1f44;
+}
+.flash.notice {
+	background-color: #6bba17;
+}

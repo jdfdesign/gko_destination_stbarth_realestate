@@ -1,0 +1,46 @@
+// Is grid centered on screen ?
+$less-grid-centered:true !default;
+
+$body-background:#ebebeb !default; 
+$body-color:grey !default;
+$body-font-size:17px !default;
+$body-line-height: 22px !default; 
+$body-font-family: Helvetica,Arial,Tahoma,sans-serif !default;
+
+$input-font-size:1em !default;
+$input-font-family:Helvetica,Arial,Tahoma,sans-serif !default;
+$input-font-weight: normal !default;
+$input-color:#DCE1E4 !default;
+$input-line-height:1em !default;  
+$input-background:#fbbeae !default;
+
+$main-background:none repeat scroll 0 0 transparent !default; 
+	$content-background:none repeat scroll 0 0 transparent !default;
+	$sidebar-background:none repeat scroll 0 0 transparent !default;
+	$sidebar-color:$body-color !default;
+$header-background:none repeat scroll 0 0 transparent !default;
+$footer-background:none repeat scroll 0 0 transparent !default;  
+
+$link-color: grey;
+$link-hover-color: black;
+$link-active-color: black;  
+
+// Padding between menu elements
+$menu-item-padding:8px;
+// Padding between list elements 
+$list-padding:false;
+// Padding between list elements 
+$list-margin:24px;
+// Thumbs width for list elements 
+$list-thumb-width:220px !default; 
+// Thumbs height for list elements
+$list-thumb-height:220px !default;
+// Thumbs background color for list elements 
+$list-thumb-background-color:#8C8C8C !default; 
+
+@mixin center($padding: 0px) {
+	display:block;
+	margin: 0 auto !important;
+	padding: $padding;
+}
+

@@ -1,0 +1,44 @@
+---
+fr:
+  layouts:
+    public:
+      master_header:
+        user:
+          links:
+            sign_out: Sign Out
+  rental_properties:
+    list:
+      continue: Continue
+    cell:
+      price_on_request: Price On Request
+    resource:
+      price_on_request: Price On Request
+  admin:
+    mail_methods:
+      menu_tab: Menu Tab
+    homes:
+      actions:
+        new: New
+        destroy: Destroy
+        index: Index
+    filter:
+      order_by:
+        published_at: Published At
+        email: Email
+    sessions:
+      titles:
+        new: New
+  registration:
+    titles:
+      new: New
+      create: Create
+  inquiry_mailer:
+    confirmation:
+      subject: Subject
+    notification:
+      subject: Subject
+  password:
+    titles:
+      new: New
+  flash:
+    close: Close

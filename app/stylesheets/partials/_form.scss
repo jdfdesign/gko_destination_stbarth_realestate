@@ -1,0 +1,90 @@
+/* Forms
+-------------------------------------------------------------- */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	background-color: $input-background;
+	color: $input-color;
+	line-height: $input-line-height;
+	font: {
+		family: $input-font-family;
+		size: $input-font-size;
+		weight: $input-font-weight;
+	}
+} 
+.ui-field-contain {
+	background: none repeat scroll 0 0 transparent;
+	margin: 0;
+	overflow: visible;
+	padding: 0.4em;
+	display: block;
+	position: relative;
+	border: none;
+	clear: none;
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="tel"],
+	textarea {
+		display: block;
+		padding: 0.4em;
+		border: none;
+		width:100%;
+	}
+	textarea {
+		height: 80px;
+	}
+	label {
+		font-weight: normal;
+		margin: 0 0 .3em;
+		display: inline-block;
+		margin: 0 2% 0 0;
+	}
+	input[type="text"].error_field,
+	input[type="password"].error_field,
+	textarea.error_field {
+		background-color: #fbbeae;
+	}
+}
+
+.ui-field-contain.buttons,
+.ui-field-contain.policy {
+	clear:both;
+	float:left;
+}
+
+
+/* FORM FILTER
+----------------------------------------------------*/
+form.filter {
+	/*background-color: #666666;*/
+	display: block;
+	.ui-field-contain {
+		clear:none;
+		display: inline;
+		margin-left: 5px;
+		position: static;
+		float: left;
+		input {
+			width: auto;
+			height: 22px;
+			padding: 0 2px 0 2px;
+			margin: 0;
+			display: inline;
+		}
+		
+		label {
+			display: inline-block;
+			width: auto;
+		}
+		select {
+			min-width: 150px;
+			height: 22px;
+		}
+	}
+	.ui-field-contain.buttons {
+		clear:none; 
+	}
+} 

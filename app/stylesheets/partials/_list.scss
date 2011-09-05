@@ -1,0 +1,64 @@
+/* LIST
+----------------------------------------------------*/ 
+.collection-container {
+	p.empty_collection {
+		padding: 24px 0px;
+	}
+}
+@import "compass/typography/lists/horizontal-list";
+ul.list-view {
+	@include horizontal-list-container;
+	li { 
+		//Setting $padding to false disables the padding between list elements
+		@include horizontal-list-item($list-padding, "left"); 
+		white-space: normal;
+		zoom: 1;
+		margin-top:24px;
+	}
+	.inner {
+		display: block;
+		padding: 0;
+		position: relative;
+	 } 
+	.entry-thumb { 
+		display:block;
+		height: $list-thumb-height;
+		width: $list-thumb-width;
+		overflow:hidden;
+		background: $list-thumb-background-color; 
+		img {
+			max-height: $list-thumb-height;
+			max-width: $list-thumb-width;
+		}
+	}
+	.entry-description {
+		display: block;
+		font-weight: normal;
+		margin: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	abbr.dates,
+	.entry-meta {
+		font-size: 0.8em;
+	} 
+	h2.entry-title {
+		display:block;
+		font-size: $body-font-size;
+		padding: 0;
+		margin: 0;
+		a {
+			padding: 0;
+			margin: 0;
+			text-overflow: ellipsis; 
+			overflow: hidden; 
+			white-space: nowrap;
+			display: inline-block;
+		}
+	}  
+	a.continue {
+		@extend .small;
+		margin: 0;
+		padding: 0;
+	}
+} 

@@ -1,0 +1,17 @@
+// Setting `$padding` to `false` disables the padding between list elements
+@mixin menu-list($padding: 4px, $direction: left) {
+	list-style-image: none;
+	list-style-type: none;
+  white-space: nowrap;
+	float: $direction;
+	zoom:1;
+  @if $padding {
+    padding: {
+      left: $padding;
+      right: $padding;
+    }
+    &:first-child, &.first { padding-#{$direction}: 0; }
+    &:last-child { padding-#{opposite-position($direction)}: 0; }
+    &.last { padding-#{opposite-position($direction)}: 0; }
+  }
+}

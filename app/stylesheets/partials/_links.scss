@@ -1,0 +1,16 @@
+/* Links
+-------------------------------------------------------------- */
+@import "compass/typography/links/link-colors";
+//link-colors($normal, $hover, $active, $visited, $focus)
+a { 
+	cursor:pointer;
+	outline: none;
+	-moz-outline-style: none;
+	@include link-colors($link-color, $link-hover-color, $link-active-color, $link-color,$link-hover-color);  
+} 
+a.previous {
+	float:left;
+}
+a.next {
+	float:right;
+}

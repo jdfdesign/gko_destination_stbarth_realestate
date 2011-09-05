@@ -1,0 +1,63 @@
+/* MENU
+----------------------------------------------------*/
+@import "compass/typography/lists/horizontal-list";
+
+nav ul.menu {
+	z-index: 99999;
+	
+	@include horizontal-list-container;
+	li {
+		@include horizontal-list-item(8px);
+		zoom: 1;
+		
+		&:hover { position: relative; }
+		&:first-child { padding-left: 0; }
+    &:last-child { padding-right: 0; }
+	}
+	li:hover > ul {
+		visibility: visible;
+	}
+	li.active {
+		a { color: $link-active-color;}
+	}
+	a {
+		text-overflow: ellipsis; 
+		overflow: hidden; 
+		white-space: nowrap; 
+		display: block;
+		text-decoration: none !important;
+	}
+	
+	ul.menu-branch {
+		width: 220px;
+		visibility: hidden;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: #000;
+		background-color: rgba(0,0,0,0.8); 
+		@include horizontal-list-container;
+		li {
+			@include horizontal-list-container;
+			width: 100%;
+			border-bottom: 1px solid grey;
+			ul {
+			 	left: 100%;
+				top: 0; 
+			}
+			&:first-child { padding-top: 0; }
+	    &:last-child { padding-bottom: 0; }
+		}
+		a {
+			width: 100%;
+			display: inline-block;
+		}
+		
+
+	}
+}
+aside nav ul.menu li {
+	padding-left:0px;
+	margin-left:0px;
+	clear:both;
+}

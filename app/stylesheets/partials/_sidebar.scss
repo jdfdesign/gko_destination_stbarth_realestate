@@ -1,0 +1,42 @@
+aside {
+	position:relative;
+	float:left;
+	color:$sidebar-color;
+	background: $sidebar-background; 
+	min-height: 100%;
+	.sidebar-content {
+		float:left;
+		display:block;
+	}
+	h3, ul {
+		margin: 0;
+		padding: 0;
+		clear:both;
+	 	float:left;
+	}
+	ul {
+		list-style: none outside none;
+		li {
+			display:block;
+			clear: left;
+			float: left;
+		}
+	}
+	
+	.partial {
+		clear:both;
+	 	float:left;
+		display:block;
+		li {
+			a {
+				font-size: .8em;
+				line-height: .8em;
+			}
+		}
+	}
+	
+	.feed {
+		clear:both;
+	 	float:left;
+	}
+}
