@@ -239,6 +239,6 @@ DEPENDENCIES
   gko-documents (= 0.0.22)!
   gko-images (= 0.0.27)!
   gko-inquiry (= 0.0.29)!
-  gko-realty (>= 0.0.24)!
+  gko-realty!
   gko-sticker (= 0.0.22)!
   smurf!
