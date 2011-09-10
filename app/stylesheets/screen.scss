@@ -202,7 +202,7 @@ h1.page-title {
 	display:block;
 	overflow:hidden;
 }
-.html-text {
+.html_text {
 	width: 480px;
 	float: left;
 }
@@ -428,7 +428,8 @@ ul.list-view-seasons ul.list-view-rates li span:last-child {
 	ul {
 		@extend ul.list-view;
 		.thumb {
-		 @extend .entry-thumb; 
+		 @extend .entry-thumb;
+		  margin-bottom: 10px; 
 		}
 		h2 {
 			@extend h2.entry-title;

@@ -25,6 +25,10 @@ fr:
       order_by:
         published_at: Published At
         email: Email
+    pages:
+      actions:
+        view: View
+        show: Show
     sessions:
       titles:
         new: New

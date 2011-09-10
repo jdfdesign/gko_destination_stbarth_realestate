@@ -30,7 +30,7 @@ class Pages::Home < Minimal::Template
     
     def link_to_property(property)
       div :class => :thumb do
-        link_to(image_fu(property.thumbnail, 'x120'), url_for([property.section, property]))
+        link_to(image_fu(property.thumbnail, :medium), url_for([property.section, property]))
       end if property.thumbnail
       
       h2 do 
@@ -44,7 +44,7 @@ class Pages::Home < Minimal::Template
 
       div(:class => :continue) do 
         capture do
-          link_to(:'rental_properties.list.continue', url_for([property.section, property]), :class => :continue)
+          link_to(:'rental_properties.collection.continue', url_for([property.section, property]), :class => :continue)
         end
       end
     end
