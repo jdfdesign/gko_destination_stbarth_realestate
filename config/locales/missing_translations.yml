@@ -15,7 +15,13 @@ fr:
       price_on_request: Price On Request
   admin:
     mail_methods:
+      actions:
+        new: New
       menu_tab: Menu Tab
+      titles:
+        index: Index
+      collection:
+        empty: Empty
     homes:
       actions:
         new: New
