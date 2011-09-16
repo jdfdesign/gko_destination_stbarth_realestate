@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms.git
-  revision: d16a829db7c9c2abd32fc12e60b24f445b8c0c40
+  revision: eb2ae8bcb21c01203b7972ae46240581ee020f99
   specs:
     gko-category (0.0.23)
       gko-core
@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms.git
-  revision: d16a829db7c9c2abd32fc12e60b24f445b8c0c40
+  revision: eb2ae8bcb21c01203b7972ae46240581ee020f99
   specs:
     gko-inquiry (0.0.29)
       filters_spam (~> 0.2)
@@ -24,9 +24,9 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms.git
-  revision: d16a829db7c9c2abd32fc12e60b24f445b8c0c40
+  revision: eb2ae8bcb21c01203b7972ae46240581ee020f99
   specs:
-    gko-core (0.0.40)
+    gko-core (0.0.41)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7)
       bundler (= 1.1.pre.4)
@@ -56,7 +56,7 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms.git
-  revision: d16a829db7c9c2abd32fc12e60b24f445b8c0c40
+  revision: eb2ae8bcb21c01203b7972ae46240581ee020f99
   specs:
     gko-auth (0.0.28)
       cancan (= 1.6.5)
@@ -235,7 +235,7 @@ DEPENDENCIES
   compass (>= 0.11.5)
   gko-auth (= 0.0.28)!
   gko-category (= 0.0.23)!
-  gko-core (= 0.0.40)!
+  gko-core (= 0.0.41)!
   gko-images (= 0.0.28)!
   gko-inquiry (= 0.0.29)!
   gko-realty!
