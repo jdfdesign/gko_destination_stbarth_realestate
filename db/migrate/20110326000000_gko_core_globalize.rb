@@ -6,6 +6,9 @@ class GkoCoreGlobalize < ActiveRecord::Migration
                                        :subtitle => :string
                                    }, {:migrate_data => true})
 
+    unless column_exists?(:sections, :menu_title)
+      add_column :sections, :menu_title, :string
+    end                              
     Section.create_translation_table!({
                                           :title => :string,
                                           :body => :text,
@@ -15,7 +18,8 @@ class GkoCoreGlobalize < ActiveRecord::Migration
                                           :slug => :string,
                                           :path => :string,
                                           :redirect_url => :string,
-                                          :title_addon => :string
+                                          :title_addon => :string,
+                                          :menu_title => :string
                                       }, {:migrate_data => true})
 
     Content.create_translation_table!({
