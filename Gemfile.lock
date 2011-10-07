@@ -1,13 +1,13 @@
 GIT
   remote: git@github.com:jdfdesign/gko-realty.git
-  revision: 47d30182626f096e2bf283e20dba79e50fb9b19a
+  revision: 1c875ed0d2009ee0b8949786573871d79af17e9a
   specs:
-    gko-realty (0.0.24)
+    gko-realty (0.0.25)
       gko-core
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms.git
-  revision: c33573e0edf942d3f2936211e3f9b52666d845cb
+  revision: 2f513b91ee41fcb23b4d5908acaa4e603591b848
   specs:
     gko-inquiry (0.0.31)
       filters_spam (~> 0.2)
@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms.git
-  revision: c33573e0edf942d3f2936211e3f9b52666d845cb
+  revision: 2f513b91ee41fcb23b4d5908acaa4e603591b848
   specs:
     gko-category (0.0.23)
       gko-core
@@ -24,7 +24,7 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms.git
-  revision: c33573e0edf942d3f2936211e3f9b52666d845cb
+  revision: 2f513b91ee41fcb23b4d5908acaa4e603591b848
   specs:
     gko-images (0.0.30)
       dragonfly (~> 0.9.4)
@@ -34,7 +34,7 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms.git
-  revision: c33573e0edf942d3f2936211e3f9b52666d845cb
+  revision: 2f513b91ee41fcb23b4d5908acaa4e603591b848
   specs:
     gko-core (0.0.45)
       activesupport-slices (= 0.0.2)
@@ -66,7 +66,7 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms.git
-  revision: c33573e0edf942d3f2936211e3f9b52666d845cb
+  revision: 2f513b91ee41fcb23b4d5908acaa4e603591b848
   specs:
     gko-auth (0.0.28)
       cancan (~> 1.6.0)

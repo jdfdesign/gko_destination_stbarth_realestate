@@ -18,7 +18,7 @@ class Pages::Home < Minimal::Template
           div(:class => "sale_properties") do
             h3("Villas la vente".html_safe)
             ul do
-              rental_properties.each do |p|
+              sale_properties.each do |p|
                 li { div(:class => :inner) { link_to_property(p) } }
               end
             end

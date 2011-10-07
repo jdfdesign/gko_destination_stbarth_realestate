@@ -41,8 +41,8 @@ fr:
         email: Email
     pages:
       actions:
-        show: Show
         view: View
+        show: Show
     sessions:
       titles:
         new: New
@@ -55,8 +55,8 @@ fr:
       subject: Subject
     notification:
       subject: Subject
-  flash:
-    close: Close
   password:
     titles:
       new: New
+  flash:
+    close: Close
