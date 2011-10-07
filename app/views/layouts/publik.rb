@@ -20,12 +20,15 @@ class Layouts::Publik < Layouts::BasePublic
     def content
       div(:id => "wrapper-wide-diaporama ", :class => "wrapper-wide #{resource_instance_name}") do
         div(:id => "diaporama", :class => "container") do
-          render :partial => '/images/shared/list', :locals => { :images => resource.images }
+          render :partial => '/images/shared/list', :locals => { :images => images }
         end
-      end if resource.respond_to?(:images) && resource.images.any?
+      end if images.try(:any?)
       super
     end 
-
+    
+    def images
+      @images ||= resource.images if resource.respond_to?(:images)
+    end
 
   end
 end
