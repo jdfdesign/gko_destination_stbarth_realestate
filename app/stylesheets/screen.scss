@@ -585,13 +585,13 @@ ul.list-view-seasons ul.list-view-rates li span:last-child {
 	width: 86px;
 	height: 86px;
 	position: absolute;
-	left: 10px;
+	left: 20px;
 	z-index: 2;
 	background-position: 0px 0px;
 }
 .galleria-image-nav-right {
 	left: auto;
-	right: 10px;
+	right: 20px;
 	background-position: -86px 0px;
 	z-index: 2;
 }
@@ -606,7 +606,7 @@ ul.list-view-seasons ul.list-view-rates li span:last-child {
 	display: none;
 	background-position: -172px 0px;
 	position: absolute;
-	left: 0;
+	left: 18;
 	top: 0;
 	height: 38px;
 	width: 38px;
@@ -617,7 +617,7 @@ ul.list-view-seasons ul.list-view-rates li span:last-child {
 .galleria-thumb-nav-right {
 	background-position: -210px 0px;
 	border-right: none;
-	right: 0;
+	right: 18;
 	left: auto;
 }
 .galleria-thumbnails-container .disabled {

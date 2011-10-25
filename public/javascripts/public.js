@@ -2,62 +2,71 @@ jQuery(document).ready(function() {
 
     //<![cdata[
     init_slideshow = function() {
-			    return $('#diaporama .images:first').galleria({
-			        transition: 'slide',
-			        thumbCrop:  'height',
-							height:450,
-							width:712,
-							image_crop: "width",
-              image_pan: true,
-					// set this to false if you want to show the caption all the time:
-			        _toggleInfo: true,
-			    extend: function(options) {
+        return $('#diaporama .images:first').galleria({
+            transition: 'slide',
+            thumbCrop: 'height',
+            height: 450,
+            width: 712,
+            image_crop: "width",
+            image_pan: false,
+            // set this to false if you want to show the caption all the time:
+            _toggleInfo: false,
+            extend: function(options) {
 
-			        // cache some stuff
-			        var touch = Galleria.TOUCH,
-			            click = touch ? 'touchstart' : 'click';
+                // cache some stuff
+                var touch = Galleria.TOUCH,
+                click = touch ? 'touchstart': 'click';
 
-			        // show loader & counter with opacity
-			        this.$('loader,counter').show().css('opacity', 0.4);
+                // show loader & counter with opacity
+                this.$('loader,counter').show().css('opacity', 0.4);
 
-			        // some stuff for non-touch browsers
-			        if (! touch ) {
-			            this.addIdleState( this.get('image-nav-left'), { left:-50 });
-			            this.addIdleState( this.get('image-nav-right'), { right:-50 });
-			            this.addIdleState( this.get('counter'), { opacity:0 });
-			        }
+                // some stuff for non-touch browsers
+                if (!touch) {
+                    this.addIdleState(this.get('image-nav-left'), {
+                        left: -100
+                    });
+                    this.addIdleState(this.get('image-nav-right'), {
+                        right: -100
+                    });
+                    this.addIdleState(this.get('counter'), {
+                        opacity: 0
+                    });
+                }
 
+                // bind some stuff
+                this.bind('thumbnail',
+                function(e) {
 
-			        // bind some stuff
-			        this.bind('thumbnail', function(e) {
+                    if (!touch) {
+                        // fade thumbnails
+                        $(e.thumbTarget).css('opacity', 0.6).parent().hover(function() {
+                            $(this).not('.active').children().stop().fadeTo(100, 1);
+                        },
+                        function() {
+                            $(this).not('.active').children().stop().fadeTo(400, 0.6);
+                        });
 
-			            if (! touch ) {
-			                // fade thumbnails
-			                $(e.thumbTarget).css('opacity', 0.6).parent().hover(function() {
-			                    $(this).not('.active').children().stop().fadeTo(100, 1);
-			                }, function() {
-			                    $(this).not('.active').children().stop().fadeTo(400, 0.6);
-			                });
+                        if (e.index === options.show) {
+                            $(e.thumbTarget).css('opacity', 1);
+                        }
+                    }
+                });
 
-			                if ( e.index === options.show ) {
-			                    $(e.thumbTarget).css('opacity',1);
-			                }
-			            }
-			        });
+                this.bind('loadstart',
+                function(e) {
+                    if (!e.cached) {
+                        this.$('loader').show().fadeTo(200, 0.4);
+                    }
 
-			        this.bind('loadstart', function(e) {
-			            if (!e.cached) {
-			                this.$('loader').show().fadeTo(200, 0.4);
-			            }
+                    $(e.thumbTarget).css('opacity', 1).parent().siblings().children().css('opacity', 0.6);
+                });
 
-			            $(e.thumbTarget).css('opacity',1).parent().siblings().children().css('opacity', 0.6);
-			        });
-
-			        this.bind('loadfinish', function(e) {
-			            this.$('loader').fadeOut(200);
-			        });
-			    }
-			});
+                this.bind('loadfinish',
+                function(e) {
+                    this.$('loader').fadeOut(200);
+                });
+            }
+        });
 
     }
 
@@ -68,7 +77,7 @@ jQuery(document).ready(function() {
     $("#wrapper").css("display", "none");
     $('#wrapper').fadeIn(2000);
     //$("#tabs").tabs();
-		//$("select:not('.datetime,.date')").selectmenu();
+    //$("select:not('.datetime,.date')").selectmenu();
     //-------------------------------------------------
     //-- DATE PICKERS
     // Define the dateFormat for the datepicker.
@@ -130,7 +139,7 @@ jQuery(document).ready(function() {
         }
         $(input).datepicker();
     });
-    
+
 
 
 });

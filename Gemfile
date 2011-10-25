@@ -1,9 +1,13 @@
 source :rubygems
 
 group :production do
+<<<<<<< HEAD
   gem 'gko-core', '= 0.0.45', :git => 'git@github.com:jdfdesign/gko_cms.git'
+=======
+  gem 'gko-core', '= 0.0.49', :git => 'git@github.com:jdfdesign/gko_cms.git'
+>>>>>>> bump version
   gem 'gko-auth', '= 0.0.28', :git => 'git@github.com:jdfdesign/gko_cms.git'
-  gem 'gko-images', '= 0.0.30', :git => 'git@github.com:jdfdesign/gko_cms.git'
+  gem 'gko-images', '= 0.0.31', :git => 'git@github.com:jdfdesign/gko_cms.git'
   gem 'gko-inquiry', '= 0.0.31', :git => 'git@github.com:jdfdesign/gko_cms.git'
   gem "gko-category", '= 0.0.23', :git => 'git@github.com:jdfdesign/gko_cms.git'
   gem 'gko-sticker', '= 0.0.23', :git => 'git@github.com:jdfdesign/gko_cms.git'
