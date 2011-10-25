@@ -27,8 +27,8 @@ ul.list-view {
 		overflow:hidden;
 		background: $list-thumb-background-color; 
 		img {
-			max-height: $list-thumb-height;
-			max-width: $list-thumb-width;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 	.entry-description {
