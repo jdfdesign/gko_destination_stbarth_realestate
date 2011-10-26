@@ -457,8 +457,8 @@ ul.list-view .entry-thumb, .home.properties ul .entry-thumb, .home.properties ul
 }
 /* line 29, ../../app/stylesheets/partials/_list.scss */
 ul.list-view .entry-thumb img, .home.properties ul .entry-thumb img, .home.properties ul.list-view .thumb img, .home.properties ul .thumb img {
-  max-height: 128px;
-  max-width: 192px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* line 34, ../../app/stylesheets/partials/_list.scss */
 ul.list-view .entry-description, .home.properties ul .entry-description {
@@ -693,7 +693,7 @@ aside .feed {
   border-radius: 6px;
   margin-bottom: 8px;
   padding: 4px;
-  background: #cdccca;
+  background: #89c551;
   color: white;
   font-family: "Lucida Grande", "Tahoma", Arial, sans-serif;
   font-size: 11px;
@@ -702,7 +702,7 @@ aside .feed {
 }
 /* line 62, ../../app/stylesheets/screen.scss */
 .important-tag strong, #content .metas span.tag strong, ul.list-view .entry-metas span.tag strong, .home.properties ul .entry-metas span.tag strong {
-  color: #7b7a78;
+  color: #4b4a48;
   font-style: normal;
   font-weight: normal;
 }

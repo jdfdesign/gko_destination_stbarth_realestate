@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111020000000) do
+ActiveRecord::Schema.define(:version => 20111025111111) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -280,6 +280,7 @@ ActiveRecord::Schema.define(:version => 20111020000000) do
     t.text     "children_policy"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
   end
 
   add_index "rental_property_option_translations", ["rental_property_option_id"], :name => "index_8087d0bf5d52493b8cbc45fdd4426c6365e14280"
@@ -309,6 +310,7 @@ ActiveRecord::Schema.define(:version => 20111020000000) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "globalized",                              :default => 0
+    t.text     "description"
   end
 
   add_index "rental_property_options", ["area_id"], :name => "index_rental_property_options_on_area_id"
@@ -346,6 +348,7 @@ ActiveRecord::Schema.define(:version => 20111020000000) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "globalized",  :default => 0
+    t.boolean  "all_year",    :default => false
   end
 
   add_index "rental_property_seasons", ["property_id"], :name => "index_rental_property_seasons_on_property_id"

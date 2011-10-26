@@ -3,9 +3,11 @@ class Pages::Home < Minimal::Template
     def to_html
       
       div(:class => "home properties") do
-        if rental_properties.any?
+        if rental_properties.try(:any?)
           div(:class => "rental_properties") do
-            h3("Villas la location".html_safe)
+            h3 do
+              link_to("Villas à la location".html_safe, site.sections.find_by_name("rental_properties"))
+            end
             ul do
               rental_properties.each do |p|
                 li { div(:class => :inner) { link_to_property(p) } }
@@ -14,9 +16,11 @@ class Pages::Home < Minimal::Template
           end
         end
       
-        if sale_properties.any?
+        if sale_properties.try(:any?)
           div(:class => "sale_properties") do
-            h3("Villas la vente".html_safe)
+            h3 do
+              link_to("Biens à la vente".html_safe, site.sections.find_by_name("sale_properties"))
+            end
             ul do
               sale_properties.each do |p|
                 li { div(:class => :inner) { link_to_property(p) } }
