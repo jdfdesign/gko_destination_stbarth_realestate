@@ -183,9 +183,11 @@ nav ul.menu {
 /* FOOTER
 ----------------------------------------------------*/
 #wrapper-wide-footer {
+	padding-top:6px;
 	min-height: 80px;
 }
 a#site_by {
+	text-decoration:none;
 	@include link-colors($grey-dark, $green-medium, $green-medium, $grey-dark,$green-medium);
 }
 /* CONTENT
@@ -207,10 +209,11 @@ h1.page-title {
 	float: left;
 }
 #content .metas {
+	width:200px;
 	position: relative;
 	padding-left: 14px;
 	border-left: 1px dotted #7b7a78;
-	float: left;
+	float: right;
 	font-size: 11px;
 	font-style: italic;
 	font-weight: normal;
@@ -224,6 +227,9 @@ h1.page-title {
 	.metas-tags {
 		clear: both;
 		float:left;
+		li {
+			display:inline;
+		}
 	}
 }
 .description {
@@ -274,15 +280,12 @@ ul.list-view {
 	
 	.entry-thumb {
 		border: 4px solid white;
-		@include box-shadow(rgba(0,0,0,0.3) 0px 1px 4px);
+	  @include box-shadow(rgba(0,0,0,0.3) 0px 1px 4px);
 		margin-right: 12px;
 		float: left;
 		overflow:hidden;
-		img {
-			position:absolute;
-			left:4px;
-			top:4px;
-		}
+	}
+	.entry-infos {
 	} 
 	.entry-links {
 		display: inline;
@@ -337,6 +340,7 @@ ul.list-view-seasons ul.list-view-rates li span:last-child {
 ----------------------------------------------------*/ 
 .inquiry_property {
 	background-color: $green-medium;
+	padding-bottom:12px;
 	form {
 		width: 60%;
 		margin-left: 40%;
@@ -410,7 +414,11 @@ ul.list-view-seasons ul.list-view-rates li span:last-child {
 			background-image: url(/images/arrow_white_14_right.png); }
 	}
 }
-
+/* Home
+----------------------------------------------------*/ 
+body#home #main h3 {
+padding-bottom: 0px;
+}
 .home.properties {
 	@include column($less-grid-columns);
 	margin: 0 auto !important;

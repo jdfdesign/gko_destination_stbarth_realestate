@@ -322,12 +322,10 @@ ActiveRecord::Schema.define(:version => 20111025111111) do
     t.integer  "usd_price"
     t.integer  "bedroom_count"
     t.integer  "season_id"
-    t.integer  "property_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "rental_property_rates", ["property_id"], :name => "index_rental_property_rates_on_property_id"
   add_index "rental_property_rates", ["season_id"], :name => "index_rental_property_rates_on_season_id"
 
   create_table "rental_property_season_translations", :force => true do |t|
@@ -348,7 +346,6 @@ ActiveRecord::Schema.define(:version => 20111025111111) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "globalized",  :default => 0
-    t.boolean  "all_year",    :default => false
   end
 
   add_index "rental_property_seasons", ["property_id"], :name => "index_rental_property_seasons_on_property_id"

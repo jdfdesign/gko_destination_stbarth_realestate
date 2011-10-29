@@ -1,7 +1,7 @@
 source :rubygems
 
 #group :production do
-#  gem 'gko-core', '= 0.0.51', :git => 'git@github.com:jdfdesign/gko_cms.git'
+#  gem 'gko-core', '= 0.0.52', :git => 'git@github.com:jdfdesign/gko_cms.git'
 #  gem 'gko-auth', '= 0.0.28', :git => 'git@github.com:jdfdesign/gko_cms.git'
 #  gem 'gko-images', '= 0.0.33', :git => 'git@github.com:jdfdesign/gko_cms.git'
 #  gem 'gko-inquiry', '= 0.0.31', :git => 'git@github.com:jdfdesign/gko_cms.git'
@@ -22,4 +22,5 @@ group :development do
   gem "gko-realty", :path => File.expand_path('../../gko/gko-realty', __FILE__)
   gem "compass", ">= 0.11.5"
   gem 'smurf', :git => 'git@github.com:jdfdesign/smurf.git'
+  gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git', :require => 'rails_development_boost'
 end
