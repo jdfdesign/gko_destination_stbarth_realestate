@@ -15,4 +15,5 @@ config/deploy.rb
 coverage/*
 capybara-*.html
 .rspec
-.bundle
+*.zip
+*.tar
