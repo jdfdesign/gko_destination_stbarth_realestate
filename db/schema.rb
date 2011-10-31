@@ -128,6 +128,36 @@ ActiveRecord::Schema.define(:version => 20111025111111) do
     t.datetime "updated_at"
   end
 
+  create_table "document_assignments", :force => true do |t|
+    t.integer  "position",                      :default => 1, :null => false
+    t.integer  "document_id",                                  :null => false
+    t.integer  "attachable_id",                                :null => false
+    t.string   "attachable_type", :limit => 40,                :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "document_assignments", ["attachable_id", "attachable_type"], :name => "index_document_assignments_on_attachable_id_and_attachable_type"
+  add_index "document_assignments", ["document_id"], :name => "index_document_assignments_on_document_id"
+
+  create_table "documents", :force => true do |t|
+    t.string   "title",                      :limit => 100
+    t.string   "lang",                       :limit => 4
+    t.integer  "account_id"
+    t.integer  "site_id"
+    t.integer  "document_assignments_count",                :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "file_mime_type"
+    t.string   "file_name"
+    t.integer  "file_size"
+    t.string   "file_uid"
+    t.string   "file_ext"
+  end
+
+  add_index "documents", ["account_id"], :name => "index_documents_on_account_id"
+  add_index "documents", ["site_id"], :name => "index_documents_on_site_id"
+
   create_table "groups", :force => true do |t|
     t.string   "name"
     t.string   "description"

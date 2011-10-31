@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:jdfdesign/gko-realty.git
-  revision: 142407f8b836554492fe614f6099292a39bbf44d
+  revision: 59552d76e4de4e25ca3f74a1c8e6de9d982ff62c
   specs:
     gko-realty (0.0.28)
       gko-core
@@ -165,7 +165,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.17.1)
+    mime-types (1.17.2)
     minimal (0.0.25)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
