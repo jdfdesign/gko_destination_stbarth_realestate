@@ -18,7 +18,7 @@ jQuery(document).ready(function() {
                 click = touch ? 'touchstart': 'click';
 
                 // show loader & counter with opacity
-                this.$('loader,counter').show().css('opacity', 0.4);
+                this.$('loader').show().css('opacity', 0.4);
 
                 // some stuff for non-touch browsers
                 if (!touch) {
@@ -28,9 +28,9 @@ jQuery(document).ready(function() {
                     this.addIdleState(this.get('image-nav-right'), {
                         right: -100
                     });
-                    this.addIdleState(this.get('counter'), {
-                        opacity: 0
-                    });
+                    //this.addIdleState(this.get('counter'), {
+                    //    opacity: 0
+                    //});
                 }
 
                 // bind some stuff

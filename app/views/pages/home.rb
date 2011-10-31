@@ -81,8 +81,8 @@ class Pages::Home < Minimal::Template
     
     def rental_properties_images
       images = []
-      rental_properties.each { |p| images << p.images } if rental_properties.try(:any?)
-      images.flatten.compact
+      rental_properties.each { |p| images << p.images.first } if rental_properties.try(:any?)
+      images.flatten.compact.uniq.shuffle
     end
     
     def rental_properties
