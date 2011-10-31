@@ -23,7 +23,10 @@ GkoDestinationStbarthRealestate::Application.configure do
 
   # Use a different logger for distributed setups
   # config.logger = SyslogLogger.new
-
+  config.middleware.use ExceptionNotifier,
+    :email_prefix => "[Exception] ",
+    :sender_address => %{"Exception" <contact@joufdesign.com>},
+    :exception_recipients => %w{regis@joufdesign.com}
   # Use a different cache store in production
   # config.cache_store = :mem_cache_store
 
