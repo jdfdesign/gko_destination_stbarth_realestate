@@ -3,12 +3,15 @@ class Layouts::Publik < Layouts::BasePublic
   include do
     
     def html
-      content_for :head do
-        stylesheet_link_tag("screen", :cache => "compiled/public")
+      content_for :before_stylesheet_libraries do
+        stylesheet_link_tag("gko-core/public/jquery-ui", "screen", :cache => "compiled/screen") 
+      end
 
-        javascript_include_tag( "gko-core/jquery-1.6.2.min.js",
-                                "gko-core/jquery-ui-1.8.11.custom.min.js",
-                                "gko-core/rails",
+      content_for :before_javascript_libraries do
+        self << raw('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>')
+        self << raw('<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>')
+        
+        javascript_include_tag( "gko-core/rails",
                                 "gko-core/gko/core",
                                 "gko-core/jquery.mobile.events.js",
                                 "gko-core/gko/galleria", 
