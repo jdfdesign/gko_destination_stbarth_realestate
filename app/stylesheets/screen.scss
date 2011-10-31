@@ -91,6 +91,7 @@ body {
 #main .next-previous-container,
 body#inquiry .main-container,
 #main .images,
+body#home .annual_properties,
 h1.page-title {
 	@include column($less-grid-columns);
 	margin: 0 auto !important;
@@ -99,6 +100,9 @@ h1.page-title {
 	float: none;
 }
 
+#body#contact #main .description-container {
+	width:220px;
+} 
 /* IMAGES
 ----------------------------------------------------*/
 #wrapper-wide-diaporama {
@@ -208,6 +212,12 @@ h1.page-title {
 	width: 480px;
 	float: left;
 }
+#body#contact .html_text {
+	width:220px;
+}
+#body#contact form {
+	float:left;
+} 
 #content .metas {
 	width:200px;
 	position: relative;
@@ -413,11 +423,16 @@ ul.list-view-seasons ul.list-view-rates li span:last-child {
 		&:hover { 
 			background-image: url(/images/arrow_white_14_right.png); }
 	}
-}
+} 
+
+
 /* Home
 ----------------------------------------------------*/ 
 body#home #main h3 {
 padding-bottom: 0px;
+} 
+body#home #annual {
+	
 }
 .home.properties {
 	@include column($less-grid-columns);

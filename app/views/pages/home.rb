@@ -2,33 +2,47 @@ class Pages::Home < Minimal::Template
   include do
     def to_html
       
-      div(:class => "home properties") do
-        if rental_properties.try(:any?)
-          div(:class => "rental_properties") do
-            h3 do
-              link_to(t("home.featured_rental_properties"), site.sections.find_by_name("rental_properties"))
+      unless @images.try(:any?)
+        if rental_properties_images.try(:any?)
+          div(:id => "wrapper-wide-diaporama ", :class => "wrapper-wide #{resource_instance_name}") do
+            div(:id => "diaporama", :class => "container") do
+              render :partial => '/images/shared/list', :locals => { :images => rental_properties_images }
             end
-            ul do
-              rental_properties.each do |p|
-                li { div(:class => :inner) { link_to_property(p) } }
-              end
-            end
-          end
-        end
+          end 
+        end 
+      end
 
-        if sale_properties.try(:any?)
-          div(:class => "sale_properties") do
-            h3 do
-              link_to(t("home.featured_sale_properties").html_safe, site.sections.find_by_name("sale_properties"))
-            end
-            ul do
-              sale_properties.each do |p|
-                li { div(:class => :inner) { link_to_property(p) } }
+      div(:class => "home properties") do
+        if rent_section 
+          div(:class => "rental_properties") do
+            h3 { link_to(t("home.featured_rental_properties"), url_for([rent_section])) }
+            if rental_properties.try(:any?)
+              ul do
+                rental_properties.each { |p| li { div(:class => :inner) { link_to_property(p) } } }
               end
             end
           end
-        end
+        end  
+
+        if sale_section
+          div(:class => "sale_properties") do
+            h3 { link_to(t("home.featured_sale_properties"), url_for([sale_section])) }
+            if sale_properties.try(:any?)
+              ul do
+                sale_properties.each { |p| li { div(:class => :inner) { link_to_property(p) } } }
+              end
+            else
+              self << t("sale_properties.collection.empty")
+            end
+          end
+        end 
+      end
       
+      if annual_rent_section and annual_rent_section.body.present?
+        div(:class => "annual_properties") do
+           h3 { link_to(annual_rent_section.title, url_for([annual_rent_section])) }
+           self << render_html_text(annual_rent_section.body)
+        end
       end
     end
     
@@ -53,12 +67,30 @@ class Pages::Home < Minimal::Template
       end
     end
     
+    def sale_section
+      @sale_section ||= site.sections.with_translations(I18n.locale).published.named("sale_properties")
+    end
+    
+    def rent_section
+      @rent_section ||= site.sections.with_translations(I18n.locale).published.named("rental_properties")
+    end
+    
+    def annual_rent_section
+      @annual_rent_section ||= site.sections.with_translations(I18n.locale).published.named("annual_rental_properties")
+    end
+    
+    def rental_properties_images
+      images = []
+      rental_properties.each { |p| images << p.images } if rental_properties.try(:any?)
+      images.flatten.compact
+    end
+    
     def rental_properties
-      @rental_properties ||= site.rental_properties.with_translations(I18n.locale).published.in_homepage
+      @rental_properties ||= rent_section.rental_properties.with_translations(I18n.locale).published.in_homepage
     end
     
     def sale_properties
-      @sale_properties ||= site.sale_properties.with_translations(I18n.locale).published.in_homepage
+      @sale_properties ||= sale_section.sale_properties.with_translations(I18n.locale).published.in_homepage
     end
 
   end
