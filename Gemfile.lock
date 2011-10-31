@@ -1,40 +1,40 @@
 GIT
-  remote: git://github.com/thedarkone/rails-dev-boost.git
-  revision: dd82d6caf24e607f8a7f2359e46796c7f8683e50
-  specs:
-    rails-dev-boost (0.1.1)
-
-GIT
-  remote: git@github.com:jdfdesign/smurf.git
-  revision: 3b5b3222268f6d931308171a61c2608f7b74736e
-  specs:
-    smurf (1.0.7)
-      rails (= 3.0.9.rc5)
-      riot (>= 0.12.0)
-
-PATH
-  remote: /Users/regisbruggheman/Developer/Workspace/gko/gko-realty
+  remote: git@github.com:jdfdesign/gko-realty.git
+  revision: d53e0ac6a8c7c9402be849aefe1011bec7a4d848
   specs:
     gko-realty (0.0.28)
       gko-core
 
-PATH
-  remote: /Users/regisbruggheman/Developer/Workspace/gko_cms/gko_auth
+GIT
+  remote: git@github.com:jdfdesign/gko_cms.git
+  revision: 794957045727c82804de667d9046b4b0ca7d1374
   specs:
-    gko-auth (0.0.28)
-      cancan (~> 1.6.0)
-      devise (~> 1.4.0)
+    gko-inquiry (0.0.32)
+      filters_spam (~> 0.2)
       gko-core
-      switch_user (= 0.6.0)
 
-PATH
-  remote: /Users/regisbruggheman/Developer/Workspace/gko_cms/gko_category
+GIT
+  remote: git@github.com:jdfdesign/gko_cms.git
+  revision: 794957045727c82804de667d9046b4b0ca7d1374
   specs:
     gko-category (0.0.23)
       gko-core
+    gko-sticker (0.0.23)
+      gko-core
 
-PATH
-  remote: /Users/regisbruggheman/Developer/Workspace/gko_cms/gko_core
+GIT
+  remote: git@github.com:jdfdesign/gko_cms.git
+  revision: 794957045727c82804de667d9046b4b0ca7d1374
+  specs:
+    gko-images (0.0.35)
+      dragonfly (~> 0.9.8)
+      gko-core
+      mime-types
+      rack-cache (>= 0.5.3)
+
+GIT
+  remote: git@github.com:jdfdesign/gko_cms.git
+  revision: 794957045727c82804de667d9046b4b0ca7d1374
   specs:
     gko-core (0.0.58)
       activesupport-slices (= 0.0.2)
@@ -64,27 +64,23 @@ PATH
       uuid (= 2.3.1)
       will_paginate (~> 3.0)
 
-PATH
-  remote: /Users/regisbruggheman/Developer/Workspace/gko_cms/gko_images
+GIT
+  remote: git@github.com:jdfdesign/gko_cms.git
+  revision: 794957045727c82804de667d9046b4b0ca7d1374
   specs:
-    gko-images (0.0.35)
-      dragonfly (~> 0.9.8)
+    gko-auth (0.0.28)
+      cancan (~> 1.6.0)
+      devise (~> 1.4.0)
       gko-core
-      mime-types
-      rack-cache (>= 0.5.3)
+      switch_user (= 0.6.0)
 
-PATH
-  remote: /Users/regisbruggheman/Developer/Workspace/gko_cms/gko_inquiry
+GIT
+  remote: git@github.com:jdfdesign/smurf.git
+  revision: 3b5b3222268f6d931308171a61c2608f7b74736e
   specs:
-    gko-inquiry (0.0.31)
-      filters_spam (~> 0.2)
-      gko-core
-
-PATH
-  remote: /Users/regisbruggheman/Developer/Workspace/gko_cms/gko_sticker
-  specs:
-    gko-sticker (0.0.23)
-      gko-core
+    smurf (1.0.7)
+      rails (= 3.0.9.rc5)
+      riot (>= 0.12.0)
 
 GEM
   remote: http://rubygems.org/
@@ -244,12 +240,11 @@ PLATFORMS
 
 DEPENDENCIES
   compass (>= 0.11.5)
-  gko-auth!
-  gko-category!
-  gko-core!
-  gko-images!
-  gko-inquiry!
+  gko-auth (= 0.0.28)!
+  gko-category (= 0.0.23)!
+  gko-core (= 0.0.58)!
+  gko-images (= 0.0.35)!
+  gko-inquiry (= 0.0.32)!
   gko-realty!
-  gko-sticker!
-  rails-dev-boost!
+  gko-sticker (= 0.0.23)!
   smurf!
