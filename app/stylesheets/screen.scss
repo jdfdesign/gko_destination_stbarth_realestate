@@ -147,7 +147,18 @@ h2#site-title a {
 		@include link-colors(white, black, black, white,black);
 	}
 }
-
+#address {
+	font-size: 11px;
+	color: white;
+	position: absolute;
+	top: 52px;
+	width: 256px;
+	text-align:center;
+	color:$grey-medium;
+	a {
+		 @include link-colors($grey-medium, $green-medium, $green-medium, $grey-medium,$green-medium);
+	}
+}
 /* MENU
 ----------------------------------------------------*/ 
 
