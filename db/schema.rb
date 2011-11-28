@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111025111111) do
+ActiveRecord::Schema.define(:version => 20111106111111) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -112,8 +112,10 @@ ActiveRecord::Schema.define(:version => 20111025111111) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "globalized",                      :default => 0
+    t.integer  "position",                        :default => 1
   end
 
+  add_index "contents", ["position", "section_id"], :name => "index_contents_on_position_and_section_id"
   add_index "contents", ["section_id"], :name => "index_contents_on_section_id"
   add_index "contents", ["site_id"], :name => "index_contents_on_site_id"
   add_index "contents", ["slug"], :name => "index_contents_on_slug"

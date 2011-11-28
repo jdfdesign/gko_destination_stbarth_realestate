@@ -12,7 +12,7 @@ class Pages::Home < Minimal::Template
         end 
       end
 
-      div(:class => "home properties") do
+      div(:class => "row home properties") do
         if rent_section 
           div(:class => "rental_properties") do
             h3 { link_to(t("home.featured_rental_properties"), url_for([rent_section])) }
@@ -39,10 +39,15 @@ class Pages::Home < Minimal::Template
       end
       
       if annual_rent_section and annual_rent_section.body.present?
-        div(:class => "annual_properties") do
+        div(:class => "row annual_properties") do
            h3 { link_to(annual_rent_section.title, url_for([annual_rent_section])) }
            self << render_html_text(annual_rent_section.body)
         end
+      end
+      
+      div(:class => "row home about") do
+        h3 { t("about") }
+        self << t("home_intro").html_safe
       end
     end
     
