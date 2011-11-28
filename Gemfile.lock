@@ -1,8 +1,8 @@
 GIT
   remote: git@github.com:jdfdesign/gko-realty.git
-  revision: 9b6fcbbd2e03a1d6a098d43bfd41f883f9383bce
+  revision: a553e8808e46eb7d7a3f6e17ff8239f0d231d583
   specs:
-    gko-realty (0.0.29)
+    gko-realty (0.0.30)
       gko-core
 
 GIT
@@ -76,10 +76,9 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/smurf.git
-  revision: 3b5b3222268f6d931308171a61c2608f7b74736e
+  revision: 751f9f0ddea2f325cbe3930607c34aecaabc74c8
   specs:
     smurf (1.0.7)
-      rails (= 3.0.9.rc5)
       riot (>= 0.12.0)
 
 GEM
@@ -155,7 +154,7 @@ GEM
       has_scope (~> 0.5.0)
       responders (~> 0.6.0)
     inherited_resources_helpers (0.0.15)
-    json (1.6.1)
+    json (1.6.2)
     kronn-has_many_polymorphs (3.0.3)
       activerecord
     macaddr (1.5.0)
@@ -181,7 +180,7 @@ GEM
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
     orm_adapter (0.0.5)
-    polyglot (0.3.2)
+    polyglot (0.3.3)
     rack (1.2.4)
     rack-cache (1.1)
       rack (>= 0.4)
@@ -228,7 +227,7 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     truncate_html (0.5.1)
-    tzinfo (0.3.30)
+    tzinfo (0.3.31)
     uuid (2.3.1)
       macaddr (~> 1.0)
     warden (1.0.6)
