@@ -45,10 +45,10 @@ class Pages::Home < Minimal::Template
         end
       end
       
-      div(:class => "row home about") do
-        h3 { t("about") }
-        self << t("home_intro").html_safe
-      end
+      #div(:class => "row home about") do
+      #  h3 { t("about") }
+      #  self << t("home_intro").html_safe
+      #end
     end
     
     def link_to_property(property)
