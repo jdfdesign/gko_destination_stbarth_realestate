@@ -1,8 +1,8 @@
 GIT
   remote: git@github.com:jdfdesign/gko-realty.git
-  revision: a553e8808e46eb7d7a3f6e17ff8239f0d231d583
+  revision: c577a6ebbd61664424fde89c1f11637eeb26360c
   specs:
-    gko-realty (0.0.30)
+    gko-realty (0.0.31)
       gko-core
 
 GIT
@@ -154,7 +154,7 @@ GEM
       has_scope (~> 0.5.0)
       responders (~> 0.6.0)
     inherited_resources_helpers (0.0.15)
-    json (1.6.2)
+    json (1.6.3)
     kronn-has_many_polymorphs (3.0.3)
       activerecord
     macaddr (1.5.0)
@@ -211,7 +211,7 @@ GEM
     routing-filter (0.2.4)
       actionpack
     rr (1.0.4)
-    sass (3.1.10)
+    sass (3.1.11)
     silence_log_tailer (0.0.1)
     simple_form (1.5.2)
       actionpack (~> 3.0)
