@@ -1,8 +1,8 @@
 GIT
   remote: git@github.com:jdfdesign/gko-realty.git
-  revision: ccab9ccddaa573bb5cb1532f445d27f498a296c6
+  revision: 9b1eaa89148298d9a8dfb3bbd594c8fdc67f1b63
   specs:
-    gko-realty (0.0.35)
+    gko-realty (0.0.36)
       gko-core
 
 GIT
@@ -244,6 +244,6 @@ DEPENDENCIES
   gko-core (= 0.0.69)!
   gko-images (= 0.0.46)!
   gko-inquiry (= 0.0.32)!
-  gko-realty (= 0.0.35)!
+  gko-realty (= 0.0.36)!
   gko-sticker (= 0.0.23)!
   smurf!
