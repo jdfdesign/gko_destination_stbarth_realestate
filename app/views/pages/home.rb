@@ -21,6 +21,7 @@ class Pages::Home < Minimal::Template
                 rental_properties.each { |p| li { div(:class => :inner) { link_to_property(p) } } }
               end
             end
+            link_to(t("home.view_all_rental_properties"), url_for([rent_section]), :class => 'view_all')
           end
         end  
 
@@ -31,6 +32,7 @@ class Pages::Home < Minimal::Template
               ul do
                 sale_properties.each { |p| li { div(:class => :inner) { link_to_property(p) } } }
               end
+              link_to(t("home.view_all_sale_properties"), url_for([sale_section]), :class => 'view_all')
             else
               self << t("sale_properties.collection.empty")
             end

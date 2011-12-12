@@ -274,7 +274,8 @@ h1.page-title {
 /* HEADER
 ----------------------------------------------------*/
 #header {
-	height: 120px;
+	height: 80px;
+	padding: 0px 28px 60px;
 }
 h2#site-title {
 	position: absolute;
@@ -595,10 +596,27 @@ ul.list-view-seasons ul.list-view-rates li span:last-child {
 ----------------------------------------------------*/ 
 body#home #main h3 {
 padding-bottom: 0px;
+font-size: 16px;
 } 
 body#home #annual {
 	
 }
+body#home a.view_all {
+	clear: both;
+	@include border-radius(6px);
+	margin-top: 8px;
+	padding: 4px;
+	background: $green-medium;
+	color: white;
+	font-family: $alt-font-family;
+	font-size: 11px;
+	font-style: italic;
+	font-weight: normal;
+	text-decoration: none;
+	float:left;
+	display:block;
+}
+
 .home.properties {
 	@include column($less-grid-columns);
 	margin: 0 auto !important;
@@ -622,8 +640,10 @@ body#home #annual {
 		}
 		h2 {
 			@extend h2.entry-title;
+			
 			margin-top:12px;
 			clear:both;
+			
 		}
 	 
 	}
