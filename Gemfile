@@ -1,13 +1,13 @@
 source :rubygems
 
 group :production do
-  gem 'gko-core', '= 0.0.69', :git => 'git@github.com:jdfdesign/gko_cms.git'
+  gem 'gko-core', '= 0.0.72', :git => 'git@github.com:jdfdesign/gko_cms.git'
   gem 'gko-auth', '= 0.0.29', :git => 'git@github.com:jdfdesign/gko_cms.git'
   gem 'gko-images', '= 0.0.46', :git => 'git@github.com:jdfdesign/gko_cms.git'
   gem 'gko-inquiry', '= 0.0.32', :git => 'git@github.com:jdfdesign/gko_cms.git'
   gem "gko-category", '= 0.0.23', :git => 'git@github.com:jdfdesign/gko_cms.git'
   gem 'gko-sticker', '= 0.0.23', :git => 'git@github.com:jdfdesign/gko_cms.git'
-  gem 'gko-realty', '= 0.0.36',  :git => 'git@github.com:jdfdesign/gko-realty.git'
+  gem 'gko-realty', '= 0.0.37',  :git => 'git@github.com:jdfdesign/gko-realty.git'
   gem "compass", ">= 0.11.5"
   gem 'smurf', :git => 'git@github.com:jdfdesign/smurf.git'
 end
