@@ -1,0 +1,33 @@
+<%
+has_stickers = @stickers.try(:any?)
+options = @sale_property.content_options
+has_options = options.try(:any?)
+tags = []
+tags << realty_meta_tag("bedroom_count", @sale_property.meta.bedroom_count)
+tags << realty_meta_tag("min_price", sale_price_value(@sale_property))
+if @sale_property.meta.area.present? 
+  tags << realty_meta_tag("area", @sale_property.meta.area.name)
+end
+%>
+<div class='container-fluid sale_property body'>
+    <div class='row-fluid'>
+      <div class='span12'>
+    <%= render 'shared/slideshow', :images => @images if @images.try(:any?) %>
+      </div>
+    </div>
+    <%= page_title(@sale_property.title) %> 
+    <%= render_html_text(resource.body) if @sale_property.body.present? %>    
+</div>
+<%= render '/shared/next_previous', :record => @sale_property %>
+
+<aside id='sidebar' class="row-fluid">
+  <div class='span12'>
+    <div class='partial tags-list'>
+      <h4><%= t(:'details') %></h4>
+      <%= tags.compact.join("<br/>").html_safe %>
+      <%= render('/stickers/shared/meta_list', :stickers => @stickers) if has_stickers %>
+      <%= render('/shared/content_options', :options => options) if has_options %>
+    </div> 
+    <%= render "sale_properties/filter", :section => parent %>
+  </div>
+</aside>

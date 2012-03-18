@@ -1,0 +1,57 @@
+<%
+if @rent_section = site.rental_property_lists.with_translations(I18n.locale).published.first
+  @promo_rental_properties = @rent_section.rental_properties.with_translations(I18n.locale).published.with_promo  
+  num_property = @promo_rental_properties.any? ? 1 : 2
+  span_num = @promo_rental_properties.any? ? 5 : 9
+  @random_rental_properties = @rent_section.rental_properties.randoms(num_property)
+end
+#if @sale_section = site.sale_property_lists.with_translations(I18n.locale).published.first 
+  #@sale_properties = @sale_section.sale_properties.with_translations(I18n.locale).published.in_homepage.limit(2)
+#  @random_sale_property = begin 
+#    @sale_section.sale_properties.randoms(1).first 
+#    rescue
+#    end;
+#end 
+
+@features ||= @site.features.visibles
+%>
+<% content_for :page_content do %>
+  <% if @features.any? %>
+  <div class="row-fluid">
+    <div class="span12"  id="home-features">
+      <%= render 'shared/carousel', :features => @features %>
+    </div>
+  </div>
+  <% end %>   
+  <div class="row-fluid">
+    <section class="span3">
+      <%= render "rental_properties/filter", :section => @rent_section %>
+    </section>
+    
+    <section class="span<%= span_num %>">
+      <h3><%= link_to(t("home.featured_rental_properties"), url_for([@rent_section])) %></h3>
+      <% if @random_rental_properties.any? %>
+        <ul id="home-rental-property" class="unstyled block-grid grid<%= num_property %>">
+          <%= render :partial => "rental_properties/record", :collection => @random_rental_properties, :as => 'record' %>
+        </ul>
+        <%= link_to(t("home.view_all_rental_properties"), url_for([@rent_section]), :class => 'btn view_all') %>
+      <% end %>
+    </section>
+    <% if @promo_rental_properties.any? %>
+    <section class="span4">
+      <h3><%= link_to(t("promotions"), url_for([@rent_section])) %></h3>
+      <ul id="home-rental-property" class="unstyled block-grid grid1">
+        <%= render :partial => "rental_properties/record", :collection => @promo_rental_properties, :as => 'record' %> 
+      </ul>
+      <%= link_to(t("view_all_promotions"), add_url_param(:with_promo,'true',rental_property_list_path(@rent_section)), :class => 'btn view_all') %>
+    </section>
+     <% end %>
+  </div> 
+  <% unless resource.body.blank? %>
+  <div class="row-fluid">
+    <section class="span12"> 
+      <%= render_html_text(resource.body) %>   				
+    </section>  
+  </div>
+  <% end %>  
+<% end %>

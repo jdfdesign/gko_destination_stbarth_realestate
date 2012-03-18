@@ -1,3 +1,14 @@
-cd ~/developer/workspace/gko_destination_stbarth_realestate
+cd ~/developer/workspace/gko_destination_stbarth_realestate_31
 bundle install
-rails s
+rails s           
+
+
+bundle exec rake assets:precompile
+
+bundle exec rake railties:install:migrations
+bundle exec rake db:bootstrap
+
+ 
+bundle exec rake db:admin:create
+bundle exec rake db:load_default 
+bundle exec rake db:load_sample

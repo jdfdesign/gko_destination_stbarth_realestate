@@ -1,0 +1,418 @@
+/* custom variables >>> */ 
+$greenMedium:#89C551;
+$greyMedium:#CDCCCA;
+$greyDark:#7B7A78;
+$altFontFamily:"Lucida Grande","Tahoma",Arial,sans-serif;
+/* <<< custom variables */
+
+$global-radii-blocks: 4px;
+
+// Layout 
+$containerMaxWidth: 0; 
+$rowMaxWidth: 980px;
+
+$bodyBackgroundColor: #f7f6f2;
+$contentBackgroundColor: transparent;
+$footerContainerBackgroundColor: #262626;
+$footerBackgroundColor: transparent;
+$copyrightContainerBackgroundColor: $footerContainerBackgroundColor;
+$copyrightBackgroundColor: transparent; 
+$mainBackgroundColor: transparent;
+$sidebarBackgroundColor: transparent;
+
+// Typography
+$baseFontFamily: Georgia,"Times New Roman",serif;
+$baseFontSize: 14px;
+$baseLineHeight: 20px;
+$textColor:$greyDark;
+$headingFontFamily: $baseFontFamily;
+$headingTextColor: $textColor;
+$headingBaseFontSize: 26px;
+
+// Links
+$linkColor: $greenMedium;
+$linkColorHover: $greyDark;
+$linkColorActive: $greyDark;
+
+// Navbar
+$navbarBackgroundHighlight: black;
+$navbarBackground: black;
+$navbarText: $greyMedium;
+$navbarLinkColor: $greyMedium;
+$navbarLinkColorHover: white;
+$navbarLinkColorActive: $greenMedium;
+$navbarLinkColorBorder: none; 
+$navbarButtonBackgroundHighlight: $navbarBackgroundHighlight; 
+$navbarButtonBackground: $navbarBackground; 
+$navbarButtonIconBarColor: white;
+$navbarResponsiveLinkBorder: lighter($navbarLinkColor, 15%);
+$navbarDropdownBackground: $navbarBackground;
+$navbarDropdownLinkColor: $navbarLinkColor;
+$navbarDropdownLinkColorHover: $navbarLinkColorHover;
+$navbarDropdownLinkColorActive: $navbarLinkColorActive;
+
+
+// Footer links
+$footerLinkColor: $greyMedium;
+$footerLinkColorHover: white;
+$footerLinkColorActive: $greenMedium;
+$footerResponsiveLinkBorder: lighter($footerLinkColor, 15%);
+
+// Copyright links
+$copyrightLinkColor: $footerLinkColor;
+$copyrightLinkColorHover: $footerLinkColorHover;
+$copyrightLinkColorActive: $footerLinkColorActive;
+$copyrightLogoColor: white;
+
+// Form
+$inputTextColor: #f7f6f2;
+$inputBackgroundColor: #000;
+$inputBorderColor: $greenMedium;
+$inputFocusBorderColor: rgba(137, 197, 82, 0.8);// green 
+$inputBorderRadius: 3px; 
+
+// Grid
+$blockGridImageBorder: 4px solid white;
+$blockGridImageBackgroundColor: transparent; 
+$blockGridBackgroundColor: transparent; 
+$blockGridImageCorner: none;
+$blockGridImageShadow: rgba(0,0,0,0.3) 0px 1px 4px;
+
+// Icon
+$pdfIcon: 'gko/icon_pdf_white_x110.png';
+
+/*-----------------------------------------
+ DESKTOP
+----------------------------------------- */
+@import "gko_public_all"; 
+@import "gko/elastislide";
+
+// --------------------------------------------------
+// BASE STYLES
+// -------------------------------------------------- 
+.next-previous {
+	display:none;
+}
+.tags-list {
+	display: block;
+	span { 
+		@include border-radius(6px);
+		display: inline;
+		position: relative;
+		margin-bottom: 8px;
+		padding: 4px;
+		background: $greenMedium;
+		color: white;
+		font-family: $altFontFamily;
+		font-size: 11px;
+		font-style: italic;
+		font-weight: normal;
+		white-space: nowrap;
+		&.tag {
+			strong {
+				color: black;
+				font-style: normal;
+			}
+		}
+	}
+}
+li > .realty-promo {
+	background: transparent asset-url("promo_en.png", image) no-repeat scroll right top;
+	position:absolute;
+	top:0;
+	right:0;
+	width: 146px;
+	height: 102px;
+}
+.partial.filter {
+	
+}
+h1.page-title {
+ text-transform: uppercase; 
+}
+  
+.navbar {
+	border-top: 6px solid $greenMedium;
+}
+.header-nav {
+	position:relative;
+}
+.navbar .brand {
+	@include logo(256px, 40px);
+	position:absolute;
+	left: 0px;
+	top: 10px;
+	z-index: 10000;
+}
+#address {
+	position:absolute;
+	left: 0px;
+	width: 256px;
+	text-align: center; 
+	font-size: 12px;
+	top: 70px;
+	z-index: 10000;
+}
+.navbar .header-top .nav {
+	background-color: $greenMedium;
+	font-size: 10px;
+	@include corner-bottom(6px); 
+	a {
+		@include link-colors(white, black, white); 
+	} 
+}  
+/*-----------------------------------------
+ STRUCTURE
+----------------------------------------- */
+
+body#rental_property { 
+
+	#content-container {
+		position: relative;
+		padding-left:0;
+		padding-right:0;
+		
+		.container-fluid.rental_property { 
+			padding-left: 0;
+			padding-right: 0;
+			.row-fluid {
+				//max-width: 680px; 
+				.span12:first-child {
+					padding-right: 30%;
+					width: 70%;
+				}
+			}
+		}
+		
+		#sidebar {
+			position:absolute;
+			top: 0;
+			right: 0;
+			.span12:first-child {
+				padding-left: 70%;
+				width: 30%;
+				
+			}
+		}
+	}
+
+}
+/*-----------------------------------------
+ SLIDESHOW
+----------------------------------------- */
+
+.carousel-control {
+	background: transparent asset_url("classic-map.png", image) no-repeat 0 0;
+	@include circle(87px);
+	opacity: .7;
+	text-indent: -9999px;
+	border: none;
+	&:hover {
+		opacity: 1;
+	};
+	&.right {
+		right:8px;
+		background-position: -87px 0;
+	} 
+}
+
+/*-----------------------------------------
+ NAVBAR
+----------------------------------------- */
+.header-nav .nav > li > a {
+	text-transform: uppercase;
+	font-family: $altFontFamily;
+	font-size: 12px;
+	font-weight: normal;
+}
+.nav-collapse { 
+	padding-top: 100px; 
+	float:right;  
+}
+/*-----------------------------------------
+ GRID
+----------------------------------------- */
+
+.block-grid > li { 
+	margin-top: $baseLineHeight * .5;
+	margin-bottom: $baseLineHeight * .5;
+	border-top: 1px dashed #E0E0CF;
+	.entry-thumb {
+		margin-right: 12px;
+		float: left;
+	}
+	.entry-infos {
+		position:relative; 
+		h2 {
+			text-transform: uppercase;
+			font-size: 16px; 
+			font-style: normal;
+			font-weight: normal;
+			line-height: $baseLineHeight;
+		} 
+		.entry-links {
+			font-style: italic;
+			a {
+				@include link-colors($greenMedium, black, white);
+			}
+		}
+	} 
+} 
+/*-----------------------------------------
+ CONTENT
+----------------------------------------- */
+.well.realty-promo-text {
+	background-color: $greenMedium;
+	color: white;
+}
+#content-container h3 {
+	font-weight: normal;
+	font-style: italic;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	text-transform: uppercase;
+}
+
+ul.realty-seasons {
+	display: block;
+	li {
+	 display: block;
+		h4 {
+			border-bottom: 1px dashed #E0E0CF; 
+			span {
+				font-size: $baseFontSize;
+			}
+		}
+	}
+}
+ul.realty-rates { 
+	display: block;
+	li {
+		display: block; 
+	}
+	span.realty-rates-price {
+		margin-left: 20px;
+		border-bottom: 1px dashed #E0E0CF;
+	}
+}
+.rental_property .tags-list {
+	@include clearfix;
+	span {
+		clear: both;
+		float: left;
+		display: block;
+		margin-bottom: 8px; 
+		padding: 4px;
+		border-left: 1px dotted $greyDark;
+	}
+}
+.rental_property .tags {
+	clear:both;
+	border-left: 1px dotted $greyDark;
+}
+.rental_property.body,
+.rental_property.details, 
+.rental_property.rates {
+	padding-top: $baseLineHeight;
+	padding-bottom: $baseLineHeight;
+} 
+.rental_property.rates {
+	background-color: white;
+}
+.rental_property.inquiry {
+	background-color: $greenMedium;
+	color: white; 
+	padding-top: $baseLineHeight;
+	label {
+		color: white;
+	}
+}
+
+/*-----------------------------------------
+ SIDEBAR
+----------------------------------------- */ 
+.partial {
+	h4 { 
+		line-height: $baseLineHeight;
+		text-transform: uppercase;
+		font-size: $baseFontSize;
+		font-style: italic;
+		font-weight: normal;
+		margin-top: $baseLineHeight * .5;
+		margin-bottom: $baseLineHeight * .5;
+		border-top: 1px dashed #E0E0CF;
+		border-bottom: 1px dashed #E0E0CF;
+	}
+}
+
+.partial.realty-promotion {
+	h2 { 
+		line-height: $baseLineHeight;
+		font-size: $baseFontSize;
+		font-style: italic;
+		font-weight: bold;
+	}
+}
+.partial.filter {
+	select {
+		margin-bottom: 0;
+	}
+}
+/*-----------------------------------------
+ HOME
+----------------------------------------- */
+#home-features {
+	padding-bottom: 36px;
+}
+.btn { 
+	@include buttonBackground($greenMedium, adjust_hue($greenMedium, 20deg));
+	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  color: $white;
+}
+.btn:hover {
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+  color: $white;
+	@include buttonBackground($greenMedium, adjust_hue($greenMedium, 10deg));
+}
+#home .block-grid > li { 
+	.entry-thumb {
+		margin-bottom: 12px;
+	}
+	.tags-list {
+		span {
+			display: block; 
+			clear: both;
+		} 
+		
+	}
+}
+/*-----------------------------------------
+ FOOTER
+----------------------------------------- */
+#pipe-menu ul.menu a {
+	font-size: 10px;
+	font-style: italic;
+} 
+#footer {
+	// Links
+	.nav > li > a {
+		font-size: 10px;
+		font-style: italic;
+		font-family: $altFontFamily;
+		text-transform: uppercase;
+	}
+}
+/*-----------------------------------------
+ RESPONSIVE
+----------------------------------------- */
+@import "gko/responsive";
+@media(max-width: 980px) {
+	#address { 
+	 @include mobile-clear;
+  }
+	.block-grid > li { 
+		.entry-infos {
+			clear:both; 
+		} 
+	} 
+}
