@@ -15,6 +15,7 @@ group :production do
   gem 'gko_core', '= 0.1.93', :git => 'git@github.com:jdfdesign/gko_cms_rails_3.git'
   gem 'gko_auth', :git => 'git@github.com:jdfdesign/gko_cms_rails_3.git'
   gem 'gko_images', :git => 'git@github.com:jdfdesign/gko_cms_rails_3.git'
+  gem 'gko_documents', :git => 'git@github.com:jdfdesign/gko_cms_rails_3.git'
   gem 'gko_inquiries', :git => 'git@github.com:jdfdesign/gko_cms_rails_3.git'
   gem 'gko_categories', :git => 'git@github.com:jdfdesign/gko_cms_rails_3.git'
   gem 'gko_stickers', :git => 'git@github.com:jdfdesign/gko_cms_rails_3.git'
