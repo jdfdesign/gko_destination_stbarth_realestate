@@ -1,4 +1,4 @@
-cd ~/developer/workspace/gko_destination_stbarth_realestate_31
+cd ~/developer/workspace/gko_destination_stbarth_realestate
 bundle install
 rails s           
 
