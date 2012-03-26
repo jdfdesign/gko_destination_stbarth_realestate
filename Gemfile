@@ -13,14 +13,14 @@ end
 
 group :production do
   gem "gko_cms3", "= 0.2.19", :git => 'git@github.com:jdfdesign/gko_cms3.git'
-  gem 'gko_core', :git => 'git@github.com:jdfdesign/gko_cms3.git'
-  gem 'gko_auth', :git => 'git@github.com:jdfdesign/gko_cms3.git'
-  gem 'gko_images', :git => 'git@github.com:jdfdesign/gko_cms3.git'
-  gem 'gko_documents', :git => 'git@github.com:jdfdesign/gko_cms3.git'
-  gem 'gko_inquiries', :git => 'git@github.com:jdfdesign/gko_cms3.git'
-  gem 'gko_categories', :git => 'git@github.com:jdfdesign/gko_cms3.git'
-  gem 'gko_stickers', :git => 'git@github.com:jdfdesign/gko_cms3.git'
-  gem 'gko_features', :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem 'gko_core', "= 0.2.19", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem 'gko_auth', "= 0.2.19", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem 'gko_images', "= 0.2.19", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem 'gko_documents', "= 0.2.19", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem 'gko_inquiries', "= 0.2.19", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem 'gko_categories', "= 0.2.19", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem 'gko_stickers', "= 0.2.19", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem 'gko_features', "= 0.2.19", :git => 'git@github.com:jdfdesign/gko_cms3.git'
   gem 'gko_realty', '= 0.0.49',  :git => 'git@github.com:jdfdesign/gko-realty.git'
   #gem "eu_central_bank", "~> 0.3.0"
   #gem "whenever", "~> 0.7.2"
