@@ -1,6 +1,7 @@
 fr:
-  about: "L'agence"
-  home_intro: "<p>Destination St Barts Real Estate est une agence immobilière reconnue sur Saint Barthélemy. Son équipe, est présente depuis près de vingt ans, ce qui lui donne une connaissance précise de l’immobilier et une excellente qualité en matière de conseil. Grâce aux services attentifs de personnes dynamiques et professionnelles, Destination St Barts Real Estate propose un large choix de villas, appartement et terrains.</p><p>Que vous recherchiez un bien à acheter ou à louer, en location saisonnière ainsi qu’à l’année, Destination St Barts Real Estate vous offre une multitude de possibilités. Les prestations de Destination St Barts Real Estate sont nombreuses et entourées de professionnels compétents, pour rendre votre expérience inoubliable et faciliter votre séjour.</p><p>Vente, achat, location, Destination St Barts Real Estate vous orientera dans vos recherches et mettra tout en œuvre pour satisfaire vos besoins.</p>"
+  home:
+    featured_sale_properties: Sélection de ventes
+    featured_rental_properties: Sélection de locations
   sale_properties:
     collection:
       empty: "Nous avons de nombreux biens à vous proposer, n'hésitez pas à nous contacter."

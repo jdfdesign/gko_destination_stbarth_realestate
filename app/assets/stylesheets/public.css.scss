@@ -75,7 +75,7 @@ $inputBorderRadius: 3px;
 $blockGridImageBorder: 4px solid white;
 $blockGridImageBackgroundColor: transparent; 
 $blockGridBackgroundColor: transparent; 
-$blockGridImageCorner: none;
+$blockGridImageCorner: 0;
 $blockGridImageShadow: rgba(0,0,0,0.3) 0px 1px 4px;
 
 // Icon
@@ -119,8 +119,8 @@ $pdfIcon: 'gko/icon_pdf_white_x110.png';
 li > .realty-promo {
 	background: transparent asset-url("promo_en.png", image) no-repeat scroll right top;
 	position:absolute;
-	top:0;
-	right:0;
+	top:10px;
+	right:10px;
 	width: 146px;
 	height: 102px;
 }
@@ -200,7 +200,12 @@ body#rental_property {
 /*-----------------------------------------
  SLIDESHOW
 ----------------------------------------- */
-
+.image-large-wrapper {
+	@include box-shadow($blockGridImageShadow);
+	background-color: $blockGridImageBackgroundColor;
+	border: $blockGridImageBorder;
+	@include border-radius($blockGridImageCorner);
+}
 .carousel-control {
 	background: transparent asset_url("classic-map.png", image) no-repeat 0 0;
 	@include circle(87px);
@@ -234,7 +239,7 @@ body#rental_property {
 ----------------------------------------- */
 
 .block-grid > li { 
-	margin-top: $baseLineHeight * .5;
+	padding-top: $baseLineHeight * .5;
 	margin-bottom: $baseLineHeight * .5;
 	border-top: 1px dashed #E0E0CF;
 	.entry-thumb {
@@ -249,6 +254,8 @@ body#rental_property {
 			font-style: normal;
 			font-weight: normal;
 			line-height: $baseLineHeight;
+			margin-bottom: $baseLineHeight * .5;
+
 		} 
 		.entry-links {
 			font-style: italic;
@@ -364,6 +371,11 @@ ul.realty-rates {
 #home-features {
 	padding-bottom: 36px;
 }
+#home {
+	h3 {
+		padding-bottom: 0;
+	}
+}
 .btn { 
 	@include buttonBackground($greenMedium, adjust_hue($greenMedium, 20deg));
 	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
@@ -377,6 +389,9 @@ ul.realty-rates {
 #home .block-grid > li { 
 	.entry-thumb {
 		margin-bottom: 12px;
+	}
+	h2 {
+		clear: both;
 	}
 	.tags-list {
 		span {

@@ -2,7 +2,8 @@ cd ~/developer/workspace/gko_destination_stbarth_realestate
 bundle install
 rails s           
 
-
+RAILS_ENV=development bundle exec rake assets:precompile
+RAILS_ENV=production bundle exec rake assets:precompile
 bundle exec rake assets:precompile
 
 bundle exec rake railties:install:migrations
