@@ -1,21 +1,19 @@
 GIT
   remote: git@github.com:jdfdesign/gko-realty.git
-  revision: aeaf015e278ba720ac5b242649ea5818264fd365
+  revision: f203b123af9de7fe032789e8543ccfecbd12f975
   specs:
-    gko_realty (0.0.51)
+    gko_realty (0.0.52)
       gko_core
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: e7c99c181518983e6018ee80fc5645292dc575b8
+  revision: 5adc52cf86c3a1fd7a1d7339585789b89bd69152
   specs:
-    gko_auth (0.2.20)
+    gko_auth (0.2.22)
       cancan (= 1.6.7)
       devise (= 2.0.4)
-      gko_core (= 0.2.20)
-    gko_categories (0.2.20)
-      gko_core (= 0.2.20)
-    gko_core (0.2.20)
+    gko_categories (0.2.22)
+    gko_core (0.2.22)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
       capistrano
@@ -47,21 +45,15 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-    gko_documents (0.2.20)
+    gko_documents (0.2.22)
       dragonfly (~> 0.9.8)
-      gko_core (= 0.2.20)
       rack-cache (>= 0.5.3)
-    gko_features (0.2.20)
-      gko_core (= 0.2.20)
-      gko_images (= 0.2.20)
-    gko_images (0.2.20)
-      gko_core (= 0.2.20)
-    gko_inquiries (0.2.20)
+    gko_features (0.2.22)
+    gko_images (0.2.22)
+    gko_inquiries (0.2.22)
       filters_spam (~> 0.2)
-      gko_core (= 0.2.20)
       launchy
-    gko_stickers (0.2.20)
-      gko_core (= 0.2.20)
+    gko_stickers (0.2.22)
 
 GEM
   remote: http://rubygems.org/
@@ -242,15 +234,15 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.2)
-  gko_auth (= 0.2.20)!
-  gko_categories (= 0.2.20)!
-  gko_core (= 0.2.20)!
-  gko_documents (= 0.2.20)!
-  gko_features (= 0.2.20)!
-  gko_images (= 0.2.20)!
-  gko_inquiries (= 0.2.20)!
-  gko_realty (= 0.0.51)!
-  gko_stickers (= 0.2.20)!
+  gko_auth (= 0.2.22)!
+  gko_categories (= 0.2.22)!
+  gko_core (= 0.2.22)!
+  gko_documents (= 0.2.22)!
+  gko_features (= 0.2.22)!
+  gko_images (= 0.2.22)!
+  gko_inquiries (= 0.2.22)!
+  gko_realty (= 0.0.52)!
+  gko_stickers (= 0.2.22)!
   iconv
   sass-rails (~> 3.2.5)
   uglifier (>= 1.0.3)
