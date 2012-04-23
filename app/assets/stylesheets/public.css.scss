@@ -220,6 +220,22 @@ body#rental_property {
 		background-position: -87px 0;
 	} 
 }
+.es-nav {
+	.carousel-control {
+		background: #000 asset_url("arrow_white_14_left.png", image) no-repeat 6px 6px;
+		@include circle(28px);
+		opacity: .5;
+		text-indent: -9999px;
+		border: none;
+		&:hover {
+			opacity: 1;
+		};
+		&.right {
+			right:8px;
+			background: #000 asset_url("arrow_white_14_right.png", image) no-repeat 6px 6px;
+		} 
+	}	
+}
 
 /*-----------------------------------------
  NAVBAR
@@ -238,32 +254,51 @@ body#rental_property {
  GRID
 ----------------------------------------- */
 
-.block-grid > li { 
-	padding-top: $baseLineHeight * .5;
+.grid > li { 
+	
 	margin-bottom: $baseLineHeight * .5;
-	border-top: 1px dashed #E0E0CF;
-	.entry-thumb {
-		margin-right: 12px;
-		float: left;
-	}
-	.entry-infos {
-		position:relative; 
-		h2 {
-			text-transform: uppercase;
-			font-size: 16px; 
-			font-style: normal;
-			font-weight: normal;
-			line-height: $baseLineHeight;
-			margin-bottom: $baseLineHeight * .5;
+	position:relative;
+	.thumbnail {
+		
+		border-width: 1px 0 0 0;
+		border-top: 1px dashed #E0E0CF;
+		padding-top: $baseLineHeight * .5;
+		@include border-radius(0);
+		@include box-shadow(none);
+		.thumbnail-image {
+			margin-right: 12px;
+			float: left;
+			@include box-shadow($blockGridImageShadow);
+			background-color: $blockGridImageBackgroundColor;
+			border: $blockGridImageBorder;
+			@include border-radius($blockGridImageCorner);
+			
+		}
+		.caption {
+			position:relative; 
+			h2 {
+				text-transform: uppercase;
+				font-size: 16px; 
+				font-style: normal;
+				font-weight: normal;
+				line-height: $baseLineHeight;
+				margin-bottom: $baseLineHeight * .5;
 
-		} 
-		.entry-links {
-			font-style: italic;
-			a {
-				@include link-colors($greenMedium, black, white);
+			} 
+			.description {
+				margin-top: $baseLineHeight * .5;
+			}
+			.links {
+				font-style: italic;
+				a {
+					@include link-colors($greenMedium, black, white);
+				}
 			}
 		}
-	} 
+	}
+	
+
+
 } 
 /*-----------------------------------------
  CONTENT

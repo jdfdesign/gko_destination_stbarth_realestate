@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120329195229) do
+ActiveRecord::Schema.define(:version => 20120423121506) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -756,7 +756,13 @@ ActiveRecord::Schema.define(:version => 20120329195229) do
     t.integer  "globalized",                             :default => 0
     t.text     "plugins"
     t.integer  "theme_id"
-    t.string   "localhost"
+    t.string   "logo_mime_type"
+    t.string   "logo_name"
+    t.integer  "logo_size"
+    t.integer  "logo_width"
+    t.integer  "logo_height"
+    t.string   "logo_uid"
+    t.string   "logo_ext"
   end
 
   add_index "sites", ["account_id"], :name => "index_sites_on_account_id"

@@ -76,7 +76,7 @@ end
           <% if site.preferred_realty_agent_public && @rental_property.meta.realty_agent %>
             <%= render 'shared/realty_agent', :realty_agent => @rental_property.meta.realty_agent %>
           <% else %>
-            <%= "Adress and text should be there".html_safe %>
+            <%= "".html_safe %>
           <% end %> 
         </div>
         <div class='span8'><%= render :partial => 'rental_property_inquiries/form' %></div>
@@ -88,7 +88,7 @@ end
   <aside id='sidebar' class="row-fluid">
     <div class='span12'>
 
-      <% if @rental_property.lat_long.present? %>
+      <% if @rental_property.lat_long.present? && site.preferred_google_map_api_key.present? %>
         <div class='partial google_map_container'> 
           <%= render('shared/google_map', :point => @rental_property.lat_long) %> 
         </div>
@@ -97,4 +97,4 @@ end
       <%= render "rental_properties/promotion_list" %>
     </div>
   </aside>  
-<% end %> 
+<% end %>
