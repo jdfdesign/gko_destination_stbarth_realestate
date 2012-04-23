@@ -421,11 +421,12 @@ ul.realty-rates {
   color: $white;
 	@include buttonBackground($greenMedium, adjust_hue($greenMedium, 10deg));
 }
-#home .block-grid > li { 
-	.entry-thumb {
+#home .grid > li { 
+	.thumbnail-image {
+		float: none;
 		margin-bottom: 12px;
 	}
-	h2 {
+	caption {
 		clear: both;
 	}
 	.tags-list {
@@ -456,12 +457,23 @@ ul.realty-rates {
  RESPONSIVE
 ----------------------------------------- */
 @import "gko/responsive";
+@media (max-width: 480px) {
+	.grid > li { 
+		.tags-list {
+			span {
+				display: block; 
+				clear: both;
+			} 
+
+		}
+	}
+}
 @media(max-width: 980px) {
 	#address { 
 	 @include mobile-clear;
   }
-	.block-grid > li { 
-		.entry-infos {
+	.grid > li { 
+		.caption {
 			clear:both; 
 		} 
 	} 
