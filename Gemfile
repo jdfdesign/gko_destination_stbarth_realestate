@@ -22,7 +22,7 @@ group :production do
   gem 'gko_categories', prod_version, :git => prod_location
   gem 'gko_stickers', prod_version, :git => prod_location
   gem 'gko_features', prod_version, :git => prod_location
-  gem 'gko_realty', '= 0.0.53',  :git => 'git@github.com:jdfdesign/gko-realty.git'
+  gem 'gko_realty', '= 0.0.54',  :git => 'git@github.com:jdfdesign/gko-realty.git'
 end
 
 
