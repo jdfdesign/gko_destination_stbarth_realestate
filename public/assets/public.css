@@ -6918,15 +6918,16 @@ ul.realty-rates span.realty-rates-price {
 }
 
 /* line 426, ../../app/assets/stylesheets/public.css.scss */
-#home .block-grid > li .entry-thumb {
+#home .grid > li .thumbnail-image {
+  float: none;
   margin-bottom: 12px;
 }
-/* line 429, ../../app/assets/stylesheets/public.css.scss */
-#home .block-grid > li h2 {
+/* line 430, ../../app/assets/stylesheets/public.css.scss */
+#home .grid > li caption {
   clear: both;
 }
-/* line 433, ../../app/assets/stylesheets/public.css.scss */
-#home .block-grid > li .tags-list span {
+/* line 434, ../../app/assets/stylesheets/public.css.scss */
+#home .grid > li .tags-list span {
   display: block;
   clear: both;
 }
@@ -6934,13 +6935,13 @@ ul.realty-rates span.realty-rates-price {
 /*-----------------------------------------
  FOOTER
 ----------------------------------------- */
-/* line 443, ../../app/assets/stylesheets/public.css.scss */
+/* line 444, ../../app/assets/stylesheets/public.css.scss */
 #pipe-menu ul.menu a {
   font-size: 10px;
   font-style: italic;
 }
 
-/* line 449, ../../app/assets/stylesheets/public.css.scss */
+/* line 450, ../../app/assets/stylesheets/public.css.scss */
 #footer .nav > li > a {
   font-size: 10px;
   font-style: italic;
@@ -8079,8 +8080,15 @@ table.hide-on-tablets {
     display: block !important;
   }
 }
+@media (max-width: 480px) {
+  /* line 464, ../../app/assets/stylesheets/public.css.scss */
+  .grid > li .tags-list span {
+    display: block;
+    clear: both;
+  }
+}
 @media (max-width: 980px) {
-  /* line 461, ../../app/assets/stylesheets/public.css.scss */
+  /* line 473, ../../app/assets/stylesheets/public.css.scss */
   #address {
     position: static;
     height: auto;
@@ -8090,8 +8098,8 @@ table.hide-on-tablets {
     left: 0;
   }
 
-  /* line 465, ../../app/assets/stylesheets/public.css.scss */
-  .block-grid > li .entry-infos {
+  /* line 477, ../../app/assets/stylesheets/public.css.scss */
+  .grid > li .caption {
     clear: both;
   }
 }
