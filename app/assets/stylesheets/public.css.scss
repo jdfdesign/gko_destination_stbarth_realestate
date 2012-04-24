@@ -164,14 +164,14 @@ h1.page-title {
 /*-----------------------------------------
  STRUCTURE
 ----------------------------------------- */
-
+body#sale_property,
 body#rental_property { 
 
 	#content-container {
 		position: relative;
 		padding-left:0;
 		padding-right:0;
-		
+		.container-fluid.sale_property,
 		.container-fluid.rental_property { 
 			padding-left: 0;
 			padding-right: 0;
@@ -246,10 +246,7 @@ body#rental_property {
 	font-size: 12px;
 	font-weight: normal;
 }
-.nav-collapse { 
-	padding-top: 100px; 
-	float:right;  
-}
+
 /*-----------------------------------------
  GRID
 ----------------------------------------- */
@@ -274,31 +271,28 @@ body#rental_property {
 			@include border-radius($blockGridImageCorner);
 			
 		}
-		.caption {
+		.thumbnail-caption {
 			position:relative; 
-			h2 {
-				text-transform: uppercase;
-				font-size: 16px; 
-				font-style: normal;
-				font-weight: normal;
-				line-height: $baseLineHeight;
-				margin-bottom: $baseLineHeight * .5;
+		}
+		.thumbnail-title {
+			text-transform: uppercase;
+			font-size: 16px; 
+			font-style: normal;
+			font-weight: normal;
+			line-height: $baseLineHeight;
+			margin-bottom: $baseLineHeight * .5;
 
-			} 
-			.description {
-				margin-top: $baseLineHeight * .5;
-			}
-			.links {
-				font-style: italic;
-				a {
-					@include link-colors($greenMedium, black, white);
-				}
+		} 
+		.thumbnail-description {
+			margin-top: $baseLineHeight * .5;
+		}
+		.thumbnail-links {
+			font-style: italic;
+			a {
+				@include link-colors($greenMedium, black, white);
 			}
 		}
 	}
-	
-
-
 } 
 /*-----------------------------------------
  CONTENT
@@ -337,6 +331,7 @@ ul.realty-rates {
 		border-bottom: 1px dashed #E0E0CF;
 	}
 }
+.sale_property .tags-list,
 .rental_property .tags-list {
 	@include clearfix;
 	span {
@@ -348,19 +343,25 @@ ul.realty-rates {
 		border-left: 1px dotted $greyDark;
 	}
 }
+.sale_property .tags,
 .rental_property .tags {
 	clear:both;
 	border-left: 1px dotted $greyDark;
 }
+.sale_property.body,
+.sale_property.details, 
+.sale_property.rates,
 .rental_property.body,
 .rental_property.details, 
 .rental_property.rates {
 	padding-top: $baseLineHeight;
 	padding-bottom: $baseLineHeight;
 } 
+.sale_property.rates,
 .rental_property.rates {
 	background-color: white;
 }
+.sale_property.inquiry,
 .rental_property.inquiry {
 	background-color: $greenMedium;
 	color: white; 
@@ -468,7 +469,7 @@ ul.realty-rates {
 		}
 	}
 }
-@media(max-width: 980px) {
+@media(max-width: 979px) {
 	#address { 
 	 @include mobile-clear;
   }
@@ -476,5 +477,12 @@ ul.realty-rates {
 		.caption {
 			clear:both; 
 		} 
-	} 
+	}
+}	
+@media(min-width: 980px) {
+	.nav-collapse { 
+		padding-top: 100px; 
+		float:right;  
+	}
+
 }

@@ -9,25 +9,41 @@ if @sale_property.meta.area.present?
   tags << realty_meta_tag("area", @sale_property.meta.area.name)
 end
 %>
+<% content_for(:page_container) do %>
+<div class='container-fluid sale_property images'>
+  <div class='row-fluid'>
+    <div class='span12'>
+      <%= render 'shared/slideshow', :images => @images if @images.try(:any?) %>
+    </div>
+  </div>
+</div>
 <div class='container-fluid sale_property body'>
-    <div class='row-fluid'>
-      <div class='span12'>
-    <%= render 'shared/slideshow', :images => @images if @images.try(:any?) %>
+  <div class='row-fluid'>
+    <div class='span12'>
+      <%= page_title(@sale_property.title) %>
+      <div class='row-fluid'>
+        <div class="span8">
+          <%= render_html_text( @sale_property.body) if @sale_property.body.present? %>
+        </div>
+        <div class="span4 tags-list">
+          <%= tags.compact.join(" ").html_safe %>
+          <%= render('/stickers/shared/tags', :stickers => @stickers) if has_stickers %>
+          <%= render('/shared/content_options', :options => options) if has_options %>
+        </div>
       </div>
     </div>
-    <%= page_title(@sale_property.title) %> 
-    <%= render_html_text(resource.body) if @sale_property.body.present? %>    
+  </div>
 </div>
-<%= render '/shared/next_previous', :record => @sale_property %>
 
 <aside id='sidebar' class="row-fluid">
   <div class='span12'>
-    <div class='partial tags-list'>
-      <h4><%= t(:'details') %></h4>
-      <%= tags.compact.join("<br/>").html_safe %>
-      <%= render('/stickers/shared/meta_list', :stickers => @stickers) if has_stickers %>
-      <%= render('/shared/content_options', :options => options) if has_options %>
-    </div> 
+
+    <% if @sale_property.lat_long.present? %>
+      <div class='partial google_map_container'> 
+        <%= render('shared/google_map', :point => @sale_property.lat_long) %> 
+      </div>
+    <% end %> 
     <%= render "sale_properties/filter", :section => parent %>
   </div>
 </aside>
+<% end %>

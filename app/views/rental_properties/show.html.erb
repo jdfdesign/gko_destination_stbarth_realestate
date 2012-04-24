@@ -88,7 +88,7 @@ end
   <aside id='sidebar' class="row-fluid">
     <div class='span12'>
 
-      <% if @rental_property.lat_long.present? && site.preferred_google_map_api_key.present? %>
+      <% if @rental_property.lat_long.present? %>
         <div class='partial google_map_container'> 
           <%= render('shared/google_map', :point => @rental_property.lat_long) %> 
         </div>

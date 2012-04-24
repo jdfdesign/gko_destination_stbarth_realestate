@@ -9,7 +9,7 @@ $(document).ready(function() {
 				cWidth = $("#content-container .row-fluid:first").width(),
 				space = winWidth - cWidth,
 				x = space > 300 ? (space / 2) : 0; 
-		sidebar.css({ 'right': x });
+		sidebar.css({ 'right': x - 20 });
 	}
 	function init() {
 		if($('.images:first').length > 0) {
