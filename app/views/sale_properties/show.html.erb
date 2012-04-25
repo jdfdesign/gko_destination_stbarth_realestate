@@ -4,7 +4,7 @@ options = @sale_property.content_options
 has_options = options.try(:any?)
 tags = []
 tags << realty_meta_tag("bedroom_count", @sale_property.meta.bedroom_count)
-tags << realty_meta_tag("min_price", sale_price_value(@sale_property))
+tags << realty_meta_tag("price", sale_price_value(@sale_property))
 if @sale_property.meta.area.present? 
   tags << realty_meta_tag("area", @sale_property.meta.area.name)
 end
