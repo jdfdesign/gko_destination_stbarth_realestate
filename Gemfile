@@ -12,7 +12,7 @@ group :assets do
 end
 
 prod_location = 'git@github.com:jdfdesign/gko_cms3.git'
-prod_version = "= 0.2.60"
+prod_version = "= 0.2.62"
 group :production do
 	gem 'gko_core', prod_version, :git => prod_location
 	gem 'gko_auth', prod_version, :git => prod_location
@@ -24,7 +24,6 @@ group :production do
 	gem 'gko_features', prod_version, :git => prod_location
 	gem 'gko_realty', '= 0.0.57',  :git => 'git@github.com:jdfdesign/gko-realty.git'
 end
-
 
 #group :development do
 #  gem "gko_core", :path => File.expand_path('~/Github/gko_cms3/gko_core', __FILE__)
