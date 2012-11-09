@@ -1,95 +1,35 @@
-/* custom variables >>> */ 
+$greenLight:#91d74f;
 $greenMedium:#89C551;
 $greyMedium:#CDCCCA;
 $greyDark:#7B7A78;
-$altFontFamily:"Lucida Grande","Tahoma",Arial,sans-serif;
-/* <<< custom variables */
 
-$global-radii-blocks: 4px;
-
-// Layout 
 $containerMaxWidth: 0; 
-$rowMaxWidth: 980px;
 
-$bodyBackgroundColor: #f7f6f2;
-$contentBackgroundColor: transparent;
-$footerContainerBackgroundColor: #262626;
-$footerBackgroundColor: transparent;
-$copyrightContainerBackgroundColor: $footerContainerBackgroundColor;
-$copyrightBackgroundColor: transparent; 
-$mainBackgroundColor: transparent;
-$sidebarBackgroundColor: transparent;
-
-// Typography
-$baseFontFamily: Georgia,"Times New Roman",serif;
-$baseFontSize: 14px;
-$baseLineHeight: 20px;
-$textColor:$greyDark;
-$headingFontFamily: $baseFontFamily;
-$headingTextColor: $textColor;
-$headingBaseFontSize: 26px;
-
-// Links
-$linkColor: $greenMedium;
-$linkColorHover: $greyDark;
-$linkColorActive: $greyDark;
-
-// Navbar
-$navbarBackgroundHighlight: black;
-$navbarBackground: black;
-$navbarText: $greyMedium;
-$navbarLinkColor: $greyMedium;
-$navbarLinkColorHover: white;
-$navbarLinkColorActive: $greenMedium;
-$navbarLinkColorBorder: none; 
-$navbarButtonBackgroundHighlight: $navbarBackgroundHighlight; 
-$navbarButtonBackground: $navbarBackground; 
-$navbarButtonIconBarColor: white;
-$navbarResponsiveLinkBorder: lighter($navbarLinkColor, 15%);
-$navbarDropdownBackground: $navbarBackground;
-$navbarDropdownLinkColor: $navbarLinkColor;
-$navbarDropdownLinkColorHover: $navbarLinkColorHover;
-$navbarDropdownLinkColorActive: $navbarLinkColorActive;
-
-
-// Footer links
-$footerLinkColor: $greyMedium;
-$footerLinkColorHover: white;
-$footerLinkColorActive: $greenMedium;
-$footerResponsiveLinkBorder: lighter($footerLinkColor, 15%);
-
-// Copyright links
-$copyrightLinkColor: $footerLinkColor;
-$copyrightLinkColorHover: $footerLinkColorHover;
-$copyrightLinkColorActive: $footerLinkColorActive;
-$copyrightLogo: "gko/logo_gecko_white.png";
-
-// Form
-$inputTextColor: #f7f6f2;
-$inputBackgroundColor: #000;
-$inputBorderColor: $greenMedium;
-$inputFocusBorderColor: rgba(137, 197, 82, 0.8);// green 
-$inputBorderRadius: 3px; 
-
-// Grid
-$blockGridImageBorder: 4px solid white;
-$blockGridImageBackgroundColor: transparent; 
-$blockGridBackgroundColor: transparent; 
-$blockGridImageCorner: 0;
-$blockGridImageShadow: rgba(0,0,0,0.3) 0px 1px 4px;
-
-// Icon
 $pdfIcon: 'gko/icon_pdf_white_x110.png';
 
+
+
 /*-----------------------------------------
- DESKTOP
+ IMPORT
 ----------------------------------------- */
-@import "gko_public_all"; 
-@import "gko/elastislide";
+@import "variables";
+@import "twitter/bootstrap";
+@import "gko/public/base";
+@import "galleria";
 
 // --------------------------------------------------
 // BASE STYLES
 // -------------------------------------------------- 
+.btn { 
+	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  	color: $white;
+}
+// Hover state
+.btn:hover {
+  color: $white;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+}
+
 .next-previous {
 	display:none;
 }
@@ -124,25 +64,114 @@ li > .realty-promo {
 	width: 146px;
 	height: 102px;
 }
-.partial.filter {
-	
+
+
+/*-----------------------------------------
+ STRUCTURAL LAYOUT 
+----------------------------------------- */
+.container-fluid {
+	padding-right: 0;
+	padding-left: 0;
 }
+.row-fluid {
+	max-width: 980px;
+	@include center-block;
+}
+
+body#annual_rental,
+body#sale_property,
+body#rental_property { 
+	#main-container {
+		position: relative;
+		#sidebar {
+			position:absolute;
+			top: 0;
+			right: 0;
+		}
+		.tags-list {
+			span {
+				clear: both;
+				float: left;
+				display: block;
+				margin-bottom: 8px;
+				padding: 4px;	
+			}
+		}
+	}
+}
+
+/*-----------------------------------------
+ TYPOGRAPHY
+----------------------------------------- */
 h1.page-title {
- text-transform: uppercase; 
+	text-transform: uppercase; 
+	margin-bottom: 20px;
 }
-  
+
+/*-----------------------------------------
+ HEADER
+----------------------------------------- */
 .navbar {
+	
 	border-top: 6px solid $greenMedium;
+	
+	.brand {
+		a {
+			padding: 0;
+			margin: 0 auto;
+			background: transparent image-url("logo.png") center center no-repeat;
+			background-size: contain;
+			cursor: pointer;
+			text-decoration: none;
+			display: block;
+			width: 256px;
+			height: 40px;
+			@include hide-text;
+		}
+	}
+	
+	
+	.header-nav {
+		position:relative;
+	}
+	
+	.nav-collapse {
+		.nav > li > a {
+			text-transform: uppercase;
+			font-family: $altFontFamily;
+			font-size: 12px;
+			font-weight: normal;
+		}
+	} 
+	
+	.header-top {
+		background-color: $greenMedium;
+		float: right;
+		width: auto;
+		@include border-radius(0 0 6px 6px);
+		.nav {
+			font-size: 10px;
+			margin: 0;
+			a {
+				color: $white;
+				&:hover {
+					color: $black;
+				}
+			}
+		}
+	}
+	
+	.btn-navbar {
+		text-shadow: none;
+		@include buttonBackground($greenMedium, darken($greenMedium, 10%));
+		color: $white;
+		&:hover {
+			color: $black;
+		};
+	}
 }
-.header-nav {
-	position:relative;
-}
-.navbar .brand {
-	@include logo(256px, 40px);
-	position:absolute;
-	left: 0px;
-	top: 10px;
-	z-index: 10000;
+.navbar-inner {
+	@include border-radius(0);
 }
 #address {
 	position:absolute;
@@ -153,143 +182,68 @@ h1.page-title {
 	top: 70px;
 	z-index: 10000;
 }
-.navbar .header-top .nav {
-	background-color: $greenMedium;
-	font-size: 10px;
-	@include corner-bottom(6px); 
-	a {
-		@include link-colors(white, black, white); 
-	} 
-}  
-/*-----------------------------------------
- STRUCTURE
------------------------------------------ */
-body#sale_property,
-body#rental_property { 
 
-	#content-container {
-		position: relative;
-		padding-left:0;
-		padding-right:0;
-		.container-fluid.sale_property,
-		.container-fluid.rental_property { 
-			padding-left: 0;
-			padding-right: 0;
-			.row-fluid {
-				//max-width: 680px; 
-				.span12:first-child {
-					padding-right: 30%;
-					width: 70%;
-				}
-			}
-		}
-		
-		#sidebar {
-			position:absolute;
-			top: 0;
-			right: 0;
-			.span12:first-child {
-				padding-left: 70%;
-				width: 30%;
-				
-			}
-		}
-	}
-
-}
-/*-----------------------------------------
- SLIDESHOW
------------------------------------------ */
-.image-large-wrapper {
-	@include box-shadow($blockGridImageShadow);
-	background-color: $blockGridImageBackgroundColor;
-	border: $blockGridImageBorder;
-	@include border-radius($blockGridImageCorner);
-}
-.carousel-control {
-	background: transparent asset_url("classic-map.png", image) no-repeat 0 0;
-	@include circle(87px);
-	opacity: .7;
-	text-indent: -9999px;
-	border: none;
-	&:hover {
-		opacity: 1;
-	};
-	&.right {
-		right:8px;
-		background-position: -87px 0;
-	} 
-}
-.es-nav {
-	.carousel-control {
-		background: #000 asset_url("arrow_white_14_left.png", image) no-repeat 6px 6px;
-		@include circle(28px);
-		opacity: .5;
-		text-indent: -9999px;
-		border: none;
-		&:hover {
-			opacity: 1;
-		};
-		&.right {
-			right:8px;
-			background: #000 asset_url("arrow_white_14_right.png", image) no-repeat 6px 6px;
-		} 
-	}	
-}
-
-/*-----------------------------------------
- NAVBAR
------------------------------------------ */
-.header-nav .nav > li > a {
-	text-transform: uppercase;
-	font-family: $altFontFamily;
-	font-size: 12px;
-	font-weight: normal;
-}
 
 /*-----------------------------------------
  GRID
 ----------------------------------------- */
-
 .grid > li { 
-	
 	margin-bottom: $baseLineHeight * .5;
 	position:relative;
 	.thumbnail {
-		
 		border-width: 1px 0 0 0;
 		border-top: 1px dashed #E0E0CF;
 		padding-top: $baseLineHeight * .5;
 		@include border-radius(0);
 		@include box-shadow(none);
-		.thumbnail-image {
+		.image {
 			margin-right: 12px;
 			float: left;
-			@include box-shadow($blockGridImageShadow);
-			background-color: $blockGridImageBackgroundColor;
-			border: $blockGridImageBorder;
-			@include border-radius($blockGridImageCorner);
-			
+			background-color: transparent;
+			border: 4px solid white;
+			@include border-radius(0);
+			@include box-shadow(rgba(0, 0, 0, 0.3) 0px 1px 4px);
 		}
-		.thumbnail-caption {
-			position:relative; 
+		.image > img {
+			display: block;
+			max-width: 100%;
+			margin-right: auto;
+			margin-left: auto;
 		}
-		.thumbnail-title {
+		.caption {
+			position:relative;
+		}
+		.title {
 			text-transform: uppercase;
-			font-size: 16px; 
+			font-size: 16px;
 			font-style: normal;
 			font-weight: normal;
-			line-height: $baseLineHeight;
-			margin-bottom: $baseLineHeight * .5;
-
+			line-height: 20px;
+			margin-bottom: 10px;
+			a {
+				color: $greenMedium;
+				&:hover {
+					color: $greyMedium;
+				};
+			}
 		} 
-		.thumbnail-description {
+		.description {
 			margin-top: $baseLineHeight * .5;
 		}
-		.thumbnail-links {
+		.links {
 			font-style: italic;
-			a {
-				@include link-colors($greenMedium, black, white);
+			a, .btn {
+				color: $greenMedium;
+				text-shadow: none;
+				border: none;
+				background: none;
+				&:hover {
+					color: $black;
+					text-decoration: underline;
+				};
+				&:first-child {
+					padding-left: 0;
+				};
 			}
 		}
 	}
@@ -301,14 +255,13 @@ body#rental_property {
 	background-color: $greenMedium;
 	color: white;
 }
-#content-container h3 {
+#main-container h3 {
 	font-weight: normal;
 	font-style: italic;
 	padding-top: 24px;
 	padding-bottom: 24px;
 	text-transform: uppercase;
 }
-
 ul.realty-seasons {
 	display: block;
 	li {
@@ -331,6 +284,7 @@ ul.realty-rates {
 		border-bottom: 1px dashed #E0E0CF;
 	}
 }
+/*
 .sale_property .tags-list,
 .rental_property .tags-list {
 	@include clearfix;
@@ -348,6 +302,7 @@ ul.realty-rates {
 	clear:both;
 	border-left: 1px dotted $greyDark;
 }
+*/
 .sale_property.body,
 .sale_property.details, 
 .sale_property.rates,
@@ -386,21 +341,27 @@ ul.realty-rates {
 		border-top: 1px dashed #E0E0CF;
 		border-bottom: 1px dashed #E0E0CF;
 	}
-}
-
-.partial.realty-promotion {
-	h2 { 
-		line-height: $baseLineHeight;
-		font-size: $baseFontSize;
-		font-style: italic;
-		font-weight: bold;
+	.grid > li {
+		.thumbnail {
+			border: none;
+			.title {
+				text-transform: none;
+				line-height: $baseLineHeight;
+				font-size: $baseFontSize;
+				font-style: italic;
+				font-weight: bold;
+				text-align: center;
+			}
+			.caption {
+				padding: 0;
+			}
+		}
 	}
-}
-.partial.filter {
 	select {
 		margin-bottom: 0;
 	}
 }
+
 /*-----------------------------------------
  HOME
 ----------------------------------------- */
@@ -412,24 +373,18 @@ ul.realty-rates {
 		padding-bottom: 0;
 	}
 }
-.btn { 
-	@include buttonBackground($greenMedium, adjust_hue($greenMedium, 20deg));
-	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-  color: $white;
-}
-.btn:hover {
-  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-  color: $white;
-	@include buttonBackground($greenMedium, adjust_hue($greenMedium, 10deg));
-}
+
 #home .grid > li { 
-	.thumbnail-image {
-		float: none;
-		margin-bottom: 12px;
+	.thumbnail {
+		.image {
+			float: none;
+			margin-bottom: 12px;
+		}
+		.caption {
+			clear: both;
+		}
 	}
-	caption {
-		clear: both;
-	}
+
 	.tags-list {
 		span {
 			display: block; 
@@ -441,23 +396,31 @@ ul.realty-rates {
 /*-----------------------------------------
  FOOTER
 ----------------------------------------- */
-#pipe-menu ul.menu a {
-	font-size: 10px;
-	font-style: italic;
-} 
 #footer {
-	// Links
 	.nav > li > a {
 		font-size: 10px;
 		font-style: italic;
 		font-family: $altFontFamily;
 		text-transform: uppercase;
+		&:first-child {
+			margin-left: 0;
+		};
 	}
+}
+#copyright {
+	text-align: center;
+}
+#site-by {
+	font-size: 9px;
+	float: none;
 }
 /*-----------------------------------------
  RESPONSIVE
 ----------------------------------------- */
-@import "gko/responsive";
+
+@import "twitter/bootstrap/responsive";
+@import "gko/default_responsive";
+
 @media (max-width: 480px) {
 	.grid > li { 
 		.tags-list {
@@ -465,24 +428,86 @@ ul.realty-rates {
 				display: block; 
 				clear: both;
 			} 
-
 		}
 	}
 }
+@media (max-width: 767px) {
+	body {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.row-fluid {
+		padding-left: 20px;
+		padding-right: 20px;
+		@include box-sizing(border-box);
+	}
+	body#annual_rental,
+	body#sale_property,
+	body#rental_property { 
+		#main-container {
+			#sidebar {
+				position:relative;
+				top: auto;
+				right: auto;
+				width: 100%;
+				float: none;
+			    display: block;
+			    padding: 0 20px;
+				@include box-sizing(border-box);
+			}
+		}
+	}
+}
+
 @media(max-width: 979px) {
-	#address { 
-	 @include mobile-clear;
-  }
 	.grid > li { 
 		.caption {
 			clear:both; 
 		} 
 	}
+	.navbar {
+		.brand {
+			float: none;
+			text-align: center;
+			margin: $baseLineHeight 0 0 0;
+		}	
+		.nav-collapse {
+			.nav > li > a {
+				text-align: center;
+			}
+		}
+	}
+	#address {
+	position: static;
+	height: auto;
+	float: none;
+	margin: 0 auto;
+	right: 0;
+	left: 0;
+	margin-bottom: $baseLineHeight;
+	}
+	/*#footer {
+		#pipe-menu-container {
+			width: 100%;
+		}
+		.nav {
+			left: auto;
+			float: none;
+			text-align: center;
+			@include center-block;
+		}
+			.nav > li {
+				text-align: center;
+			}
+	}*/
 }	
 @media(min-width: 980px) {
 	.nav-collapse { 
 		padding-top: 100px; 
 		float:right;  
+	}
+	#site-by {
+		float: right;
 	}
 
 }

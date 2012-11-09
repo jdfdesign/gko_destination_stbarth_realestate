@@ -28,5 +28,3 @@ cd ~/developer/workspace/gko_joufdesign_com
 rake jobs:work
 cd ~/developer/workspace/gko_joufdesign_com
 rake jobs:clear
-
-rake db:load_tourism

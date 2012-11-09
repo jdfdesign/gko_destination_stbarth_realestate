@@ -1,0 +1,13 @@
+<ul class='unstyled realty-rates'>
+<% if season.rates.any? %>
+  <% season.rates.order('rental_property_rates.bedroom_count ASC').each do |rate| %>
+    <li>
+      <span class='realty-rates-bedroom-count'><%= [rate.bedroom_count.to_s, t(:'bedrooms')].join(' ') %></span> 
+      <span class='realty-rates-price'><%= price_for_rate(primary_currency, rate.send(currency_method)) %></span>
+      
+    </li>
+  <% end %>
+<% else %>
+  <li><%= t(:'price_on_request') %></li>
+<% end %>
+</ul>

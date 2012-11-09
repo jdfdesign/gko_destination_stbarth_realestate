@@ -1,0 +1,185 @@
+// GLOBAL VALUES
+// --------------------------------------------------
+
+// Grays
+// -------------------------
+$black:                 #000;
+$grayDarker:            #222;
+$grayDark:              #808285;
+$gray:                  #555;
+$grayLight:             #999;
+$grayLighter:           #eee;
+$white:                 #F2F1ED;
+
+
+// Accent colors
+// -------------------------
+$blue:                  #049cdb;
+$blueDark:              #0064cd;
+$green:                 #59A9A1;
+$red:                   #9d261d;
+$yellow: #FF9000;
+$orange: #FFAB00;
+$pink:                  #c3325f;
+$purple:                #7a43b6;
+
+// Scaffolding
+// -------------------------
+$bodyBackground: #f7f6f2;
+$textColor: $grayDark;
+
+// Links
+// -------------------------
+$linkColor:             $greenMedium;
+$linkColorHover:        darken($linkColor, 15%);
+
+// Typography
+// -------------------------
+$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+
+$baseFontSize:          14px;
+$baseFontFamily:        $serifFontFamily;
+$baseLineHeight:        20px;
+$altFontFamily:         $sansFontFamily;
+
+$headingsFontFamily:    $serifFontFamily; // empty to use BS default, @baseFontFamily
+$headingsFontWeight:    inherit;    // instead of browser default, bold
+$headingsColor:         $textColor; // empty to use BS default, @textColor
+
+// Tables
+// -------------------------
+$tableBackground:                   transparent; // overall background-color
+$tableBackgroundAccent:             #f9f9f9; // for striping
+$tableBackgroundHover:              #f5f5f5; // for hover
+$tableBorder:                       #ddd; // table and cell border
+
+
+// Buttons
+// -------------------------
+$btnBackground:                     $greenMedium;
+$btnBackgroundHighlight:            darken($btnBackground, 10%);
+$btnBorder:                         $btnBackground;
+
+$btnPrimaryBackground:              $linkColor;
+$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 15%);
+
+$btnInfoBackground:                 #5bc0de;
+$btnInfoBackgroundHighlight:        #2f96b4;
+
+$btnSuccessBackground:              #62c462;
+$btnSuccessBackgroundHighlight:     #51a351;
+
+$btnWarningBackground:              lighten($orange, 15%);
+$btnWarningBackgroundHighlight:     $orange;
+
+$btnDangerBackground:               #ee5f5b;
+$btnDangerBackgroundHighlight:      #bd362f;
+
+$btnInverseBackground:              $gray;
+$btnInverseBackgroundHighlight:     $grayDarker;
+
+
+// Forms
+// -------------------------
+$inputBackground:               #000;
+$inputBorder:                   $greenMedium;
+$inputBorderRadius:             3px;
+$inputDisabledBackground:       $grayLighter;
+
+$formActionsBackground:         #f5f5f5;
+
+
+// Dropdowns
+// -------------------------
+$dropdownBackground:            $white;
+$dropdownBorder:                rgba(0,0,0,.2);
+$dropdownLinkColor:             $grayDark;
+$dropdownLinkColorHover:        $white;
+$dropdownLinkBackgroundHover:   $linkColor;
+$dropdownDividerTop:            #e5e5e5;
+$dropdownDividerBottom:         $white;
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Input placeholder text color
+// -------------------------
+$placeholderText:       $grayLight;
+
+
+// Hr border color
+// -------------------------
+$hrBorder:              $grayLighter;
+
+// Navbar
+// -------------------------
+$navbarHeight:                    40px;
+$navbarBackground:                $black;
+$navbarBackgroundHighlight:       $black;
+
+$navbarText:                      $grayLight;
+$navbarLinkColor:                 $grayLight;
+$navbarLinkColorHover:            $white;
+$navbarLinkColorActive:           $navbarLinkColorHover;
+$navbarLinkBackgroundHover:       transparent;
+$navbarLinkBackgroundActive:      $navbarBackground;
+
+$navbarSearchBackground:          lighten($navbarBackground, 25%);
+$navbarSearchBackgroundFocus:     $white;
+$navbarSearchBorder:              darken($navbarSearchBackground, 30%);
+$navbarSearchPlaceholderColor:    #ccc;
+$navbarBrandColor:                $navbarLinkColor;
+
+
+// Hero unit
+// -------------------------
+$heroUnitBackground:              $grayLighter;
+$heroUnitHeadingColor:            inherit;
+$heroUnitLeadColor:               inherit;
+
+
+// Form states and alerts
+// -------------------------
+$warningText:             #c09853;
+$warningBackground:       #fcf8e3;
+$warningBorder:           darken(adjust_hue($warningBackground, -10deg), 3%);
+
+$errorText:               #b94a48;
+$errorBackground:         #f2dede;
+$errorBorder:             darken(adjust_hue($errorBackground, -10deg), 3%);
+
+$successText:             #468847;
+$successBackground:       #dff0d8;
+$successBorder:           darken(adjust_hue($successBackground, -10deg), 5%);
+
+$infoText:                #3a87ad;
+$infoBackground:          #d9edf7;
+$infoBorder:              darken(adjust_hue($infoBackground, -10deg), 7%);
+
+// Navbar (gko addon)
+// -------------------------
+$navbarLinkBackground:            transparent;	
+// Footer (gko addon)
+// -------------------------
+$footerHeight:                    40px;
+$footerBackground:                $navbarBackground;
+$footerText:                      $navbarText;
+$footerLinkColor:                 $navbarLinkColor;
+$footerLinkBackground:       	  $navbarLinkBackground;
+$footerLinkColorHover:            $navbarLinkColorHover;
+$footerLinkBackgroundHover:       $navbarLinkBackgroundHover;
+// Copyright (gko addon)
+// -------------------------
+$copyrightHeight:                    40px;
+$copyrightBackground:                $footerBackground;
+$copyrightText:                      $footerText;
+$copyrightLinkColor:                 $footerLinkColor;
+$copyrightLinkBackground:            $footerLinkBackground;
+$copyrightLinkColorHover:            $footerLinkColorHover;
+$copyrightLinkBackgroundHover:       $footerLinkBackgroundHover;
+
+
+
+

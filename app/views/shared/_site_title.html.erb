@@ -1,9 +1,0 @@
-<h2 id="site-title" class="brand"><%= link_to(site.title, root_url) %></h2>
-<div id="address">
-  <%= "T. (+590) 590 29 07 66 <br/>".html_safe %>
-  <% if site.preferred_contact_email.present? and @contact_page = site.sections.named("contact") %> 
-    <%= link_to(site.inquiry_recipients, url_for([@contact_page])) %>
-  <% else %>
-    <%= mail_to(site.preferred_contact_email, t(:email_us), :encode => "javascript") %>
-  <% end %>
-</div> 

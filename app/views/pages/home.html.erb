@@ -13,7 +13,7 @@ end
 #    end;
 #end 
 
-@features ||= @site.features.visibles
+@features ||= site.features.live
 %>
 <% content_for :page_content do %>
   <% if @features.any? %>
@@ -24,15 +24,15 @@ end
   </div>
   <% end %>   
   <div class="row-fluid">
-    <section class="span3">
+    <section class="span4 offset1">
       <%= render "rental_properties/filter", :section => @rent_section %>
     </section>
     
-    <section class="span<%= span_num %> offset1">
+    <section class="span<%= span_num %>">
       <h3><%= link_to(t("home.featured_rental_properties"), url_for([@rent_section])) %></h3>
       <% if @random_rental_properties.any? %>
-        <ul id="home-rental-property" class="unstyled block-grid grid1">
-          <%= render :partial => "rental_properties/record", :collection => @random_rental_properties, :as => 'record' %>
+        <ul id="home-rental-property" class="grid grid1">
+          <%= render @random_rental_properties %>
         </ul>
         <%= link_to(t("home.view_all_rental_properties"), url_for([@rent_section]), :class => 'btn view_all') %>
       <% end %>
@@ -40,16 +40,17 @@ end
     <% if @promo_rental_properties.any? %>
     <section class="span4">
       <h3><%= link_to(t("promotions"), url_for([@rent_section])) %></h3>
-      <ul id="home-rental-property" class="unstyled block-grid grid1">
-        <%= render :partial => "rental_properties/record", :collection => @promo_rental_properties, :as => 'record' %> 
+      <ul id="home-rental-property" class="grid grid1">
+        <%= render @promo_rental_properties %> 
       </ul>
-      <%= link_to(t("view_all_promotions"), add_url_param(:with_promo,'true',rental_property_list_path(@rent_section)), :class => 'btn view_all') %>
+      <%= link_to(t("view_all_promotions"), add_url_param(:with_promo,'true',rental_property_list_path(@rent_s ection)), :class => 'btn view_all') %>
     </section>
      <% end %>
   </div> 
   <% unless resource.body.blank? %>
   <div class="row-fluid">
-    <section class="span12"> 
+   <div class="span4"><p></p></div>
+    <section class="span7 offset1"> 
       <%= render_html_text(resource.body) %>   				
     </section>  
   </div>

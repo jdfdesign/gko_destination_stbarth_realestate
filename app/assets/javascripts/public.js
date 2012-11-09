@@ -1,39 +1,134 @@
-//= require gko/jquery.elastidegallery
-	
-$(document).ready(function() { 
-	var body = $("body");
-	var sidebar = $("#sidebar");
-	
-	function setSidebar() {
-		var winWidth = body.width(),
-				cWidth = $("#content-container .row-fluid:first").width(),
-				space = winWidth - cWidth,
-				x = space > 300 ? (space / 2) : 0; 
-		sidebar.css({ 'right': x - 20 });
-	}
-	function init() {
-		if($('.images:first').length > 0) {
-			Gallery.init($('.images:first'));
-		} 
+//= require gko/gko.galleria 
+//= jquery.throttledresize.js
 
-		$('.carousel').each(function(index) {
-			var _self = $(this);
-			if(_self.find('.item').length > 1) {
-				_self.carousel();
-			} else {
-				_self.find('.carousel-control').each(function(index) {
-					  $(this).css({display: 'none'})
-				 });
-			}
-		}); 
+var $window,$body,$sidebar,$row, sidebarHeight, breakpoint;
+
+var Site = {
+	init: function() {
+		$window = $(window);
+		$body = $("body");
+		$sidebar = $("#sidebar");
+		$row = $("#main-container .span9:last");
+		breakpoint = 768;
+		Carousel.addTheme();
+		Carousel.init();
+		if($sidebar.length > 0 && $row.length > 0) {
+			$window.on("throttledresize", Site.onresize);
+			Site.onresize();
+		}
+	},
+	
+	onresize: function() {
+		if($window.width() < breakpoint) {
+			$("#main-container").css("minHeight", "none");
+			$sidebar.css('right', "auto");
+		} else {
+			$("#main-container").css("minHeight", $sidebar.height());
+			$sidebar.css('right', $row.offset().left);
+		}
 		
-		if(!body.hasClass('mobile')) {
-			$(window).bind('resize', setSidebar);
-			setSidebar();
-		} 
-    
 	}
+}
 
-	init();
+var Carousel = {
+	init: function() {
+		if($(".galleria").length > 0) {
+			$(".galleria").galleria({
+				debug: false,
+				autoplay: true,
+				responsive: true,
+				height: .85,
+				imageCrop: 'landscape',
+				transition: 'flash',
+				thumbMargin: 10,
+				showCounter: false,
+				showInfo: false,
+				thumbnails: true
+			})
+		}
+	},
+	addTheme: function() {
 
+		 Galleria.addTheme({
+		        name:'classic',
+		        author:'Galleria',
+		        css:'galleria.classic.css',
+		        defaults:{
+		            transition:'slide',
+		            thumbCrop:'height',
+
+		            // set this to false if you want to show the caption all the time:
+		            _toggleInfo:false
+		        },
+		        init:function (options) {
+
+		            // add some elements
+		            this.addElement('info-link', 'info-close');
+		            this.append({
+		                'info':['info-link', 'info-close']
+		            });
+
+		            // cache some stuff
+		            var info = this.$('info-link,info-close,info-text'),
+		                touch = Galleria.TOUCH,
+		                click = touch ? 'touchstart' : 'click';
+
+		            // show loader & counter with opacity
+		            this.$('loader,counter').show().css('opacity', 0.4);
+
+		            // some stuff for non-touch browsers
+		            if (!touch) {
+		                this.addIdleState(this.get('image-nav-left'), { left:-50 });
+		                this.addIdleState(this.get('image-nav-right'), { right:-50 });
+		                this.addIdleState(this.get('counter'), { opacity:0 });
+		            }
+
+		            // toggle info
+		            if (options._toggleInfo === true) {
+		                info.bind(click, function () {
+		                    info.toggle();
+		                });
+		            } else {
+		                info.show();
+		                this.$('info-link, info-close').hide();
+		            }
+
+		            // bind some stuff
+		            this.bind('thumbnail', function (e) {
+
+		                if (!touch) {
+		                    // fade thumbnails
+		                    $(e.thumbTarget).css('opacity', 0.6).parent().hover(function () {
+		                        $(this).not('.active').children().stop().fadeTo(100, 1);
+		                    }, function () {
+		                        $(this).not('.active').children().stop().fadeTo(400, 0.6);
+		                    });
+
+		                    if (e.index === this.getIndex()) {
+		                        $(e.thumbTarget).css('opacity', 1);
+		                    }
+		                } else {
+		                    $(e.thumbTarget).css('opacity', this.getIndex() ? 1 : 0.6);
+		                }
+		            });
+
+		            this.bind('loadstart', function (e) {
+		                if (!e.cached) {
+		                    this.$('loader').show().fadeTo(200, 0.4);
+		                }
+
+		                this.$('info').toggle(this.hasInfo());
+
+		                $(e.thumbTarget).css('opacity', 1).parent().siblings().children().css('opacity', 0.6);
+		            });
+
+		            this.bind('loadfinish', function (e) {
+		                this.$('loader').fadeOut(200);
+		            });
+		        }
+		    });
+	} 
+}
+$(document).ready(function() {
+	Site.init();
 });

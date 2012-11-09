@@ -1,0 +1,47 @@
+<%
+has_stickers = @stickers.try(:any?)
+tags = []
+tags << realty_meta_tag("bedroom_count", resource.bedroom_count)
+tags << realty_meta_tag("price", annual_price_value(resource))
+if resource.area.present? 
+  tags << realty_meta_tag("area", resource.meta.area.name)
+end
+%>
+<% content_for(:page_container) do %>
+<div class='container-fluid annual_rental images'>
+  <div class='row-fluid'>
+    <div class='span9 offset3'>
+      <%= render_slideshow_for(resource) %>
+    </div>
+  </div>
+</div>
+<div class='container-fluid annual_rental body'>
+  <div class='row-fluid'>
+    <div class='span9 offset3'>
+      <%= render_page_title(resource.title) %>
+      <div class='row-fluid'>
+        <div class="span8">
+          <%= render_html_text(resource.body) %>
+        </div>
+        <div class="span4 tags-list">
+          <%= tags.compact.join(" ").html_safe %>
+          <%= render('/stickers/shared/tags', :stickers => @stickers) if has_stickers %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<aside id='sidebar'>
+  <div class='sidebar-inner'>
+
+    <% if resource.lat_long.present? %>
+      <div class='partial google_map_container'> 
+        <%= render('shared/google_map', :point => resource.lat_long) %> 
+      </div>
+    <% end %> 
+    <%= render "sale_properties/filter", :section => parent %>
+  
+  </div>
+</aside>
+<% end %>

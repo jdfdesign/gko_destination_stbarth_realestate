@@ -12,18 +12,18 @@ end
 <% content_for(:page_container) do %>
 <div class='container-fluid sale_property images'>
   <div class='row-fluid'>
-    <div class='span12'>
-      <%= render 'shared/slideshow', :images => @images if @images.try(:any?) %>
+    <div class='span9 offset3'>
+      <%= render_slideshow_for(resource) %>
     </div>
   </div>
 </div>
 <div class='container-fluid sale_property body'>
   <div class='row-fluid'>
-    <div class='span12'>
-      <%= page_title(@sale_property.title) %>
+    <div class='span9 offset3'>
+      <%= render_page_title(resource.title) %>
       <div class='row-fluid'>
         <div class="span8">
-          <%= render_html_text( @sale_property.body) if @sale_property.body.present? %>
+          <%= render_html_text(resource.body) %>
         </div>
         <div class="span4 tags-list">
           <%= tags.compact.join(" ").html_safe %>
@@ -35,8 +35,8 @@ end
   </div>
 </div>
 
-<aside id='sidebar' class="row-fluid">
-  <div class='span12'>
+<aside id='sidebar'>
+  <div class='sidebar-inner'>
 
     <% if @sale_property.lat_long.present? %>
       <div class='partial google_map_container'> 
@@ -44,6 +44,7 @@ end
       </div>
     <% end %> 
     <%= render "sale_properties/filter", :section => parent %>
+  
   </div>
 </aside>
 <% end %>

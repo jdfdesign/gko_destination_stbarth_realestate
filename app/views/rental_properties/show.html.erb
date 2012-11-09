@@ -17,19 +17,19 @@ end
 
   <div class='container-fluid rental_property images'>
     <div class='row-fluid'>
-      <div class='span12'>
-        <%= render 'shared/slideshow', :images => @images if @images.try(:any?) %>
+      <div class='span9 offset3'>
+        <%= render_slideshow_for(resource) %>
       </div>
     </div>
   </div>
   
   <div class='container-fluid rental_property body'>
     <div class='row-fluid'>
-      <div class='span12'>
-        <%= page_title(@rental_property.title) %>
+      <div class='span9 offset3'>
+        <%= render_page_title(resource.title) %>
         <div class='row-fluid'>
           <div class="span8">
-            <%= render_html_text( @rental_property.body) if @rental_property.body.present? %>
+            <%= render_html_text(resource.body) %>
           </div>
           <div class="span4 tags-list">
             <%= tags.compact.join(" ").html_safe %>
@@ -43,7 +43,7 @@ end
    
   <div class='container-fluid rental_property rates'>
     <div class='row-fluid'>
-      <div class='span12'>
+      <div class='span9 offset3'>
         <h3><%= t(:'rates') %></h3>
         <% if @rental_property.has_promo? %>
         <div class="well realty-promo-text">
@@ -58,7 +58,7 @@ end
   <% if @rental_property.meta and @rental_property.meta.description.present? %>
   <div class='container-fluid rental_property details'>
     <div class='row-fluid'>
-      <div class='span12'>
+      <div class='span9 offset3'>
         <h3><%= t(:'details') %></h3>
         <%= render_html_text(@rental_property.meta.description) %>
       </div>
@@ -68,11 +68,11 @@ end
    
   <div class='container-fluid rental_property inquiry'>
     <div class='row-fluid'>  
-      <div class='span12'>
+      <div class='span9 offset3'>
         <h3><%= t(:'realty.request_availability') %></h3>
       </div>
       <div class='row-fluid'>
-        <div class='span4'>
+        <div class='span9 offset3'>
           <% if site.preferred_realty_agent_public && @rental_property.meta.realty_agent %>
             <%= render 'shared/realty_agent', :realty_agent => @rental_property.meta.realty_agent %>
           <% else %>
@@ -83,10 +83,10 @@ end
       </div>
     </div>  
   </div>
-  <%= render '/shared/next_previous', :record => @rental_property %> 
+  <%= render 'next_previous', :record => @rental_property %> 
   
-  <aside id='sidebar' class="row-fluid">
-    <div class='span12'>
+  <aside id='sidebar'>
+    <div class='sidebar-inner'>
 
       <% if @rental_property.lat_long.present? %>
         <div class='partial google_map_container'> 
