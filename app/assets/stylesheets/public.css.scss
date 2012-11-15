@@ -28,6 +28,7 @@ $pdfIcon: 'gko/icon_pdf_white_x110.png';
 .btn:hover {
   color: $white;
   text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+	background-color: $greenMedium;
 }
 
 .next-previous {
@@ -65,7 +66,22 @@ li > .realty-promo {
 	height: 102px;
 }
 
-
+.carousel-control {
+	background: transparent asset-url("classic-map.png", image) no-repeat 0 0;
+	@include circle(87px);
+	@include hide-text();
+	border: none;
+	&.right {
+		right: 8px;
+		background-position: -87px 0;
+	}
+}
+.carousel .btn.inline {
+	position: absolute;
+	right: 8px;
+	bottom: 4px;
+	z-index: 2;
+}
 /*-----------------------------------------
  STRUCTURAL LAYOUT 
 ----------------------------------------- */

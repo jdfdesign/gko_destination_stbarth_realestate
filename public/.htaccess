@@ -1,0 +1,18 @@
+Options +FollowSymLinks  
+RewriteEngine On  
+  
+RewriteCond %{SCRIPT_FILENAME} !-d  
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+
+#-Redirection www.domain.com => domain.com
+RewriteCond %{HTTP_HOST} ^www.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,NC,L]
+
+#-Rewrite home to check for static 
+#RewriteRule ^$ home
+#-Checks cache directory for already cached pages 
+
+#RewriteCond %{REQUEST_URI} /(../)?[/]*$
+RewriteCond %{DOCUMENT_ROOT}/gko/cache/%{HTTP_HOST}%{REQUEST_URI}.html -f
+RewriteRule ^(.*)$ /gko/cache/%{HTTP_HOST}%{REQUEST_URI}.html [L]

@@ -1,3 +1,5 @@
+<% content_for(:page_container) do %>
+<% cache([action_name, site, I18n.locale, @sale_property.section, @sale_property]) do %>
 <%
 has_stickers = @stickers.try(:any?)
 options = @sale_property.content_options
@@ -9,7 +11,7 @@ if @sale_property.meta.area.present?
   tags << realty_meta_tag("area", @sale_property.meta.area.name)
 end
 %>
-<% content_for(:page_container) do %>
+
 <div class='container-fluid sale_property images'>
   <div class='row-fluid'>
     <div class='span9 offset3'>
@@ -40,11 +42,12 @@ end
 
     <% if @sale_property.lat_long.present? %>
       <div class='partial google_map_container'> 
-        <%= render('shared/google_map', :point => @sale_property.lat_long) %> 
+        <%= render('google_map', :point => @sale_property.lat_long) %> 
       </div>
     <% end %> 
     <%= render "sale_properties/filter", :section => parent %>
   
   </div>
 </aside>
+<% end %>
 <% end %>

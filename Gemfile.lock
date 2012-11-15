@@ -1,19 +1,19 @@
 GIT
   remote: git@github.com:jdfdesign/gko-realty.git
-  revision: f739428c0fb315df7a45c3c27e918e81d4cf5ce4
+  revision: fcf762a7f234909465b6f5a5d89af2941b1c8ae9
   specs:
-    gko_realty (0.0.83)
+    gko_realty (0.0.84)
       gko_core
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 9fabd283961515da8d3bb691ea51f9816ce87f35
+  revision: 34f65b8fa9772282b08e9a449ac8eb058665167c
   specs:
-    gko_auth (0.4.35)
+    gko_auth (0.4.49)
       cancan (= 1.6.8)
       devise (= 2.1.2)
-    gko_categories (0.4.35)
-    gko_core (0.4.35)
+    gko_categories (0.4.49)
+    gko_core (0.4.49)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -37,10 +37,10 @@ GIT
       jquery-rails (= 2.0.3)
       json
       letter_opener
+      mobile-fu
       mysql2 (~> 0.3.11)
       nested_set (= 1.7.0)
-      nokogiri (~> 1.5.0)
-      rack-cache (>= 0.5.3)
+      rack-cache (~> 1.2)
       rack-mount (~> 0.8.3)
       rails (= 3.2.3.rc2)
       rake (~> 0.9.2.2)
@@ -53,14 +53,14 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-    gko_documents (0.4.35)
+    gko_documents (0.4.49)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_features (0.4.35)
-    gko_images (0.4.35)
-    gko_inquiries (0.4.35)
+    gko_features (0.4.49)
+    gko_images (0.4.49)
+    gko_inquiries (0.4.49)
       filters_spam (~> 0.2)
-    gko_stickers (0.4.35)
+    gko_stickers (0.4.49)
 
 GEM
   remote: http://rubygems.org/
@@ -181,6 +181,9 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.19)
+    mobile-fu (1.1.0)
+      rack-mobile-detect
+      rails
     multi_json (1.3.2)
     mysql2 (0.3.11)
     nested_set (1.7.0)
@@ -193,7 +196,6 @@ GEM
     net-ssh (2.6.1)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
-    nokogiri (1.5.5)
     open4 (1.3.0)
     orm_adapter (0.4.0)
     paper_trail (2.6.3)
@@ -203,6 +205,8 @@ GEM
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-mobile-detect (0.4.0)
+      rack
     rack-mount (0.8.3)
       rack (>= 1.0.0)
     rack-ssl (1.3.2)
@@ -268,15 +272,15 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.2)
-  gko_auth (= 0.4.35)!
-  gko_categories (= 0.4.35)!
-  gko_core (= 0.4.35)!
-  gko_documents (= 0.4.35)!
-  gko_features (= 0.4.35)!
-  gko_images (= 0.4.35)!
-  gko_inquiries (= 0.4.35)!
-  gko_realty (= 0.0.83)!
-  gko_stickers (= 0.4.35)!
+  gko_auth (= 0.4.49)!
+  gko_categories (= 0.4.49)!
+  gko_core (= 0.4.49)!
+  gko_documents (= 0.4.49)!
+  gko_features (= 0.4.49)!
+  gko_images (= 0.4.49)!
+  gko_inquiries (= 0.4.49)!
+  gko_realty (= 0.0.84)!
+  gko_stickers (= 0.4.49)!
   iconv
   sass-rails (~> 3.2.5)
   uglifier (>= 1.0.3)

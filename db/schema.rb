@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121105210469) do
+ActiveRecord::Schema.define(:version => 20121110919411) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -807,6 +807,7 @@ ActiveRecord::Schema.define(:version => 20121105210469) do
     t.datetime "liquid_models_updated_at"
     t.text     "page_types"
     t.text     "mailer_settings"
+    t.boolean  "front_page_cached",        :default => false
   end
 
   add_index "sites", ["account_id"], :name => "index_sites_on_account_id"

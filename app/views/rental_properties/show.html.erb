@@ -1,16 +1,15 @@
-<% 
-has_stickers = @stickers.try(:any?)
-options = @rental_property.content_options
-has_options = options.try(:any?)
-tags = []
-tags << realty_meta_tag("bedroom_count", @rental_property.meta.bedroom_count)
-tags << realty_meta_tag("min_price", rental_min_price_value(@rental_property))
-if @rental_property.meta.area.present? 
-  tags << realty_meta_tag("area", @rental_property.meta.area.name)
-end
-%>
 <% content_for(:page_container) do %>
- 
+<% cache([action_name, site, I18n.locale, @rental_property.section, @rental_property]) do %>
+	<% 
+	has_stickers = @stickers.try(:any?)
+	has_options = @rental_property.content_options.try(:any?)
+	tags = []
+	tags << realty_meta_tag("bedroom_count", @rental_property.meta.bedroom_count)
+	tags << realty_meta_tag("min_price", rental_min_price_value(@rental_property))
+	if @rental_property.meta.area.present? 
+	  tags << realty_meta_tag("area", @rental_property.meta.area.name)
+	end
+	%>
   <% if @rental_property.has_promo? %>
     <div class="realty-promo"></div>
   <% end %>
@@ -34,7 +33,7 @@ end
           <div class="span4 tags-list">
             <%= tags.compact.join(" ").html_safe %>
             <%= render('/stickers/shared/tags', :stickers => @stickers) if has_stickers %>
-            <%= render('/shared/content_options', :options => options) if has_options %>
+            <%= render('/shared/content_options', :options => @rental_property.content_options) if has_options %>
           </div>
         </div>
       </div>
@@ -90,11 +89,12 @@ end
 
       <% if @rental_property.lat_long.present? %>
         <div class='partial google_map_container'> 
-          <%= render('shared/google_map', :point => @rental_property.lat_long) %> 
+          <%= render('google_map', :point => @rental_property.lat_long) %> 
         </div>
       <% end %> 
       <%= render "rental_properties/filter", :section => parent %>
       <%= render "rental_properties/promotion_list" %>
     </div>
   </aside>  
+<% end %>
 <% end %>

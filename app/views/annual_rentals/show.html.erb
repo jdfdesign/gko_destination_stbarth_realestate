@@ -1,3 +1,5 @@
+<% content_for(:page_container) do %>
+<% cache([action_name, site, I18n.locale, @annual_rental.section, @annual_rental]) do %>
 <%
 has_stickers = @stickers.try(:any?)
 tags = []
@@ -7,7 +9,7 @@ if resource.area.present?
   tags << realty_meta_tag("area", resource.meta.area.name)
 end
 %>
-<% content_for(:page_container) do %>
+
 <div class='container-fluid annual_rental images'>
   <div class='row-fluid'>
     <div class='span9 offset3'>
@@ -44,4 +46,5 @@ end
   
   </div>
 </aside>
+<% end %>
 <% end %>
