@@ -13,7 +13,7 @@ $pdfIcon: 'gko/icon_pdf_white_x110.png';
  IMPORT
 ----------------------------------------- */
 @import "variables";
-@import "twitter/bootstrap";
+@import "twitter.2.0.4/bootstrap";
 @import "gko/public/base";
 @import "galleria";
 
@@ -434,7 +434,7 @@ ul.realty-rates {
  RESPONSIVE
 ----------------------------------------- */
 
-@import "twitter/bootstrap/responsive";
+@import "twitter.2.0.4/bootstrap/responsive";
 @import "gko/default_responsive";
 
 @media (max-width: 480px) {

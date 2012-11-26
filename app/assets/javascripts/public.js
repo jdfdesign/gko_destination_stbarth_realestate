@@ -1,5 +1,18 @@
-//= require gko/gko.galleria 
+//= require jquery
+//= require jquery_ujs
+//= require twitter.2.0.4/bootstrap/transition.js
+//= require twitter.2.0.4/bootstrap/alert.js
+//= require twitter.2.0.4/bootstrap/button.js
+//= require twitter.2.0.4/bootstrap/carousel.js
+//= require twitter.2.0.4/bootstrap/collapse.js
+//= require twitter.2.0.4/bootstrap/dropdown.js
 //= jquery.throttledresize.js
+//= require gko/public/jquery.bootstrap.navbarhover.js
+//= require gko/public/jquery.grid.responsive.js
+
+//= require gko/gko.galleria 
+
+
 
 var $window,$body,$sidebar,$row, sidebarHeight, breakpoint;
 
@@ -12,6 +25,7 @@ var Site = {
 		breakpoint = 768;
 		Carousel.addTheme();
 		Carousel.init();
+		
 		if($sidebar.length > 0 && $row.length > 0) {
 			$window.on("throttledresize", Site.onresize);
 			Site.onresize();
@@ -19,12 +33,14 @@ var Site = {
 	},
 	
 	onresize: function() {
+		console.log($window.width())
 		if($window.width() < breakpoint) {
 			$("#main-container").css("minHeight", "none");
 			$sidebar.css('right', "auto");
 		} else {
+			console.log($row.position().left)
 			$("#main-container").css("minHeight", $sidebar.height());
-			$sidebar.css('right', $row.offset().left);
+			$sidebar.css('right', $row.position().left);
 		}
 		
 	}
