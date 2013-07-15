@@ -1,4 +1,3 @@
-<% content_for(:page_container) do %>
 <% cache([action_name, site, I18n.locale, @annual_rental.section, @annual_rental]) do %>
 <%
 has_stickers = @stickers.try(:any?)
@@ -12,14 +11,26 @@ end
 
 <div class='container-fluid annual_rental images'>
   <div class='row-fluid'>
-    <div class='span9 offset3'>
+    <div class='span9'>
       <%= render_slideshow_for(resource) %>
     </div>
+    <aside id='sidebar'>
+      <div class='sidebar-inner'>
+
+        <% if resource.lat_long.present? %>
+          <div class='partial google_map_container'> 
+            <%= render('shared/google_map', :point => resource.lat_long) %> 
+          </div>
+        <% end %> 
+        <%= render "annual_rentals/filter", :section => parent %>
+
+      </div>
+    </aside>
   </div>
 </div>
 <div class='container-fluid annual_rental body'>
   <div class='row-fluid'>
-    <div class='span9 offset3'>
+    <div class='span9'>
       <%= render_page_title(resource.title) %>
       <div class='row-fluid'>
         <div class="span8">
@@ -34,17 +45,5 @@ end
   </div>
 </div>
 
-<aside id='sidebar'>
-  <div class='sidebar-inner'>
 
-    <% if resource.lat_long.present? %>
-      <div class='partial google_map_container'> 
-        <%= render('shared/google_map', :point => resource.lat_long) %> 
-      </div>
-    <% end %> 
-    <%= render "annual_rentals/filter", :section => parent %>
-  
-  </div>
-</aside>
-<% end %>
 <% end %>

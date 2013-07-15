@@ -1,0 +1,16 @@
+<div class='container-fluid'>
+  <div class='row-fluid'>
+    <div class="span12">
+      <%= render_slideshow_for(resource) %>
+      <%= render_page_title(resource.title) %>
+    </div>
+    <div class='row-fuild'>
+    	<div class="span6">
+    		<%= render_html_text(resource.body) %>
+    	</div>
+    	<div class="span6">
+    		<%= render "inquiries/form" %>
+    	</div>
+    </div>
+ </div>
+</div>

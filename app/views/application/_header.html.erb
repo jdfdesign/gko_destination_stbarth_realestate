@@ -1,0 +1,32 @@
+<%# cache([site, I18n.locale, 'header']) do %>
+<!-- Header
+================================================== -->
+<header class="navbar hide-on-print">
+  <div class="navbar-inner">
+    <div class="row-fluid">
+      <div class="header-top">
+        <%= render 'locales_select' %>
+        <address id="address">
+          <%= "T. (+590) 590 29 07 66".html_safe %>
+          <%= mail_to(site.preferred_contact_email, site.preferred_contact_email, :encode => "javascript") %>
+        </address>
+      </div>
+      <div class="header-nav">
+        <!-- Be sure to leave the brand out there if you want it shown -->
+        <%= render 'site_title' %>
+        <%= content_tag(:h4, site.subtitle.html_safe, :id => "site-subtitle") if site.subtitle.present? %>
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span><%= t(:navigation_menu) %><i class="icon-chevron-down icon-white"></i></span>
+        </a>
+        <!-- Everything you want hidden at 940px or less, place within here -->
+        <div class="nav-collapse">
+          <!-- .nav, .navbar-search, .navbar-form, etc -->
+          <%= render_primary_menu %>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<%# end %>

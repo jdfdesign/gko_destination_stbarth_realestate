@@ -13,7 +13,7 @@ $pdfIcon: 'gko/icon_pdf_white_x110.png';
  IMPORT
 ----------------------------------------- */
 @import "variables";
-@import "twitter.2.0.4/bootstrap";
+@import "twitter.bootstrap.2.2.1/bootstrap-awesome";
 @import "gko/public/base";
 @import "galleria";
 
@@ -85,9 +85,25 @@ li > .realty-promo {
 /*-----------------------------------------
  STRUCTURAL LAYOUT 
 ----------------------------------------- */
-.container-fluid {
-	padding-right: 0;
-	padding-left: 0;
+// Shared size and type resets
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  color: $grayLight;
 }
 .row-fluid {
 	max-width: 980px;
@@ -99,11 +115,7 @@ body#sale_property,
 body#rental_property { 
 	#main-container {
 		position: relative;
-		#sidebar {
-			position:absolute;
-			top: 0;
-			right: 0;
-		}
+
 		.tags-list {
 			span {
 				clear: both;
@@ -127,10 +139,14 @@ h1.page-title {
 /*-----------------------------------------
  HEADER
 ----------------------------------------- */
+
+
 .navbar {
-	
-	border-top: 6px solid $greenMedium;
-	
+  border-top: 6px solid $greenMedium;
+	.row-fluid {
+	  position: relative;
+	}
+
 	.brand {
 		a {
 			padding: 0;
@@ -145,8 +161,7 @@ h1.page-title {
 			@include hide-text;
 		}
 	}
-	
-	
+
 	.header-nav {
 		position:relative;
 	}
@@ -157,29 +172,44 @@ h1.page-title {
 			font-family: $altFontFamily;
 			font-size: 12px;
 			font-weight: normal;
+			
 		}
 	} 
 	
+	#address { 
+	  padding-top: 4px;
+    float: right;
+    font-size: 11px;
+  }
 	.header-top {
-		background-color: $greenMedium;
-		float: right;
+		position: absolute;
+		right: 0; 
+		top: 0;
 		width: auto;
+	}
+	#locales-menu {
+		background-color: $greenMedium;
+		float: right; 
+		width: auto;
+		margin-left: 20px;
 		@include border-radius(0 0 6px 6px);
 		.nav {
-			font-size: 10px;
+			font-size: 11px;
 			margin: 0;
-			a {
-				color: $white;
-				&:hover {
-					color: $black;
-				}
+			padding: 0;
+		}
+		.nav > li >	a {
+      color: $white; 
+      padding-top: 4px;
+      padding-bottom: 4px;
+      &:hover {
+        color: $black;
 			}
 		}
 	}
-	
 	.btn-navbar {
 		text-shadow: none;
-		@include buttonBackground($greenMedium, darken($greenMedium, 10%));
+		@include button-background($greenMedium, darken($greenMedium, 10%));
 		color: $white;
 		&:hover {
 			color: $black;
@@ -189,15 +219,7 @@ h1.page-title {
 .navbar-inner {
 	@include border-radius(0);
 }
-#address {
-	position:absolute;
-	left: 0px;
-	width: 256px;
-	text-align: center; 
-	font-size: 12px;
-	top: 70px;
-	z-index: 10000;
-}
+
 
 
 /*-----------------------------------------
@@ -411,7 +433,10 @@ ul.realty-rates {
 }
 /*-----------------------------------------
  FOOTER
------------------------------------------ */
+----------------------------------------- */ 
+#footer-container {
+  background-color: $black;
+}
 #footer {
 	.nav > li > a {
 		font-size: 10px;
@@ -429,12 +454,13 @@ ul.realty-rates {
 #site-by {
 	font-size: 9px;
 	float: none;
+	padding: 9px 0 11px 0;
 }
 /*-----------------------------------------
  RESPONSIVE
 ----------------------------------------- */
 
-@import "twitter.2.0.4/bootstrap/responsive";
+@import "twitter.bootstrap.2.2.1/bootstrap-responsive"; 
 @import "gko/default_responsive";
 
 @media (max-width: 480px) {
@@ -493,34 +519,18 @@ ul.realty-rates {
 			}
 		}
 	}
-	#address {
-	position: static;
-	height: auto;
-	float: none;
-	margin: 0 auto;
-	right: 0;
-	left: 0;
-	margin-bottom: $baseLineHeight;
-	}
-	/*#footer {
-		#pipe-menu-container {
-			width: 100%;
-		}
-		.nav {
-			left: auto;
-			float: none;
-			text-align: center;
-			@include center-block;
-		}
-			.nav > li {
-				text-align: center;
-			}
-	}*/
 }	
 @media(min-width: 980px) {
 	.nav-collapse { 
-		padding-top: 100px; 
-		float:right;  
+		float:right;
+		margin-top: 72px;
+		.nav {
+		  margin: 0;
+		}
+		.nav > li > a {
+		  padding-top: 0;
+		  padding-bottom: 0;
+		}  
 	}
 	#site-by {
 		float: right;

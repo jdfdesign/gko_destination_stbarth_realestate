@@ -5,17 +5,10 @@ if @rent_section = site.rental_property_lists.with_translations(I18n.locale).pub
   span_num = @promo_rental_properties.any? ? 4 : 8
   @random_rental_properties = @rent_section.rental_properties.randoms(num_property)
 end
-#if @sale_section = site.sale_property_lists.with_translations(I18n.locale).published.first 
-  #@sale_properties = @sale_section.sale_properties.with_translations(I18n.locale).published.in_homepage.limit(2)
-#  @random_sale_property = begin 
-#    @sale_section.sale_properties.randoms(1).first 
-#    rescue
-#    end;
-#end 
 
 @features ||= site.features.live
 %>
-<% content_for :page_content do %>
+<div class="container-fluid">
   <% if @features.any? %>
   <div class="row-fluid">
     <div class="span12"  id="home-features">
@@ -24,23 +17,23 @@ end
   </div>
   <% end %>   
   <div class="row-fluid">
-    <section class="span4 offset1">
+    <section class="span4">
       <%= render "rental_properties/filter", :section => @rent_section %>
     </section>
     
-    <section class="span<%= span_num %>">
-      <h3><%= link_to(t("home.featured_rental_properties"), url_for([@rent_section])) %></h3>
+    <section class="span8">
+      <h3><%= link_to(t("home.featured_rental_properties"), @rent_section.public_url) %></h3>
       <% if @random_rental_properties.any? %>
-        <ul id="home-rental-property" class="grid grid1">
+        <ul id="home-rental-property" class="grid grid2">
           <%= render @random_rental_properties %>
         </ul>
-        <%= link_to(t("home.view_all_rental_properties"), url_for([@rent_section]), :class => 'btn view_all') %>
+        <%= link_to(t("home.view_all_rental_properties"), @rent_section.public_url, :class => 'btn btn-block view_all') %>
       <% end %>
     </section>
     <% if @promo_rental_properties.any? %>
     <section class="span4">
-      <h3><%= link_to(t("promotions"), url_for([@rent_section])) %></h3>
-      <ul id="home-rental-property" class="grid grid1">
+      <h3><%= link_to(t("promotions"), @rent_section.public_url) %></h3>
+      <ul id="home-rental-property" class="grid grid2">
         <%= render @promo_rental_properties %> 
       </ul>
       <%= link_to(t("view_all_promotions"), add_url_param(:with_promo,'true',rental_property_list_path(@rent_section)), :class => 'btn view_all') %>
@@ -50,9 +43,9 @@ end
   <% unless resource.body.blank? %>
   <div class="row-fluid">
    <div class="span4"><p></p></div>
-    <section class="span7 offset1"> 
+    <section class="span8"> 
       <%= render_html_text(resource.body) %>   				
     </section>  
   </div>
-  <% end %>  
-<% end %>
+  <% end %>
+</div>  

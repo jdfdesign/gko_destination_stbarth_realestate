@@ -1,0 +1,13 @@
+<!doctype html>
+<%= render 'html_tag' %>
+<%= render 'head' %>
+<body id='<%= @body_id %>'>
+<div id="wrapper-wide-body" role="main">
+  <%= render_header %>
+  <%= render 'layouts/messages' %>
+  <%= yield %>
+  <%= render_footer %>
+</div> <!--! end of #main -->
+<%= render 'javascripts' %>
+</body>
+</html>

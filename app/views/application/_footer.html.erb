@@ -1,0 +1,14 @@
+<%# cache([site, I18n.locale, 'footer']) do %>
+<!-- Footer
+================================================== -->
+ <footer id='footer-container' class='container-fluid footer hide-on-print'>
+   <div id='footer' class='row-fluid'>
+     <div class="span12 footer-content">
+		<%= render_menu('pipe') %>
+		<a id='site-by' href='http://www.joufdesign.com' class="copyright-author" target='_blank'>
+      <%= t(:'site_by', :name => "Jouf Design").html_safe %>
+    </a>
+     </div>
+   </div>
+ </footer>
+<%# end %>

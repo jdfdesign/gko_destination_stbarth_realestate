@@ -1,11 +1,15 @@
 //= require jquery
 //= require jquery_ujs
-//= require twitter.2.0.4/bootstrap/transition.js
-//= require twitter.2.0.4/bootstrap/alert.js
-//= require twitter.2.0.4/bootstrap/button.js
-//= require twitter.2.0.4/bootstrap/carousel.js
-//= require twitter.2.0.4/bootstrap/collapse.js
-//= require twitter.2.0.4/bootstrap/dropdown.js
+
+//= require twitter.bootstrap.2.2.1/bootstrap/transition.js
+//= require twitter.bootstrap.2.2.1/bootstrap/alert.js
+//= require twitter.bootstrap.2.2.1/bootstrap/button.js
+//= require twitter.bootstrap.2.2.1/bootstrap/carousel.js
+//= require twitter.bootstrap.2.2.1/bootstrap/collapse.js
+//= require twitter.bootstrap.2.2.1/bootstrap/dropdown.js
+//= require twitter.bootstrap.2.2.1/bootstrap/modal.js
+//= require twitter.bootstrap.2.2.1/bootstrap/tooltip.js
+
 //= jquery.throttledresize.js
 //= require gko/public/jquery.bootstrap.navbarhover.js
 //= require gko/public/jquery.grid.responsive.js
@@ -25,24 +29,6 @@ var Site = {
 		breakpoint = 768;
 		Carousel.addTheme();
 		Carousel.init();
-		
-		if($sidebar.length > 0 && $row.length > 0) {
-			$window.on("throttledresize", Site.onresize);
-			Site.onresize();
-		}
-	},
-	
-	onresize: function() {
-		console.log($window.width())
-		if($window.width() < breakpoint) {
-			$("#main-container").css("minHeight", "none");
-			$sidebar.css('right', "auto");
-		} else {
-			console.log($row.position().left)
-			$("#main-container").css("minHeight", $sidebar.height());
-			$sidebar.css('right', $row.position().left);
-		}
-		
 	}
 }
 
