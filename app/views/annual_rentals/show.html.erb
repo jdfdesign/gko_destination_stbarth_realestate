@@ -1,4 +1,4 @@
-<% cache([action_name, site, I18n.locale, @annual_rental.section, @annual_rental]) do %>
+<% resource_cache(resource) do %>
 <%
 has_stickers = @stickers.try(:any?)
 tags = []

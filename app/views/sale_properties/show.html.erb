@@ -1,5 +1,4 @@
-<% content_for(:page_container) do %>
-<% cache([action_name, site, I18n.locale, @sale_property.section, @sale_property]) do %>
+<% resource_cache(resource) do %>
 <%
 has_stickers = @stickers.try(:any?)
 options = @sale_property.content_options
@@ -44,5 +43,4 @@ end
   </div>
 </div>
 
-<% end %>
 <% end %>

@@ -1,5 +1,4 @@
-
-<%# cache([action_name, site, I18n.locale, @rental_property.section, @rental_property]) do %>
+<% resource_cache(resource) do %>
 	<% 
 	has_stickers = @stickers.try(:any?)
 	has_options = @rental_property.content_options.try(:any?)
@@ -91,4 +90,4 @@
   </div>
   <%= render 'next_previous', :record => @rental_property %> 
   
-<%# end %>
+<% end %>
