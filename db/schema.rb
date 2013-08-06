@@ -10,18 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130715093159) do
-
-  create_table "accounts", :force => true do |t|
-    t.string   "reference",  :limit => 40
-    t.string   "nickname"
-    t.string   "status",     :limit => 40
-    t.string   "type",       :limit => 40
-    t.datetime "deleted_at"
-    t.datetime "expires_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20130730134307) do
 
   create_table "annual_rental_options", :force => true do |t|
     t.text     "notes"
@@ -242,7 +231,6 @@ ActiveRecord::Schema.define(:version => 20130715093159) do
     t.string   "title",                      :limit => 100
     t.string   "lang",                       :limit => 4
     t.string   "alt"
-    t.integer  "account_id"
     t.integer  "site_id"
     t.integer  "document_assignments_count",                :default => 0
     t.datetime "created_at"
@@ -254,7 +242,6 @@ ActiveRecord::Schema.define(:version => 20130715093159) do
     t.string   "document_ext"
   end
 
-  add_index "documents", ["account_id"], :name => "index_documents_on_account_id"
   add_index "documents", ["site_id"], :name => "index_documents_on_site_id"
 
   create_table "element_images", :id => false, :force => true do |t|
@@ -753,13 +740,6 @@ ActiveRecord::Schema.define(:version => 20130715093159) do
   add_index "sections", ["parent_id"], :name => "index_sections_on_parent_id"
   add_index "sections", ["site_id"], :name => "index_sections_on_site_id"
 
-  create_table "site_registrations", :force => true do |t|
-    t.integer "user_id"
-    t.integer "site_id"
-  end
-
-  add_index "site_registrations", ["user_id", "site_id"], :name => "index_site_registrations_on_user_id_and_site_id"
-
   create_table "site_translations", :force => true do |t|
     t.integer  "site_id"
     t.string   "locale"
@@ -773,7 +753,6 @@ ActiveRecord::Schema.define(:version => 20130715093159) do
   add_index "site_translations", ["site_id"], :name => "index_site_translations_on_site_id"
 
   create_table "sites", :force => true do |t|
-    t.integer  "account_id"
     t.string   "host"
     t.string   "title"
     t.string   "meta_title"
@@ -803,7 +782,6 @@ ActiveRecord::Schema.define(:version => 20130715093159) do
     t.text     "javascript"
   end
 
-  add_index "sites", ["account_id"], :name => "index_sites_on_account_id"
   add_index "sites", ["host"], :name => "index_sites_on_host", :unique => true
   add_index "sites", ["theme_id"], :name => "index_sites_on_theme_id"
 
@@ -878,7 +856,6 @@ ActiveRecord::Schema.define(:version => 20130715093159) do
   add_index "tokenized_permissions", ["permissable_id", "permissable_type"], :name => "index_tokenized_name_and_type"
 
   create_table "users", :force => true do |t|
-    t.integer  "account_id"
     t.string   "email",                                   :default => "", :null => false
     t.string   "encrypted_password",       :limit => 128, :default => "", :null => false
     t.string   "confirmation_token"
@@ -909,9 +886,10 @@ ActiveRecord::Schema.define(:version => 20130715093159) do
     t.string   "authentication_token"
     t.string   "unlock_token"
     t.datetime "locked_at"
+    t.integer  "site_id"
   end
 
-  add_index "users", ["account_id"], :name => "index_users_on_account_id"
   add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token"
+  add_index "users", ["site_id"], :name => "index_users_on_site_id"
 
 end

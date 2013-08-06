@@ -1,20 +1,20 @@
 GIT
   remote: git@github.com:jdfdesign/gko-realty.git
-  revision: cd59543a6a946ae60ad0408b6fb50fdc8a5d80ac
+  revision: 5184ba14907861ca871e1e9269a33838a5a0229b
   specs:
-    gko_realty (0.0.94)
+    gko_realty (0.0.96)
       gko_core
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 12d464ccb199ea5fc103bcccbe8b860ebfdddcbe
-  tag: v0.6.42.rc10
+  revision: 1157936881ce8ddb1e7a6930f2d772275769d9c3
+  tag: v0.6.50.rc8
   specs:
-    gko_auth (0.6.42.rc10)
+    gko_auth (0.6.50.rc8)
       cancan (~> 1.6.10)
       devise (~> 2.2.3)
-    gko_categories (0.6.42.rc10)
-    gko_core (0.6.42.rc10)
+    gko_categories (0.6.50.rc8)
+    gko_core (0.6.50.rc8)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -44,7 +44,7 @@ GIT
       nested_set (~> 1.7.1)
       rack-cache (~> 1.2)
       rack-mount (~> 0.8.3)
-      rails (~> 3.2.14.rc1)
+      rails (= 3.2.14.rc2)
       rake (~> 10.0.4)
       rmagick (~> 2.13.1)
       routing-filter (= 0.3.1)
@@ -57,24 +57,24 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-    gko_documents (0.6.42.rc10)
+    gko_documents (0.6.50.rc8)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_features (0.6.42.rc10)
-    gko_inquiries (0.6.42.rc10)
+    gko_features (0.6.50.rc8)
+    gko_inquiries (0.6.50.rc8)
       filters_spam (~> 0.2)
-    gko_stickers (0.6.42.rc10)
+    gko_stickers (0.6.50.rc8)
 
 GEM
   remote: http://rubygems.org/
   specs:
     RedCloth (4.2.9)
-    actionmailer (3.2.14.rc1)
-      actionpack (= 3.2.14.rc1)
+    actionmailer (3.2.14.rc2)
+      actionpack (= 3.2.14.rc2)
       mail (~> 2.5.4)
-    actionpack (3.2.14.rc1)
-      activemodel (= 3.2.14.rc1)
-      activesupport (= 3.2.14.rc1)
+    actionpack (3.2.14.rc2)
+      activemodel (= 3.2.14.rc2)
+      activesupport (= 3.2.14.rc2)
       builder (~> 3.0.0)
       erubis (~> 2.7.0)
       journey (~> 1.0.4)
@@ -82,18 +82,18 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
-    activemodel (3.2.14.rc1)
-      activesupport (= 3.2.14.rc1)
+    activemodel (3.2.14.rc2)
+      activesupport (= 3.2.14.rc2)
       builder (~> 3.0.0)
-    activerecord (3.2.14.rc1)
-      activemodel (= 3.2.14.rc1)
-      activesupport (= 3.2.14.rc1)
+    activerecord (3.2.14.rc2)
+      activemodel (= 3.2.14.rc2)
+      activesupport (= 3.2.14.rc2)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activeresource (3.2.14.rc1)
-      activemodel (= 3.2.14.rc1)
-      activesupport (= 3.2.14.rc1)
-    activesupport (3.2.14.rc1)
+    activeresource (3.2.14.rc2)
+      activemodel (= 3.2.14.rc2)
+      activesupport (= 3.2.14.rc2)
+    activesupport (3.2.14.rc2)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     activesupport-slices (0.0.2)
@@ -130,7 +130,7 @@ GEM
       gherkin (~> 2.9.0)
       json (>= 1.4.6)
       term-ansicolor (>= 1.0.6)
-    devise (2.2.4)
+    devise (2.2.5)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (~> 3.1)
@@ -177,7 +177,7 @@ GEM
     letter_opener (1.1.2)
       launchy (~> 2.2)
     libv8 (3.11.8.17)
-    lol_dba (1.5.0)
+    lol_dba (1.6.0)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       railties (>= 3.0)
@@ -195,7 +195,7 @@ GEM
       i18n (~> 0.4)
       json
     multi_json (1.7.7)
-    mysql2 (0.3.11)
+    mysql2 (0.3.13)
     nested_set (1.7.1)
       activerecord (>= 3.0.0)
       railties (>= 3.0.0)
@@ -223,17 +223,17 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (3.2.14.rc1)
-      actionmailer (= 3.2.14.rc1)
-      actionpack (= 3.2.14.rc1)
-      activerecord (= 3.2.14.rc1)
-      activeresource (= 3.2.14.rc1)
-      activesupport (= 3.2.14.rc1)
+    rails (3.2.14.rc2)
+      actionmailer (= 3.2.14.rc2)
+      actionpack (= 3.2.14.rc2)
+      activerecord (= 3.2.14.rc2)
+      activeresource (= 3.2.14.rc2)
+      activesupport (= 3.2.14.rc2)
       bundler (~> 1.0)
-      railties (= 3.2.14.rc1)
-    railties (3.2.14.rc1)
-      actionpack (= 3.2.14.rc1)
-      activesupport (= 3.2.14.rc1)
+      railties (= 3.2.14.rc2)
+    railties (3.2.14.rc2)
+      actionpack (= 3.2.14.rc2)
+      activesupport (= 3.2.14.rc2)
       rack-ssl (~> 1.3.2)
       rake (>= 0.8.7)
       rdoc (~> 3.4)
@@ -249,7 +249,7 @@ GEM
       actionpack
     ruby-ole (1.2.11.7)
     rubyzip (0.9.6.1)
-    sass (3.2.9)
+    sass (3.2.10)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -257,7 +257,7 @@ GEM
     simple_form (2.1.0)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
-    spreadsheet (0.8.6)
+    spreadsheet (0.8.8)
       ruby-ole (>= 1.0)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -304,7 +304,7 @@ DEPENDENCIES
   gko_documents!
   gko_features!
   gko_inquiries!
-  gko_realty (= 0.0.94)!
+  gko_realty (= 0.0.96)!
   gko_stickers!
   money (= 5.0.0)
   nokogiri (~> 1.5.0)
