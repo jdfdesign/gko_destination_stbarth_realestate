@@ -3,10 +3,10 @@
 <%= render 'head' %>
 <body id='<%= @body_id %>'>
 <div id="wrapper-wide-body" role="main">
-  <%= render_header %>
+  <%= render "header" %>
   <%= render 'layouts/messages' %>
   <%= yield %>
-  <%= render_footer %>
+  <%= render "footer" %>
 </div> <!--! end of #main -->
 <%= render 'javascripts' %>
 </body>

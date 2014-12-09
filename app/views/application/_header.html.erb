@@ -23,7 +23,13 @@
         <!-- Everything you want hidden at 940px or less, place within here -->
         <div class="nav-collapse">
           <!-- .nav, .navbar-search, .navbar-form, etc -->
-          <%= render_primary_menu %>
+          <ul class="nav navbar-nav">
+        <% site.primary_menu.each do |section| %>
+          <li id="<%= dom_id(section) %>">
+            <%= menu_link(section, :rel => "nofollow") -%>
+          </li>
+        <% end %>
+      </ul> 
         </div>
       </div>
     </div>

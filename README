@@ -4,6 +4,7 @@ tail -f log/development.log
 cd ~/Github/gko_destination_stbarth_realestate
 tail -f log/production.log
 
+rvm use 1.8.7 --default
 cd ~/Github/gko_destination_stbarth_realestate
 bundle install
 rails s

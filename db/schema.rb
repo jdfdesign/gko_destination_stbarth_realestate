@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730134307) do
+ActiveRecord::Schema.define(:version => 20141209141438) do
 
   create_table "annual_rental_options", :force => true do |t|
     t.text     "notes"
@@ -28,20 +28,22 @@ ActiveRecord::Schema.define(:version => 20130730134307) do
     t.boolean  "show_in_homepage",               :default => false
     t.datetime "created_at",                                        :null => false
     t.datetime "updated_at",                                        :null => false
+    t.integer  "city_id"
   end
 
   add_index "annual_rental_options", ["area_id"], :name => "index_annual_rental_options_on_area_id"
+  add_index "annual_rental_options", ["city_id"], :name => "index_annual_rental_options_on_city_id"
   add_index "annual_rental_options", ["country_id"], :name => "index_annual_rental_options_on_country_id"
   add_index "annual_rental_options", ["property_id"], :name => "index_annual_rental_options_on_property_id"
 
   create_table "areas", :force => true do |t|
     t.string   "name",       :limit => 60
-    t.integer  "site_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "city_id"
   end
 
-  add_index "areas", ["site_id"], :name => "index_areas_on_site_id"
+  add_index "areas", ["city_id"], :name => "index_areas_on_city_id"
 
   create_table "assets", :force => true do |t|
     t.integer  "site_id"
@@ -101,6 +103,13 @@ ActiveRecord::Schema.define(:version => 20130730134307) do
 
   add_index "category_translations", ["category_id"], :name => "index_category_translations_on_category_id"
 
+  create_table "cities", :force => true do |t|
+    t.string   "name",       :limit => 80
+    t.integer  "site_id"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
+
   create_table "content_options", :force => true do |t|
     t.integer "owner_id",                      :null => false
     t.string  "owner_type",      :limit => 40, :null => false
@@ -127,7 +136,6 @@ ActiveRecord::Schema.define(:version => 20130730134307) do
   create_table "contents", :force => true do |t|
     t.integer  "site_id"
     t.integer  "section_id"
-    t.integer  "account_id"
     t.string   "type"
     t.string   "title"
     t.string   "slug"
@@ -150,16 +158,6 @@ ActiveRecord::Schema.define(:version => 20130730134307) do
   add_index "contents", ["site_id"], :name => "index_contents_on_site_id"
   add_index "contents", ["slug"], :name => "index_contents_on_slug"
 
-  create_table "countries", :force => true do |t|
-    t.string   "name"
-    t.string   "iso3",           :limit => 3
-    t.string   "iso",            :limit => 2
-    t.string   "printable_name"
-    t.integer  "numcode"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "site_id"
     t.integer  "priority",   :default => 0
@@ -176,7 +174,7 @@ ActiveRecord::Schema.define(:version => 20130730134307) do
   end
 
   create_table "document_assignments", :force => true do |t|
-    t.integer  "position",                      :default => 1, :null => false
+    t.integer  "position",                      :default => 1
     t.integer  "document_id",                                  :null => false
     t.integer  "attachable_id",                                :null => false
     t.string   "attachable_type", :limit => 40,                :null => false
@@ -207,11 +205,10 @@ ActiveRecord::Schema.define(:version => 20130730134307) do
     t.string   "image_ext"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "country_id"
     t.string   "language",           :limit => 5
+    t.string   "country"
   end
 
-  add_index "document_items", ["country_id"], :name => "index_press_articles_on_country_id"
   add_index "document_items", ["section_id"], :name => "index_press_articles_on_section_id"
   add_index "document_items", ["site_id"], :name => "index_press_articles_on_site_id"
 
@@ -301,7 +298,7 @@ ActiveRecord::Schema.define(:version => 20130730134307) do
   add_index "features", ["site_id"], :name => "index_features_on_site_id"
 
   create_table "image_assignments", :force => true do |t|
-    t.integer  "position",                      :default => 1, :null => false
+    t.integer  "position",                      :default => 1
     t.integer  "image_id",                                     :null => false
     t.integer  "attachable_id",                                :null => false
     t.string   "attachable_type", :limit => 40,                :null => false
@@ -347,6 +344,7 @@ ActiveRecord::Schema.define(:version => 20130730134307) do
     t.integer  "image_width"
     t.integer  "image_height"
     t.string   "image_uid"
+    t.string   "video_url"
   end
 
   add_index "images", ["site_id"], :name => "index_images_on_site_id"
@@ -384,18 +382,6 @@ ActiveRecord::Schema.define(:version => 20130730134307) do
 
   add_index "languages", ["site_id", "position"], :name => "index_languages_on_site_id_and_position"
   add_index "languages", ["site_id"], :name => "index_languages_on_site_id"
-
-  create_table "liquid_models", :force => true do |t|
-    t.integer  "site_id"
-    t.text     "body"
-    t.string   "path"
-    t.string   "format"
-    t.string   "locale"
-    t.string   "handler"
-    t.boolean  "partial",    :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "mail_methods", :force => true do |t|
     t.integer  "site_id",                                                       :null => false
@@ -570,9 +556,11 @@ ActiveRecord::Schema.define(:version => 20130730134307) do
     t.boolean  "beachfront"
     t.boolean  "end_display"
     t.string   "badge"
+    t.integer  "city_id"
   end
 
   add_index "rental_property_options", ["area_id"], :name => "index_rental_property_options_on_area_id"
+  add_index "rental_property_options", ["city_id"], :name => "index_rental_property_options_on_city_id"
   add_index "rental_property_options", ["country_id"], :name => "index_rental_property_options_on_country_id"
   add_index "rental_property_options", ["property_id"], :name => "index_rental_property_options_on_property_id"
   add_index "rental_property_options", ["realty_agent_id"], :name => "index_rental_property_options_on_realty_agent_id"
@@ -657,9 +645,11 @@ ActiveRecord::Schema.define(:version => 20130730134307) do
     t.string   "currency",         :limit => 1,  :default => "€"
     t.string   "badge"
     t.integer  "exchange_price"
+    t.integer  "city_id"
   end
 
   add_index "sale_property_options", ["area_id"], :name => "index_sale_property_options_on_area_id"
+  add_index "sale_property_options", ["city_id"], :name => "index_sale_property_options_on_city_id"
   add_index "sale_property_options", ["country_id"], :name => "index_sale_property_options_on_country_id"
   add_index "sale_property_options", ["property_id"], :name => "index_sale_property_options_on_property_id"
   add_index "sale_property_options", ["realty_agent_id"], :name => "index_sale_property_options_on_realty_agent_id"
@@ -762,16 +752,8 @@ ActiveRecord::Schema.define(:version => 20130730134307) do
     t.text     "options"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "site_registrations_count", :default => 0
     t.text     "plugins"
     t.integer  "theme_id"
-    t.string   "logo_mime_type"
-    t.string   "logo_name"
-    t.integer  "logo_size"
-    t.integer  "logo_width"
-    t.integer  "logo_height"
-    t.string   "logo_uid"
-    t.string   "logo_ext"
     t.string   "default_image_uid"
     t.integer  "languages_count",          :default => 0
     t.datetime "liquid_models_updated_at"
@@ -784,14 +766,6 @@ ActiveRecord::Schema.define(:version => 20130730134307) do
 
   add_index "sites", ["host"], :name => "index_sites_on_host", :unique => true
   add_index "sites", ["theme_id"], :name => "index_sites_on_theme_id"
-
-  create_table "states", :force => true do |t|
-    t.string  "name"
-    t.string  "abbr"
-    t.integer "country_id"
-  end
-
-  add_index "states", ["country_id"], :name => "index_states_on_country_id"
 
   create_table "sticker_translations", :force => true do |t|
     t.integer  "sticker_id"
@@ -826,6 +800,27 @@ ActiveRecord::Schema.define(:version => 20130730134307) do
 
   add_index "stickings", ["stickable_id", "stickable_type"], :name => "index_stickings_on_stickable_id_and_stickable_type"
   add_index "stickings", ["sticker_id"], :name => "index_stickings_on_sticker_id"
+
+  create_table "text_element_translations", :force => true do |t|
+    t.integer  "text_element_id"
+    t.string   "locale"
+    t.text     "value"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "text_element_translations", ["locale", "text_element_id"], :name => "index_text_element_translations_on_locale_and_text_element_id"
+
+  create_table "text_elements", :force => true do |t|
+    t.integer "section_id"
+    t.string  "key"
+    t.text    "value"
+    t.integer "position",   :default => 1
+    t.string  "value_type"
+  end
+
+  add_index "text_elements", ["key"], :name => "index_text_elements_on_name"
+  add_index "text_elements", ["section_id"], :name => "index_text_elements_on_section_id"
 
   create_table "themes", :force => true do |t|
     t.integer  "site_id"
