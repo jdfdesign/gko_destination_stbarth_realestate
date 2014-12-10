@@ -1,9 +1,9 @@
 <%
 if @rent_section = site.rental_property_lists.with_translations(I18n.locale).published.first
-  @promo_rental_properties = @rent_section.rental_properties.with_translations(I18n.locale).published.with_promo  
-  num_property = @promo_rental_properties.any? ? 1 : 2
-  span_num = @promo_rental_properties.any? ? 4 : 8
-  @random_rental_properties = @rent_section.rental_properties.randoms(num_property)
+  #@promo_rental_properties = @rent_section.rental_properties.published.with_globalize.with_promo  
+  #num_property = @promo_rental_properties.any? ? 1 : 2
+  #span_num = @promo_rental_properties.any? ? 4 : 8
+  @random_rental_properties = @rent_section.rental_properties.published.with_globalize.order('RAND()').limit(2)
 end
 
 @features ||= site.features.live
@@ -30,21 +30,12 @@ end
         <%= link_to(t("home.view_all_rental_properties"), @rent_section.public_url, :class => 'btn btn-block view_all') %>
       <% end %>
     </section>
-    <% if @promo_rental_properties.any? %>
-    <section class="span4">
-      <h3><%= link_to(t("promotions"), @rent_section.public_url) %></h3>
-      <ul id="home-rental-property" class="grid grid2">
-        <%= render @promo_rental_properties %> 
-      </ul>
-      <%= link_to(t("view_all_promotions"), add_url_param(:with_promo,'true',rental_property_list_path(@rent_section)), :class => 'btn view_all') %>
-    </section>
-     <% end %>
   </div> 
   <% unless resource.body.blank? %>
   <div class="row-fluid">
    <div class="span4"><p></p></div>
     <section class="span8"> 
-      <%= render_html_text(resource.body) %>   				
+      <%= render_html_text(resource.body) %>          
     </section>  
   </div>
   <% end %>
