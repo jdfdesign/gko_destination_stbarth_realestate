@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141209141438) do
+ActiveRecord::Schema.define(:version => 20141216105408) do
 
   create_table "annual_rental_options", :force => true do |t|
     t.text     "notes"
@@ -519,6 +519,8 @@ ActiveRecord::Schema.define(:version => 20141209141438) do
     t.text     "price_note"
     t.text     "pets_policy"
     t.string   "badge"
+    t.string   "info_title"
+    t.text     "info_body"
   end
 
   add_index "rental_property_option_translations", ["rental_property_option_id"], :name => "index_8087d0bf5d52493b8cbc45fdd4426c6365e14280"
@@ -557,6 +559,8 @@ ActiveRecord::Schema.define(:version => 20141209141438) do
     t.boolean  "end_display"
     t.string   "badge"
     t.integer  "city_id"
+    t.string   "info_title"
+    t.text     "info_body"
   end
 
   add_index "rental_property_options", ["area_id"], :name => "index_rental_property_options_on_area_id"

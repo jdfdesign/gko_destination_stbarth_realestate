@@ -177,13 +177,13 @@ body {
 
 /* line 22, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/scaffolding.scss */
 a {
-  color: #89c551;
+  color: #bd9a00;
   text-decoration: none;
 }
 
 /* line 26, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/scaffolding.scss */
 a:hover {
-  color: #639732;
+  color: #715c00;
   text-decoration: underline;
 }
 
@@ -4003,14 +4003,14 @@ ul.icons li [class*=" icon-"] {
 .dropdown-submenu:hover > a {
   text-decoration: none;
   color: #f2f1ed;
-  background-color: #83c149;
-  background-image: -moz-linear-gradient(top, #89c551, #7cbd3f);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#89c551), to(#7cbd3f));
-  background-image: -webkit-linear-gradient(top, #89c551, #7cbd3f);
-  background-image: -o-linear-gradient(top, #89c551, #7cbd3f);
-  background-image: linear-gradient(top, #89c551, #7cbd3f);
+  background-color: #b39100;
+  background-image: -moz-linear-gradient(top, #bd9a00, #a48500);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bd9a00), to(#a48500));
+  background-image: -webkit-linear-gradient(top, #bd9a00, #a48500);
+  background-image: -o-linear-gradient(top, #bd9a00, #a48500);
+  background-image: linear-gradient(top, #bd9a00, #a48500);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF89C551', endColorstr='#FF7CBD3F', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFBD9A00', endColorstr='#FFA48500', GradientType=0);
 }
 
 /* line 99, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/dropdowns.scss */
@@ -4019,14 +4019,14 @@ ul.icons li [class*=" icon-"] {
   color: #808285;
   text-decoration: none;
   outline: 0;
-  background-color: #83c149;
-  background-image: -moz-linear-gradient(top, #89c551, #7cbd3f);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#89c551), to(#7cbd3f));
-  background-image: -webkit-linear-gradient(top, #89c551, #7cbd3f);
-  background-image: -o-linear-gradient(top, #89c551, #7cbd3f);
-  background-image: linear-gradient(top, #89c551, #7cbd3f);
+  background-color: #b39100;
+  background-image: -moz-linear-gradient(top, #bd9a00, #a48500);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bd9a00), to(#a48500));
+  background-image: -webkit-linear-gradient(top, #bd9a00, #a48500);
+  background-image: -o-linear-gradient(top, #bd9a00, #a48500);
+  background-image: linear-gradient(top, #bd9a00, #a48500);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF89C551', endColorstr='#FF7CBD3F', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFBD9A00', endColorstr='#FFA48500', GradientType=0);
 }
 
 /* line 110, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/dropdowns.scss */
@@ -4261,22 +4261,22 @@ button.close {
   cursor: pointer;
   color: #808285;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  background-color: #7fba47;
-  background-image: -moz-linear-gradient(top, #89c551, #70aa39);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#89c551), to(#70aa39));
-  background-image: -webkit-linear-gradient(top, #89c551, #70aa39);
-  background-image: -o-linear-gradient(top, #89c551, #70aa39);
-  background-image: linear-gradient(top, #89c551, #70aa39);
+  background-color: #a88900;
+  background-image: -moz-linear-gradient(top, #bd9a00, #8a7000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bd9a00), to(#8a7000));
+  background-image: -webkit-linear-gradient(top, #bd9a00, #8a7000);
+  background-image: -o-linear-gradient(top, #bd9a00, #8a7000);
+  background-image: linear-gradient(top, #bd9a00, #8a7000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF89C551', endColorstr='#FF70AA39', GradientType=0);
-  border-color: #70aa39 #70aa39 #4a7126;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFBD9A00', endColorstr='#FF8A7000', GradientType=0);
+  border-color: #8a7000 #8a7000 #3e3200;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #70aa39;
+  *background-color: #8a7000;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  border: 1px solid #89c551;
+  border: 1px solid #bd9a00;
   *border: 0;
-  border-bottom-color: #70aa39;
+  border-bottom-color: #8a7000;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -4288,12 +4288,12 @@ button.close {
 /* line 523, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/mixins.scss */
 .btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
   color: #808285;
-  background-color: #70aa39;
-  *background-color: #639732;
+  background-color: #8a7000;
+  *background-color: #715c00;
 }
 /* line 531, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/mixins.scss */
 .btn:active, .btn.active {
-  background-color: #56842c \9;
+  background-color: #574700 \9;
 }
 /* line 66, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/mixins.scss */
 .btn:first-child {
@@ -4422,29 +4422,29 @@ input[type="button"].btn-block {
 .btn-primary {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #7dc551;
-  background-image: -moz-linear-gradient(top, #89c551, #6cc551);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#89c551), to(#6cc551));
-  background-image: -webkit-linear-gradient(top, #89c551, #6cc551);
-  background-image: -o-linear-gradient(top, #89c551, #6cc551);
-  background-image: linear-gradient(top, #89c551, #6cc551);
+  background-color: #b8a800;
+  background-image: -moz-linear-gradient(top, #bd9a00, #b1bd00);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bd9a00), to(#b1bd00));
+  background-image: -webkit-linear-gradient(top, #bd9a00, #b1bd00);
+  background-image: -o-linear-gradient(top, #bd9a00, #b1bd00);
+  background-image: linear-gradient(top, #bd9a00, #b1bd00);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF89C551', endColorstr='#FF6CC551', GradientType=0);
-  border-color: #6cc551 #6cc551 #4a9732;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFBD9A00', endColorstr='#FFB1BD00', GradientType=0);
+  border-color: #b1bd00 #b1bd00 #697100;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #6cc551;
+  *background-color: #b1bd00;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 /* line 523, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/mixins.scss */
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
   color: white;
-  background-color: #6cc551;
-  *background-color: #5dbd3f;
+  background-color: #b1bd00;
+  *background-color: #99a400;
 }
 /* line 531, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/mixins.scss */
 .btn-primary:active, .btn-primary.active {
-  background-color: #53aa39 \9;
+  background-color: #818a00 \9;
 }
 
 /* line 155, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/buttons.scss */
@@ -4638,7 +4638,7 @@ input[type="submit"].btn.btn-mini {
 .btn-link {
   border-color: transparent;
   cursor: pointer;
-  color: #89c551;
+  color: #bd9a00;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -4646,7 +4646,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 224, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/buttons.scss */
 .btn-link:hover {
-  color: #639732;
+  color: #715c00;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4826,11 +4826,11 @@ input[type="submit"].btn.btn-mini {
 }
 /* line 152, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/button-groups.scss */
 .btn-group.open .btn.dropdown-toggle {
-  background-color: #70aa39;
+  background-color: #8a7000;
 }
 /* line 155, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/button-groups.scss */
 .btn-group.open .btn-primary.dropdown-toggle {
-  background-color: #6cc551;
+  background-color: #b1bd00;
 }
 /* line 158, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/button-groups.scss */
 .btn-group.open .btn-warning.dropdown-toggle {
@@ -5071,7 +5071,7 @@ input[type="submit"].btn.btn-mini {
 .nav-list > .active > a:hover {
   color: #f2f1ed;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #89c551;
+  background-color: #bd9a00;
 }
 
 /* line 71, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/navs.scss */
@@ -5175,7 +5175,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: #f2f1ed;
-  background-color: #89c551;
+  background-color: #bd9a00;
 }
 
 /* line 159, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/navs.scss */
@@ -5253,15 +5253,15 @@ input[type="submit"].btn.btn-mini {
 
 /* line 208, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/navs.scss */
 .nav .dropdown-toggle .caret {
-  border-top-color: #89c551;
-  border-bottom-color: #89c551;
+  border-top-color: #bd9a00;
+  border-bottom-color: #bd9a00;
   margin-top: 6px;
 }
 
 /* line 213, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/navs.scss */
 .nav .dropdown-toggle:hover .caret {
-  border-top-color: #639732;
-  border-bottom-color: #639732;
+  border-top-color: #715c00;
+  border-bottom-color: #715c00;
 }
 
 /* move down carets for tabs */
@@ -6697,7 +6697,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 37, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/thumbnails.scss */
 a.thumbnail:hover {
-  border-color: #89c551;
+  border-color: #bd9a00;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
@@ -8055,7 +8055,7 @@ abbr[title], abbr[data-original-title] {
 .btn:hover {
   color: #f2f1ed;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
-  background-color: #89c551;
+  background-color: #bd9a00;
 }
 
 /* line 34, ../../app/assets/stylesheets/public.css.scss */
@@ -8076,7 +8076,7 @@ abbr[title], abbr[data-original-title] {
   position: relative;
   margin-bottom: 8px;
   padding: 4px;
-  background: #89c551;
+  background: #bd9a00;
   color: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
@@ -8192,7 +8192,7 @@ h1.page-title {
 ----------------------------------------- */
 /* line 144, ../../app/assets/stylesheets/public.css.scss */
 .navbar {
-  border-top: 6px solid #89c551;
+  border-top: 6px solid #bd9a00;
 }
 /* line 146, ../../app/assets/stylesheets/public.css.scss */
 .navbar .row-fluid {
@@ -8202,13 +8202,13 @@ h1.page-title {
 .navbar .brand a {
   padding: 0;
   margin: 0 auto;
-  background: transparent url(/assets/logo-87bcb414249315ff209ba1484f92d8cd.png) center center no-repeat;
+  background: transparent url(/assets/logo-561423886b03adda2dd80a1c81e8ed81.png) center center no-repeat;
   background-size: contain;
   cursor: pointer;
   text-decoration: none;
   display: block;
   width: 256px;
-  height: 40px;
+  height: 80px;
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -8241,7 +8241,7 @@ h1.page-title {
 }
 /* line 190, ../../app/assets/stylesheets/public.css.scss */
 .navbar #locales-menu {
-  background-color: #89c551;
+  background-color: #bd9a00;
   float: right;
   width: auto;
   margin-left: 20px;
@@ -8270,17 +8270,17 @@ h1.page-title {
   text-shadow: none;
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #7fba47;
-  background-image: -moz-linear-gradient(top, #89c551, #70aa39);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#89c551), to(#70aa39));
-  background-image: -webkit-linear-gradient(top, #89c551, #70aa39);
-  background-image: -o-linear-gradient(top, #89c551, #70aa39);
-  background-image: linear-gradient(top, #89c551, #70aa39);
+  background-color: #a88900;
+  background-image: -moz-linear-gradient(top, #bd9a00, #8a7000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bd9a00), to(#8a7000));
+  background-image: -webkit-linear-gradient(top, #bd9a00, #8a7000);
+  background-image: -o-linear-gradient(top, #bd9a00, #8a7000);
+  background-image: linear-gradient(top, #bd9a00, #8a7000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF89C551', endColorstr='#FF70AA39', GradientType=0);
-  border-color: #70aa39 #70aa39 #4a7126;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFBD9A00', endColorstr='#FF8A7000', GradientType=0);
+  border-color: #8a7000 #8a7000 #3e3200;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #70aa39;
+  *background-color: #8a7000;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   color: #f2f1ed;
@@ -8288,12 +8288,12 @@ h1.page-title {
 /* line 523, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/mixins.scss */
 .navbar .btn-navbar:hover, .navbar .btn-navbar:active, .navbar .btn-navbar.active, .navbar .btn-navbar.disabled, .navbar .btn-navbar[disabled] {
   color: white;
-  background-color: #70aa39;
-  *background-color: #639732;
+  background-color: #8a7000;
+  *background-color: #715c00;
 }
 /* line 531, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-1c8ae37f68c2/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/mixins.scss */
 .navbar .btn-navbar:active, .navbar .btn-navbar.active {
-  background-color: #56842c \9;
+  background-color: #574700 \9;
 }
 /* line 214, ../../app/assets/stylesheets/public.css.scss */
 .navbar .btn-navbar:hover {
@@ -8362,7 +8362,7 @@ h1.page-title {
 }
 /* line 261, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .title a {
-  color: #89c551;
+  color: #bd9a00;
 }
 /* line 263, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .title a:hover {
@@ -8378,7 +8378,7 @@ h1.page-title {
 }
 /* line 273, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .links a, .grid > li .thumbnail .links .btn {
-  color: #89c551;
+  color: #bd9a00;
   text-shadow: none;
   border: none;
   background: none;
@@ -8398,7 +8398,7 @@ h1.page-title {
 ----------------------------------------- */
 /* line 292, ../../app/assets/stylesheets/public.css.scss */
 .well.realty-promo-text {
-  background-color: #89c551;
+  background-color: #bd9a00;
   color: white;
 }
 
@@ -8481,7 +8481,7 @@ ul.realty-rates span.realty-rates-price {
 /* line 358, ../../app/assets/stylesheets/public.css.scss */
 .sale_property.inquiry,
 .rental_property.inquiry {
-  background-color: #89c551;
+  background-color: #bd9a00;
   color: white;
   padding-top: 20px;
 }
