@@ -175,23 +175,48 @@ h1.page-title {
 			
 		}
 	} 
-	
-	#address { 
-	  padding-top: 4px;
-    float: right;
-    font-size: 11px;
-  }
+
 	.header-top {
 		position: absolute;
 		right: 0; 
 		top: 0;
-		width: auto;
+		width: 100%;
+    
+    a {
+      font-size: 18px;
+      text-decoration: none;
+  	  padding-top: 4px;
+      float: right;
+      padding-left: 4px;
+      &:hover {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+    #address { 
+	    padding-top: 4px;
+      float: right;
+      font-size: 11px;
+      
+      a {
+        font-size: 11px;
+        text-decoration: none;
+    	  padding-top: 0;
+        float: right;
+        padding-left: 4px;
+        &:hover {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
 	}
 	#locales-menu {
 		background-color: $greenMedium;
 		float: right; 
 		width: auto;
 		margin-left: 20px;
+    
 		@include border-radius(0 0 6px 6px);
 		.nav {
 			font-size: 11px;
@@ -199,11 +224,13 @@ h1.page-title {
 			padding: 0;
 		}
 		.nav > li >	a {
+      font-size: 11px;
       color: $white; 
       padding-top: 4px;
       padding-bottom: 4px;
       &:hover {
         color: $black;
+        text-shadow: none;
 			}
 		}
 	}

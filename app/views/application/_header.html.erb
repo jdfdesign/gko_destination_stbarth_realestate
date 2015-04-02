@@ -6,6 +6,19 @@
     <div class="row-fluid">
       <div class="header-top">
         <%= render 'locales_select' %>
+        
+        <%= link_to("https://www.facebook.com/IMMOSTBARTH", :target => "_blank") do %>
+          <i class="icon-facebook-sign"></i>
+        <% end %>
+        <%= link_to("https://instagram.com/immostbarth/", :target => "_blank") do %>
+          <i class="icon-instagram"></i>
+        <% end %>
+        <%= link_to("https://plus.google.com/u/1/107930695161893203949/posts/p/pub", :target => "_blank") do %>
+          <i class="icon-google-plus-sign"></i>
+        <% end %>
+        <%= link_to("https://twitter.com/Immosaintbarth", :target => "_blank") do %>
+          <i class="icon-twitter-sign"></i>
+        <% end %>
         <address id="address">
           <%= "T. (+590) 590 29 07 66".html_safe %>
           <%= mail_to(site.preferred_contact_email, site.preferred_contact_email, :encode => "javascript") %>
