@@ -2308,8 +2308,8 @@ table th[class*="span"],
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome.3.2.1/fontawesome-webfont.eot?v=3.2.1");
-  src: url("../fonts/fontawesome.3.2.1/fontawesome-webfont.eot?#iefix&v=3.2.1") format("embedded-opentype"), url("../fonts/fontawesome.3.2.1/fontawesome-webfont.woff?v=3.2.1") format("woff"), url("../fonts/fontawesome.3.2.1/fontawesome-webfont.ttf?v=3.2.1") format("truetype"), url("../fonts/fontawesome.3.2.1/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1") format("svg");
+  src: url("fontawesome.3.2.1/fontawesome-webfont.eot?v=3.2.1");
+  src: url("fontawesome.3.2.1/fontawesome-webfont.eot?#iefix&v=3.2.1") format("embedded-opentype"), url("fontawesome.3.2.1/fontawesome-webfont.woff?v=3.2.1") format("woff"), url("fontawesome.3.2.1/fontawesome-webfont.ttf?v=3.2.1") format("truetype"), url("fontawesome.3.2.1/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -8710,29 +8710,29 @@ abbr[title], abbr[data-original-title] {
   display: block;
 }
 
-/* line 23, ../../app/assets/stylesheets/public.css.scss */
+/* line 24, ../../app/assets/stylesheets/public.css.scss */
 .btn {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   color: #f2f1ed;
 }
 
-/* line 28, ../../app/assets/stylesheets/public.css.scss */
+/* line 29, ../../app/assets/stylesheets/public.css.scss */
 .btn:hover {
   color: #f2f1ed;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
   background-color: #ad986b;
 }
 
-/* line 34, ../../app/assets/stylesheets/public.css.scss */
+/* line 35, ../../app/assets/stylesheets/public.css.scss */
 .next-previous {
   display: none;
 }
 
-/* line 37, ../../app/assets/stylesheets/public.css.scss */
+/* line 38, ../../app/assets/stylesheets/public.css.scss */
 .tags-list {
   display: block;
 }
-/* line 39, ../../app/assets/stylesheets/public.css.scss */
+/* line 40, ../../app/assets/stylesheets/public.css.scss */
 .tags-list span {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -8749,13 +8749,13 @@ abbr[title], abbr[data-original-title] {
   font-weight: normal;
   white-space: nowrap;
 }
-/* line 53, ../../app/assets/stylesheets/public.css.scss */
+/* line 54, ../../app/assets/stylesheets/public.css.scss */
 .tags-list span.tag strong {
   color: black;
   font-style: normal;
 }
 
-/* line 60, ../../app/assets/stylesheets/public.css.scss */
+/* line 61, ../../app/assets/stylesheets/public.css.scss */
 li > .realty-promo {
   background: transparent url(/assets/promo_en.png) no-repeat scroll right top;
   position: absolute;
@@ -8765,7 +8765,7 @@ li > .realty-promo {
   height: 102px;
 }
 
-/* line 69, ../../app/assets/stylesheets/public.css.scss */
+/* line 70, ../../app/assets/stylesheets/public.css.scss */
 .carousel-control {
   background: transparent url(/assets/classic-map.png) no-repeat 0 0;
   width: 87px;
@@ -8780,13 +8780,13 @@ li > .realty-promo {
   border: 0;
   border: none;
 }
-/* line 74, ../../app/assets/stylesheets/public.css.scss */
+/* line 75, ../../app/assets/stylesheets/public.css.scss */
 .carousel-control.right {
   right: 8px;
   background-position: -87px 0;
 }
 
-/* line 79, ../../app/assets/stylesheets/public.css.scss */
+/* line 80, ../../app/assets/stylesheets/public.css.scss */
 .carousel .btn.inline {
   position: absolute;
   right: 8px;
@@ -8797,7 +8797,7 @@ li > .realty-promo {
 /*-----------------------------------------
  STRUCTURAL LAYOUT 
 ----------------------------------------- */
-/* line 105, ../../app/assets/stylesheets/public.css.scss */
+/* line 106, ../../app/assets/stylesheets/public.css.scss */
 select,
 textarea,
 input[type="text"],
@@ -8818,7 +8818,7 @@ input[type="color"],
   color: #999999;
 }
 
-/* line 108, ../../app/assets/stylesheets/public.css.scss */
+/* line 109, ../../app/assets/stylesheets/public.css.scss */
 .row-fluid {
   max-width: 980px;
   display: block;
@@ -8826,13 +8826,13 @@ input[type="color"],
   margin-right: auto;
 }
 
-/* line 116, ../../app/assets/stylesheets/public.css.scss */
+/* line 117, ../../app/assets/stylesheets/public.css.scss */
 body#annual_rental #main-container,
 body#sale_property #main-container,
 body#rental_property #main-container {
   position: relative;
 }
-/* line 120, ../../app/assets/stylesheets/public.css.scss */
+/* line 121, ../../app/assets/stylesheets/public.css.scss */
 body#annual_rental #main-container .tags-list span,
 body#sale_property #main-container .tags-list span,
 body#rental_property #main-container .tags-list span {
@@ -8846,7 +8846,7 @@ body#rental_property #main-container .tags-list span {
 /*-----------------------------------------
  TYPOGRAPHY
 ----------------------------------------- */
-/* line 134, ../../app/assets/stylesheets/public.css.scss */
+/* line 135, ../../app/assets/stylesheets/public.css.scss */
 h1.page-title {
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -8855,15 +8855,15 @@ h1.page-title {
 /*-----------------------------------------
  HEADER
 ----------------------------------------- */
-/* line 144, ../../app/assets/stylesheets/public.css.scss */
+/* line 145, ../../app/assets/stylesheets/public.css.scss */
 .navbar {
   border-top: 6px solid #ad986b;
 }
-/* line 146, ../../app/assets/stylesheets/public.css.scss */
+/* line 147, ../../app/assets/stylesheets/public.css.scss */
 .navbar .row-fluid {
   position: relative;
 }
-/* line 151, ../../app/assets/stylesheets/public.css.scss */
+/* line 152, ../../app/assets/stylesheets/public.css.scss */
 .navbar .brand a {
   padding: 0;
   margin: 0 auto;
@@ -8880,25 +8880,25 @@ h1.page-title {
   background-color: transparent;
   border: 0;
 }
-/* line 165, ../../app/assets/stylesheets/public.css.scss */
+/* line 166, ../../app/assets/stylesheets/public.css.scss */
 .navbar .header-nav {
   position: relative;
 }
-/* line 170, ../../app/assets/stylesheets/public.css.scss */
+/* line 171, ../../app/assets/stylesheets/public.css.scss */
 .navbar .nav-collapse .nav > li > a {
   text-transform: uppercase;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
 }
-/* line 179, ../../app/assets/stylesheets/public.css.scss */
+/* line 180, ../../app/assets/stylesheets/public.css.scss */
 .navbar .header-top {
   position: absolute;
   right: 0;
   top: 0;
   width: 100%;
 }
-/* line 185, ../../app/assets/stylesheets/public.css.scss */
+/* line 186, ../../app/assets/stylesheets/public.css.scss */
 .navbar .header-top a {
   font-size: 18px;
   text-decoration: none;
@@ -8906,18 +8906,18 @@ h1.page-title {
   float: right;
   padding-left: 4px;
 }
-/* line 191, ../../app/assets/stylesheets/public.css.scss */
+/* line 192, ../../app/assets/stylesheets/public.css.scss */
 .navbar .header-top a:hover {
   text-decoration: none;
   color: #fff;
 }
-/* line 196, ../../app/assets/stylesheets/public.css.scss */
+/* line 197, ../../app/assets/stylesheets/public.css.scss */
 .navbar .header-top #address {
   padding-top: 4px;
   float: right;
   font-size: 11px;
 }
-/* line 201, ../../app/assets/stylesheets/public.css.scss */
+/* line 202, ../../app/assets/stylesheets/public.css.scss */
 .navbar .header-top #address a {
   font-size: 11px;
   text-decoration: none;
@@ -8925,12 +8925,12 @@ h1.page-title {
   float: right;
   padding-left: 4px;
 }
-/* line 207, ../../app/assets/stylesheets/public.css.scss */
+/* line 208, ../../app/assets/stylesheets/public.css.scss */
 .navbar .header-top #address a:hover {
   text-decoration: none;
   color: #fff;
 }
-/* line 214, ../../app/assets/stylesheets/public.css.scss */
+/* line 215, ../../app/assets/stylesheets/public.css.scss */
 .navbar #locales-menu {
   background-color: #ad986b;
   float: right;
@@ -8940,25 +8940,25 @@ h1.page-title {
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
 }
-/* line 221, ../../app/assets/stylesheets/public.css.scss */
+/* line 222, ../../app/assets/stylesheets/public.css.scss */
 .navbar #locales-menu .nav {
   font-size: 11px;
   margin: 0;
   padding: 0;
 }
-/* line 226, ../../app/assets/stylesheets/public.css.scss */
+/* line 227, ../../app/assets/stylesheets/public.css.scss */
 .navbar #locales-menu .nav > li > a {
   font-size: 11px;
   color: #f2f1ed;
   padding-top: 4px;
   padding-bottom: 4px;
 }
-/* line 231, ../../app/assets/stylesheets/public.css.scss */
+/* line 232, ../../app/assets/stylesheets/public.css.scss */
 .navbar #locales-menu .nav > li > a:hover {
   color: black;
   text-shadow: none;
 }
-/* line 237, ../../app/assets/stylesheets/public.css.scss */
+/* line 238, ../../app/assets/stylesheets/public.css.scss */
 .navbar .btn-navbar {
   text-shadow: none;
   color: white;
@@ -8988,12 +8988,12 @@ h1.page-title {
 .navbar .btn-navbar:active, .navbar .btn-navbar.active {
   background-color: #73623f \9;
 }
-/* line 241, ../../app/assets/stylesheets/public.css.scss */
+/* line 242, ../../app/assets/stylesheets/public.css.scss */
 .navbar .btn-navbar:hover {
   color: black;
 }
 
-/* line 246, ../../app/assets/stylesheets/public.css.scss */
+/* line 247, ../../app/assets/stylesheets/public.css.scss */
 .navbar-inner {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -9003,12 +9003,12 @@ h1.page-title {
 /*-----------------------------------------
  GRID
 ----------------------------------------- */
-/* line 255, ../../app/assets/stylesheets/public.css.scss */
+/* line 256, ../../app/assets/stylesheets/public.css.scss */
 .grid > li {
   margin-bottom: 10px;
   position: relative;
 }
-/* line 258, ../../app/assets/stylesheets/public.css.scss */
+/* line 259, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail {
   border-width: 1px 0 0 0;
   border-top: 1px dashed #E0E0CF;
@@ -9020,7 +9020,7 @@ h1.page-title {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 264, ../../app/assets/stylesheets/public.css.scss */
+/* line 265, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .image {
   margin-right: 12px;
   float: left;
@@ -9033,18 +9033,18 @@ h1.page-title {
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
 }
-/* line 272, ../../app/assets/stylesheets/public.css.scss */
+/* line 273, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .image > img {
   display: block;
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
-/* line 278, ../../app/assets/stylesheets/public.css.scss */
+/* line 279, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .caption {
   position: relative;
 }
-/* line 281, ../../app/assets/stylesheets/public.css.scss */
+/* line 282, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .title {
   text-transform: uppercase;
   font-size: 16px;
@@ -9053,35 +9053,35 @@ h1.page-title {
   line-height: 20px;
   margin-bottom: 10px;
 }
-/* line 288, ../../app/assets/stylesheets/public.css.scss */
+/* line 289, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .title a {
   color: #ad986b;
 }
-/* line 290, ../../app/assets/stylesheets/public.css.scss */
+/* line 291, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .title a:hover {
   color: #cdccca;
 }
-/* line 295, ../../app/assets/stylesheets/public.css.scss */
+/* line 296, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .description {
   margin-top: 10px;
 }
-/* line 298, ../../app/assets/stylesheets/public.css.scss */
+/* line 299, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .links {
   font-style: italic;
 }
-/* line 300, ../../app/assets/stylesheets/public.css.scss */
+/* line 301, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .links a, .grid > li .thumbnail .links .btn {
   color: #ad986b;
   text-shadow: none;
   border: none;
   background: none;
 }
-/* line 305, ../../app/assets/stylesheets/public.css.scss */
+/* line 306, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .links a:hover, .grid > li .thumbnail .links .btn:hover {
   color: black;
   text-decoration: underline;
 }
-/* line 309, ../../app/assets/stylesheets/public.css.scss */
+/* line 310, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .links a:first-child, .grid > li .thumbnail .links .btn:first-child {
   padding-left: 0;
 }
@@ -9089,13 +9089,13 @@ h1.page-title {
 /*-----------------------------------------
  CONTENT
 ----------------------------------------- */
-/* line 319, ../../app/assets/stylesheets/public.css.scss */
+/* line 320, ../../app/assets/stylesheets/public.css.scss */
 .well.realty-promo-text {
   background-color: #ad986b;
   color: white;
 }
 
-/* line 323, ../../app/assets/stylesheets/public.css.scss */
+/* line 324, ../../app/assets/stylesheets/public.css.scss */
 #main-container h3 {
   font-weight: normal;
   font-style: italic;
@@ -9104,32 +9104,32 @@ h1.page-title {
   text-transform: uppercase;
 }
 
-/* line 330, ../../app/assets/stylesheets/public.css.scss */
+/* line 331, ../../app/assets/stylesheets/public.css.scss */
 ul.realty-seasons {
   display: block;
 }
-/* line 332, ../../app/assets/stylesheets/public.css.scss */
+/* line 333, ../../app/assets/stylesheets/public.css.scss */
 ul.realty-seasons li {
   display: block;
 }
-/* line 334, ../../app/assets/stylesheets/public.css.scss */
+/* line 335, ../../app/assets/stylesheets/public.css.scss */
 ul.realty-seasons li h4 {
   border-bottom: 1px dashed #E0E0CF;
 }
-/* line 336, ../../app/assets/stylesheets/public.css.scss */
+/* line 337, ../../app/assets/stylesheets/public.css.scss */
 ul.realty-seasons li h4 span {
   font-size: 14px;
 }
 
-/* line 342, ../../app/assets/stylesheets/public.css.scss */
+/* line 343, ../../app/assets/stylesheets/public.css.scss */
 ul.realty-rates {
   display: block;
 }
-/* line 344, ../../app/assets/stylesheets/public.css.scss */
+/* line 345, ../../app/assets/stylesheets/public.css.scss */
 ul.realty-rates li {
   display: block;
 }
-/* line 347, ../../app/assets/stylesheets/public.css.scss */
+/* line 348, ../../app/assets/stylesheets/public.css.scss */
 ul.realty-rates span.realty-rates-price {
   margin-left: 20px;
   border-bottom: 1px dashed #E0E0CF;
@@ -9154,7 +9154,7 @@ ul.realty-rates span.realty-rates-price {
 	border-left: 1px dotted $greyDark;
 }
 */
-/* line 376, ../../app/assets/stylesheets/public.css.scss */
+/* line 377, ../../app/assets/stylesheets/public.css.scss */
 .sale_property.body,
 .sale_property.details,
 .sale_property.rates,
@@ -9165,20 +9165,20 @@ ul.realty-rates span.realty-rates-price {
   padding-bottom: 20px;
 }
 
-/* line 381, ../../app/assets/stylesheets/public.css.scss */
+/* line 382, ../../app/assets/stylesheets/public.css.scss */
 .sale_property.rates,
 .rental_property.rates {
   background-color: white;
 }
 
-/* line 385, ../../app/assets/stylesheets/public.css.scss */
+/* line 386, ../../app/assets/stylesheets/public.css.scss */
 .sale_property.inquiry,
 .rental_property.inquiry {
   background-color: #ad986b;
   color: white;
   padding-top: 20px;
 }
-/* line 389, ../../app/assets/stylesheets/public.css.scss */
+/* line 390, ../../app/assets/stylesheets/public.css.scss */
 .sale_property.inquiry label,
 .rental_property.inquiry label {
   color: white;
@@ -9187,7 +9187,7 @@ ul.realty-rates span.realty-rates-price {
 /*-----------------------------------------
  SIDEBAR
 ----------------------------------------- */
-/* line 398, ../../app/assets/stylesheets/public.css.scss */
+/* line 399, ../../app/assets/stylesheets/public.css.scss */
 .partial h4 {
   line-height: 20px;
   text-transform: uppercase;
@@ -9199,11 +9199,11 @@ ul.realty-rates span.realty-rates-price {
   border-top: 1px dashed #E0E0CF;
   border-bottom: 1px dashed #E0E0CF;
 }
-/* line 410, ../../app/assets/stylesheets/public.css.scss */
+/* line 411, ../../app/assets/stylesheets/public.css.scss */
 .partial .grid > li .thumbnail {
   border: none;
 }
-/* line 412, ../../app/assets/stylesheets/public.css.scss */
+/* line 413, ../../app/assets/stylesheets/public.css.scss */
 .partial .grid > li .thumbnail .title {
   text-transform: none;
   line-height: 20px;
@@ -9212,11 +9212,11 @@ ul.realty-rates span.realty-rates-price {
   font-weight: bold;
   text-align: center;
 }
-/* line 420, ../../app/assets/stylesheets/public.css.scss */
+/* line 421, ../../app/assets/stylesheets/public.css.scss */
 .partial .grid > li .thumbnail .caption {
   padding: 0;
 }
-/* line 425, ../../app/assets/stylesheets/public.css.scss */
+/* line 426, ../../app/assets/stylesheets/public.css.scss */
 .partial select {
   margin-bottom: 0;
 }
@@ -9224,26 +9224,26 @@ ul.realty-rates span.realty-rates-price {
 /*-----------------------------------------
  HOME
 ----------------------------------------- */
-/* line 433, ../../app/assets/stylesheets/public.css.scss */
+/* line 434, ../../app/assets/stylesheets/public.css.scss */
 #home-features {
   padding-bottom: 36px;
 }
 
-/* line 437, ../../app/assets/stylesheets/public.css.scss */
+/* line 438, ../../app/assets/stylesheets/public.css.scss */
 #home h3 {
   padding-bottom: 0;
 }
 
-/* line 444, ../../app/assets/stylesheets/public.css.scss */
+/* line 445, ../../app/assets/stylesheets/public.css.scss */
 #home .grid > li .thumbnail .image {
   float: none;
   margin-bottom: 12px;
 }
-/* line 448, ../../app/assets/stylesheets/public.css.scss */
+/* line 449, ../../app/assets/stylesheets/public.css.scss */
 #home .grid > li .thumbnail .caption {
   clear: both;
 }
-/* line 454, ../../app/assets/stylesheets/public.css.scss */
+/* line 455, ../../app/assets/stylesheets/public.css.scss */
 #home .grid > li .tags-list span {
   display: block;
   clear: both;
@@ -9252,29 +9252,29 @@ ul.realty-rates span.realty-rates-price {
 /*-----------------------------------------
  FOOTER
 ----------------------------------------- */
-/* line 464, ../../app/assets/stylesheets/public.css.scss */
+/* line 465, ../../app/assets/stylesheets/public.css.scss */
 #footer-container {
   background-color: black;
 }
 
-/* line 468, ../../app/assets/stylesheets/public.css.scss */
+/* line 469, ../../app/assets/stylesheets/public.css.scss */
 #footer .nav > li > a {
   font-size: 10px;
   font-style: italic;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
 }
-/* line 473, ../../app/assets/stylesheets/public.css.scss */
+/* line 474, ../../app/assets/stylesheets/public.css.scss */
 #footer .nav > li > a:first-child {
   margin-left: 0;
 }
 
-/* line 478, ../../app/assets/stylesheets/public.css.scss */
+/* line 479, ../../app/assets/stylesheets/public.css.scss */
 #copyright {
   text-align: center;
 }
 
-/* line 481, ../../app/assets/stylesheets/public.css.scss */
+/* line 482, ../../app/assets/stylesheets/public.css.scss */
 #site-by {
   font-size: 9px;
   float: none;
@@ -10740,20 +10740,20 @@ ul.realty-rates span.realty-rates-price {
   }
 }
 @media (max-width: 480px) {
-  /* line 496, ../../app/assets/stylesheets/public.css.scss */
+  /* line 497, ../../app/assets/stylesheets/public.css.scss */
   .grid > li .tags-list span {
     display: block;
     clear: both;
   }
 }
 @media (max-width: 767px) {
-  /* line 504, ../../app/assets/stylesheets/public.css.scss */
+  /* line 505, ../../app/assets/stylesheets/public.css.scss */
   body {
     padding-left: 0px;
     padding-right: 0px;
   }
 
-  /* line 508, ../../app/assets/stylesheets/public.css.scss */
+  /* line 509, ../../app/assets/stylesheets/public.css.scss */
   .row-fluid {
     padding-left: 20px;
     padding-right: 20px;
@@ -10762,7 +10762,7 @@ ul.realty-rates span.realty-rates-price {
     box-sizing: border-box;
   }
 
-  /* line 517, ../../app/assets/stylesheets/public.css.scss */
+  /* line 518, ../../app/assets/stylesheets/public.css.scss */
   body#annual_rental #main-container #sidebar,
   body#sale_property #main-container #sidebar,
   body#rental_property #main-container #sidebar {
@@ -10779,39 +10779,39 @@ ul.realty-rates span.realty-rates-price {
   }
 }
 @media (max-width: 979px) {
-  /* line 533, ../../app/assets/stylesheets/public.css.scss */
+  /* line 534, ../../app/assets/stylesheets/public.css.scss */
   .grid > li .caption {
     clear: both;
   }
 
-  /* line 538, ../../app/assets/stylesheets/public.css.scss */
+  /* line 539, ../../app/assets/stylesheets/public.css.scss */
   .navbar .brand {
     float: none;
     text-align: center;
     margin: 20px 0 0 0;
   }
-  /* line 544, ../../app/assets/stylesheets/public.css.scss */
+  /* line 545, ../../app/assets/stylesheets/public.css.scss */
   .navbar .nav-collapse .nav > li > a {
     text-align: center;
   }
 }
 @media (min-width: 980px) {
-  /* line 551, ../../app/assets/stylesheets/public.css.scss */
+  /* line 552, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse {
     float: right;
     margin-top: 72px;
   }
-  /* line 554, ../../app/assets/stylesheets/public.css.scss */
+  /* line 555, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .nav {
     margin: 0;
   }
-  /* line 557, ../../app/assets/stylesheets/public.css.scss */
+  /* line 558, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .nav > li > a {
     padding-top: 0;
     padding-bottom: 0;
   }
 
-  /* line 562, ../../app/assets/stylesheets/public.css.scss */
+  /* line 563, ../../app/assets/stylesheets/public.css.scss */
   #site-by {
     float: right;
   }
