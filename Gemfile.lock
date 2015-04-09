@@ -7,14 +7,14 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: feeccecb0632bca9ff0ebca90814bbc2a0409b2a
-  tag: v0.8.14.9
+  revision: ad0bc38e9d05e0c90b490f992c9143df827439b4
+  tag: v0.8.15
   specs:
-    gko_auth (0.8.14.9)
+    gko_auth (0.8.15)
       cancan (~> 1.6.10)
       devise (~> 2.2.3)
-    gko_categories (0.8.14.9)
-    gko_core (0.8.14.9)
+    gko_categories (0.8.15)
+    gko_core (0.8.15)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
       babosa (~> 0.3.8)
@@ -55,13 +55,13 @@ GIT
       uglifier (~> 2.4.0)
       uuid (~> 2.3.7)
       will_paginate (~> 3.0.2)
-    gko_documents (0.8.14.9)
+    gko_documents (0.8.15)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_features (0.8.14.9)
-    gko_inquiries (0.8.14.9)
+    gko_features (0.8.15)
+    gko_inquiries (0.8.15)
       filters_spam (~> 0.2)
-    gko_stickers (0.8.14.9)
+    gko_stickers (0.8.15)
 
 GEM
   remote: https://rubygems.org/

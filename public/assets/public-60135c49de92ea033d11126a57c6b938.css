@@ -8095,7 +8095,7 @@ aside > section {
 
 /* line 53, ../../../../.rvm/gems/ruby-1.8.7-head/bundler/gems/gko_cms3-ad0bc38e9d05/gko_core/app/assets/stylesheets/gko/public/_default.scss */
 .missing-document-preview {
-  background: transparent url(/assets/gko/icon_pdf_grey_light_x110.png) left center no-repeat;
+  background: transparent url(/assets/gko/icon_pdf_grey_light_x110-59ffadcad1ca8e036aabc1e65570fc16.png) left center no-repeat;
   min-height: 110px;
 }
 
@@ -8599,7 +8599,7 @@ abbr[title], abbr[data-original-title] {
   color: black;
   text-align: center;
   cursor: pointer;
-  background: transparent url(/assets/classic-map.png) no-repeat 0 0;
+  background: transparent url(/assets/classic-map-06faab7186df726fd6cfc1ee150902d7.png) no-repeat 0 0;
   width: 87px;
   height: 87px;
   -webkit-border-radius: 43.5px;
@@ -8652,7 +8652,7 @@ abbr[title], abbr[data-original-title] {
   top: 50%;
   margin-top: -24px;
   z-index: 3;
-  background: black url(/assets/arrow_white_14_left.png) no-repeat 6px 6px;
+  background: black url(/assets/arrow_white_14_left-e9a6097970557ff22ec72b2ac3ec362f.png) no-repeat 6px 6px;
   width: 28px;
   height: 28px;
   -webkit-border-radius: 14px;
@@ -8672,7 +8672,7 @@ abbr[title], abbr[data-original-title] {
 .galleria-thumb-nav-right {
   right: 0;
   left: auto;
-  background: black url(/assets/arrow_white_14_right.png) no-repeat 6px 6px;
+  background: black url(/assets/arrow_white_14_right-e839949f39d04ef626ef12ead00dfbce.png) no-repeat 6px 6px;
 }
 
 /* line 206, ../../app/assets/stylesheets/_galleria.scss */
@@ -8757,7 +8757,7 @@ abbr[title], abbr[data-original-title] {
 
 /* line 61, ../../app/assets/stylesheets/public.css.scss */
 li > .realty-promo {
-  background: transparent url(/assets/promo_en.png) no-repeat scroll right top;
+  background: transparent url(/assets/promo_en-1c6261995c92dd5a34ba8fb0a0fa5f4b.png) no-repeat scroll right top;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -8767,7 +8767,7 @@ li > .realty-promo {
 
 /* line 70, ../../app/assets/stylesheets/public.css.scss */
 .carousel-control {
-  background: transparent url(/assets/classic-map.png) no-repeat 0 0;
+  background: transparent url(/assets/classic-map-06faab7186df726fd6cfc1ee150902d7.png) no-repeat 0 0;
   width: 87px;
   height: 87px;
   -webkit-border-radius: 43.5px;
@@ -8867,7 +8867,7 @@ h1.page-title {
 .navbar .brand a {
   padding: 0;
   margin: 0 auto;
-  background: transparent url(/assets/logo.png) center center no-repeat;
+  background: transparent url(/assets/logo-561423886b03adda2dd80a1c81e8ed81.png) center center no-repeat;
   background-size: contain;
   cursor: pointer;
   text-decoration: none;
