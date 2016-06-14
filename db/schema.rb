@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150402105064) do
+ActiveRecord::Schema.define(:version => 20160614093049) do
 
   create_table "annual_rental_options", :force => true do |t|
     t.text     "notes"
@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(:version => 20150402105064) do
     t.datetime "updated_at",                                        :null => false
     t.integer  "city_id"
     t.integer  "realty_agent_id"
+    t.integer  "bathroom_count"
+    t.boolean  "garden"
+    t.boolean  "accept_roommate"
+    t.boolean  "furnished"
+    t.integer  "deposit"
+    t.integer  "acreage"
+    t.integer  "statute_id"
   end
 
   add_index "annual_rental_options", ["area_id"], :name => "index_annual_rental_options_on_area_id"
@@ -573,6 +580,7 @@ ActiveRecord::Schema.define(:version => 20150402105064) do
     t.string   "info_title"
     t.text     "info_body"
     t.string   "video_url"
+    t.integer  "statute_id"
   end
 
   add_index "rental_property_options", ["area_id"], :name => "index_rental_property_options_on_area_id"
@@ -671,6 +679,7 @@ ActiveRecord::Schema.define(:version => 20150402105064) do
     t.integer  "exchange_price"
     t.integer  "city_id"
     t.string   "video_url"
+    t.integer  "statute_id"
   end
 
   add_index "sale_property_options", ["area_id"], :name => "index_sale_property_options_on_area_id"
@@ -792,6 +801,27 @@ ActiveRecord::Schema.define(:version => 20150402105064) do
   add_index "sites", ["host"], :name => "index_sites_on_host", :unique => true
   add_index "sites", ["theme_id"], :name => "index_sites_on_theme_id"
 
+  create_table "statute_translations", :force => true do |t|
+    t.integer  "statute_id"
+    t.string   "locale",     :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "title"
+  end
+
+  add_index "statute_translations", ["locale"], :name => "index_statute_translations_on_locale"
+  add_index "statute_translations", ["statute_id"], :name => "index_statute_translations_on_statute_id"
+
+  create_table "statutes", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "site_id",    :null => false
+    t.string   "name",       :null => false
+  end
+
+  add_index "statutes", ["site_id"], :name => "index_statutes_on_site_id"
+
   create_table "sticker_translations", :force => true do |t|
     t.integer  "sticker_id"
     t.string   "locale"
@@ -810,6 +840,7 @@ ActiveRecord::Schema.define(:version => 20150402105064) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "path"
+    t.string   "css"
   end
 
   add_index "stickers", ["name"], :name => "index_stickers_on_name"

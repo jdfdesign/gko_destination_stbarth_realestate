@@ -1,20 +1,20 @@
 <% resource_cache(resource) do %>
-	<% 
+	<%
 	has_stickers = @stickers.try(:any?)
 	has_options = @rental_property.content_options.try(:any?)
 	tags = []
 	tags << realty_meta_tag("bedroom_count", @rental_property.meta.bedroom_count)
 	tags << realty_meta_tag("min_price", rental_min_price_value(@rental_property))
-	if @rental_property.meta.area.present? 
+	if @rental_property.meta.area.present?
 	  tags << realty_meta_tag("area", @rental_property.meta.area.name)
 	end
 	%>
-  <% if @rental_property.has_promo? %>
+  <% if @rental_property.promo? %>
     <div class="realty-promo"></div>
   <% end %>
 
   <div class='container-fluid rental_property body'>
-    
+
     <div class='row-fluid'>
       <div class='span9'>
         <%= render_slideshow_for(resource) %>
@@ -30,36 +30,36 @@
           </div>
         </div>
       </div>
-      
+
       <aside id='sidebar' class="span3">
         <div class='sidebar-inner'>
 
           <% if @rental_property.lat_long.present? %>
-            <div class='partial google_map_container'> 
-              <%= render('google_map', :point => @rental_property.lat_long) %> 
+            <div class='partial google_map_container'>
+              <%= render('google_map', :point => @rental_property.lat_long) %>
             </div>
-          <% end %> 
+          <% end %>
           <%= render "rental_properties/filter", :section => parent %>
           <%= render "rental_properties/promotion_list" %>
         </div>
       </aside>
     </div>
   </div>
-   
+
   <div class='container-fluid rental_property rates'>
     <div class='row-fluid'>
       <div class='span12'>
         <h3><%= t(:'rates') %></h3>
-        <% if @rental_property.has_promo? %>
+        <% if @rental_property.promo? %>
         <div class="well realty-promo-text">
-          <%= @rental_property.promo_text if @rental_property.has_promo? %>
+          <%= @rental_property.promo_text if @rental_property.promo? %>
         </div>
         <% end %>
         <%= render 'rental_properties/seasons' %>
       </div>
     </div>
   </div>
-   
+
   <% if @rental_property.meta and @rental_property.meta.description.present? %>
   <div class='container-fluid rental_property details'>
     <div class='row-fluid'>
@@ -70,9 +70,9 @@
     </div>
   </div>
   <% end %>
-   
+
   <div class='container-fluid rental_property inquiry'>
-    <div class='row-fluid'>  
+    <div class='row-fluid'>
       <div class='span12'>
         <h3><%= t(:'realty.request_availability') %></h3>
       </div>
@@ -82,12 +82,12 @@
             <%= render 'shared/realty_agent', :realty_agent => @rental_property.meta.realty_agent %>
           <% else %>
             <%= "".html_safe %>
-          <% end %> 
+          <% end %>
         </div>
         <div class='span12'><%= render :partial => 'rental_property_inquiries/form' %></div>
       </div>
-    </div>  
+    </div>
   </div>
-  <%= render 'next_previous', :record => @rental_property %> 
-  
+  <%= render 'next_previous', :record => @rental_property %>
+
 <% end %>

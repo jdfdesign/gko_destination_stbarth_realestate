@@ -14,7 +14,7 @@
 //= require gko/public/jquery.bootstrap.navbarhover.js
 //= require gko/public/jquery.grid.responsive.js
 
-//= require gko/gko.galleria 
+//= require gko/gko.galleria
 
 
 
@@ -29,6 +29,10 @@ var Site = {
 		breakpoint = 768;
 		Carousel.addTheme();
 		Carousel.init();
+		$('form').bind('ajax:success', function(){
+  		//alert("Success!");
+			$("#thanks").toggle();
+		});
 	}
 }
 
@@ -129,7 +133,7 @@ var Carousel = {
 		            });
 		        }
 		    });
-	} 
+	}
 }
 $(document).ready(function() {
 	Site.init();

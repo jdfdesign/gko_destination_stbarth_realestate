@@ -3,7 +3,7 @@ $greenMedium:#ad986b;
 $greyMedium:#CDCCCA;
 $greyDark:#7B7A78;
 
-$containerMaxWidth: 0; 
+$containerMaxWidth: 0;
 
 $pdfIcon: 'gko/icon_pdf_white_x110.png';
 
@@ -20,8 +20,8 @@ $FontAwesomePath: "fontawesome.3.2.1";
 
 // --------------------------------------------------
 // BASE STYLES
-// -------------------------------------------------- 
-.btn { 
+// --------------------------------------------------
+.btn {
 	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
   	color: $white;
 }
@@ -37,7 +37,7 @@ $FontAwesomePath: "fontawesome.3.2.1";
 }
 .tags-list {
 	display: block;
-	span { 
+	span {
 		@include border-radius(6px);
 		display: inline;
 		position: relative;
@@ -84,7 +84,7 @@ li > .realty-promo {
 	z-index: 2;
 }
 /*-----------------------------------------
- STRUCTURAL LAYOUT 
+ STRUCTURAL LAYOUT
 ----------------------------------------- */
 // Shared size and type resets
 select,
@@ -113,7 +113,7 @@ input[type="color"],
 
 body#annual_rental,
 body#sale_property,
-body#rental_property { 
+body#rental_property {
 	#main-container {
 		position: relative;
 
@@ -123,7 +123,7 @@ body#rental_property {
 				float: left;
 				display: block;
 				margin-bottom: 8px;
-				padding: 4px;	
+				padding: 4px;
 			}
 		}
 	}
@@ -133,7 +133,7 @@ body#rental_property {
  TYPOGRAPHY
 ----------------------------------------- */
 h1.page-title {
-	text-transform: uppercase; 
+	text-transform: uppercase;
 	margin-bottom: 20px;
 }
 
@@ -166,23 +166,23 @@ h1.page-title {
 	.header-nav {
 		position:relative;
 	}
-	
+
 	.nav-collapse {
 		.nav > li > a {
 			text-transform: uppercase;
 			font-family: $altFontFamily;
 			font-size: 12px;
 			font-weight: normal;
-			
+
 		}
-	} 
+	}
 
 	.header-top {
 		position: absolute;
-		right: 0; 
+		right: 0;
 		top: 0;
 		width: 100%;
-    
+
     a {
       font-size: 18px;
       text-decoration: none;
@@ -194,11 +194,11 @@ h1.page-title {
         color: #fff;
       }
     }
-    #address { 
+    #address {
 	    padding-top: 4px;
       float: right;
       font-size: 11px;
-      
+
       a {
         font-size: 11px;
         text-decoration: none;
@@ -214,10 +214,10 @@ h1.page-title {
 	}
 	#locales-menu {
 		background-color: $greenMedium;
-		float: right; 
+		float: right;
 		width: auto;
 		margin-left: 20px;
-    
+
 		@include border-radius(0 0 6px 6px);
 		.nav {
 			font-size: 11px;
@@ -226,7 +226,7 @@ h1.page-title {
 		}
 		.nav > li >	a {
       font-size: 11px;
-      color: $white; 
+      color: $white;
       padding-top: 4px;
       padding-bottom: 4px;
       &:hover {
@@ -249,11 +249,13 @@ h1.page-title {
 }
 
 
-
+#thanks {
+	display: none;
+}
 /*-----------------------------------------
  GRID
 ----------------------------------------- */
-.grid > li { 
+.grid > li {
 	margin-bottom: $baseLineHeight * .5;
 	position:relative;
 	.thumbnail {
@@ -292,7 +294,7 @@ h1.page-title {
 					color: $greyMedium;
 				};
 			}
-		} 
+		}
 		.description {
 			margin-top: $baseLineHeight * .5;
 		}
@@ -313,7 +315,7 @@ h1.page-title {
 			}
 		}
 	}
-} 
+}
 /*-----------------------------------------
  CONTENT
 ----------------------------------------- */
@@ -333,17 +335,17 @@ ul.realty-seasons {
 	li {
 	 display: block;
 		h4 {
-			border-bottom: 1px dashed #E0E0CF; 
+			border-bottom: 1px dashed #E0E0CF;
 			span {
 				font-size: $baseFontSize;
 			}
 		}
 	}
 }
-ul.realty-rates { 
+ul.realty-rates {
 	display: block;
 	li {
-		display: block; 
+		display: block;
 	}
 	span.realty-rates-price {
 		margin-left: 20px;
@@ -358,7 +360,7 @@ ul.realty-rates {
 		clear: both;
 		float: left;
 		display: block;
-		margin-bottom: 8px; 
+		margin-bottom: 8px;
 		padding: 4px;
 		border-left: 1px dotted $greyDark;
 	}
@@ -370,14 +372,14 @@ ul.realty-rates {
 }
 */
 .sale_property.body,
-.sale_property.details, 
+.sale_property.details,
 .sale_property.rates,
 .rental_property.body,
-.rental_property.details, 
+.rental_property.details,
 .rental_property.rates {
 	padding-top: $baseLineHeight;
 	padding-bottom: $baseLineHeight;
-} 
+}
 .sale_property.rates,
 .rental_property.rates {
 	background-color: white;
@@ -385,7 +387,7 @@ ul.realty-rates {
 .sale_property.inquiry,
 .rental_property.inquiry {
 	background-color: $greenMedium;
-	color: white; 
+	color: white;
 	padding-top: $baseLineHeight;
 	label {
 		color: white;
@@ -394,9 +396,9 @@ ul.realty-rates {
 
 /*-----------------------------------------
  SIDEBAR
------------------------------------------ */ 
+----------------------------------------- */
 .partial {
-	h4 { 
+	h4 {
 		line-height: $baseLineHeight;
 		text-transform: uppercase;
 		font-size: $baseFontSize;
@@ -440,7 +442,7 @@ ul.realty-rates {
 	}
 }
 
-#home .grid > li { 
+#home .grid > li {
 	.thumbnail {
 		.image {
 			float: none;
@@ -453,15 +455,15 @@ ul.realty-rates {
 
 	.tags-list {
 		span {
-			display: block; 
+			display: block;
 			clear: both;
-		} 
-		
+		}
+
 	}
 }
 /*-----------------------------------------
  FOOTER
------------------------------------------ */ 
+----------------------------------------- */
 #footer-container {
   background-color: $black;
 }
@@ -488,16 +490,16 @@ ul.realty-rates {
  RESPONSIVE
 ----------------------------------------- */
 
-@import "twitter.bootstrap.2.2.1/bootstrap-responsive"; 
+@import "twitter.bootstrap.2.2.1/bootstrap-responsive";
 @import "gko/default_responsive";
 
 @media (max-width: 480px) {
-	.grid > li { 
+	.grid > li {
 		.tags-list {
 			span {
-				display: block; 
+				display: block;
 				clear: both;
-			} 
+			}
 		}
 	}
 }
@@ -513,7 +515,7 @@ ul.realty-rates {
 	}
 	body#annual_rental,
 	body#sale_property,
-	body#rental_property { 
+	body#rental_property {
 		#main-container {
 			#sidebar {
 				position:relative;
@@ -530,26 +532,26 @@ ul.realty-rates {
 }
 
 @media(max-width: 979px) {
-	.grid > li { 
+	.grid > li {
 		.caption {
-			clear:both; 
-		} 
+			clear:both;
+		}
 	}
 	.navbar {
 		.brand {
 			float: none;
 			text-align: center;
 			margin: $baseLineHeight 0 0 0;
-		}	
+		}
 		.nav-collapse {
 			.nav > li > a {
 				text-align: center;
 			}
 		}
 	}
-}	
+}
 @media(min-width: 980px) {
-	.nav-collapse { 
+	.nav-collapse {
 		float:right;
 		margin-top: 72px;
 		.nav {
@@ -558,7 +560,7 @@ ul.realty-rates {
 		.nav > li > a {
 		  padding-top: 0;
 		  padding-bottom: 0;
-		}  
+		}
 	}
 	#site-by {
 		float: right;

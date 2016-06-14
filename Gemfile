@@ -7,8 +7,11 @@ group :assets do
   gem 'uglifier', '~> 2.4.0'
 end
 
+gem 'bcrypt', '= 3.1.10'
+gem 'mysql2', '= 0.3.20'
+
 group :production do
-  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.15" do
+  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.31" do
     gem 'gko_core'
     gem 'gko_auth'
     gem 'gko_documents'
@@ -17,10 +20,10 @@ group :production do
     gem 'gko_categories'
     gem 'gko_stickers'
   end
-  gem 'gko_realty', :git => 'git@github.com:jdfdesign/gko-realty.git'
+  gem 'gko_realty', :git => 'git@github.com:jdfdesign/gko-realty.git', :tag => "v0.4.92"
 end
 
-#group :development do
+# group :development do
 #  gem "gko_core", :path => File.expand_path('~/Github/gko_cms3/gko_core', __FILE__)
 #  gem "gko_auth", :path => File.expand_path('~/Github/gko_cms3/gko_auth', __FILE__)
 #  gem "gko_documents", :path => File.expand_path('~/Github/gko_cms3/gko_documents', __FILE__)
@@ -28,8 +31,8 @@ end
 #  gem "gko_features", :path => File.expand_path('~/Github/gko_cms3/gko_features', __FILE__)
 #  gem "gko_categories", :path => File.expand_path('~/Github/gko_cms3/gko_categories', __FILE__)
 #  gem "gko_stickers", :path => File.expand_path('~/Github/gko_cms3/gko_stickers', __FILE__)
-#  gem "gko_realty", :path => File.expand_path('~/Github/gko/gko_realty', __FILE__) 
-#end
+#  gem "gko_realty", :path => File.expand_path('~/Github/gko/gko_realty', __FILE__)
+# end
 
 gem "money", "= 5.0.0"
 gem "eu_central_bank", "~> 0.3.2"
